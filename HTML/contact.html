@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact | Portfoliowebsite Dion van der Riet</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/stylesheet.css">
+	<link rel="stylesheet" href="https://use.typekit.net/gqv3dkc.css">
+	<link rel="shortcut icon" type="image/png" href="../Afbeeldingen/favicon.ico"/>
+	<meta charset="UTF-8">
+</head>
+<body onload="caseSwitchAnimationDown()" class="contactBody">
+<div id="caseSwitchAnimation"></div>
+<header id="desktop" class="headerDefault">
+		<div class="progress-container">
+			<div class="progress-bar" id="myBar"></div>
+		</div>
+		<div id="headerContainer" class="headerContainerDefault" onclick="home()">
+			<div id="headerItem1">
+				<h2 id="inactive-page-1">Welkom</h2>
+			</div>
+			<div id="headerItemDefault2" onmouseover="headerItemDefaultTwo()" onmouseout="headerItemDefaultTwoOff()">
+				<h2 id="active-page-1">Contact</h2>
+			</div>
+			<div id="headerContainer2"  class="headerContainerActive"></div>
+		</div>
+	</header>
+<header id="responsive-nav">
+		<div class="progress-container">
+			<div class="progress-bar" id="myBarResponsive"></div>
+		</div>
+		<div class="responsive-nav-top">
+			<div class="arrow-left" id="arrow-left" onclick="home()">
+				<img src="../Afbeeldingen/arrow-left.svg" width="50px">
+			</div>
+			<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
+				<div id="hamburger-1"></div>
+				<div id="hamburger-2"></div>
+			</div>
+			<h2 id="nav-project-title">Contact</h2>
+		</div>
+		<div id="responsive-nav-list">
+			<h2 id="responsive-nav-list-item-1" onclick="home()">Welkom</h2>
+			<h2 id="responsive-nav-list-item-2" onclick="contact()">Contact</h2>
+		</div>
+	</header>
+<section class="contactContent">
+	<div class="contactCardContainer" id="contactDesktop">
+		<div class="contactCard" id="contact1">
+			<div class="contactCardTitle">
+				<div class="contactCardIcon contactCardIconEmail"></div>
+				<h4>E-mail</h4>
+			</div>
+			<div class="contactCardDescription">
+				<input class="p-small" id="contact-email-text" value="dionvanderriet@gmail.com">
+				<input type="button" name="button" value="Kopieer adres" class="buttonSmall" id="contactEmail" onclick="emailCopiedContact()">
+			</div>
+		</div>
+		<div class="contactCard" id="contact2">
+			<div class="contactCardTitle">
+				<div class="contactCardIcon contactCardIconTelefoon"></div>
+				<h4>Telefoon</h4>
+			</div>
+			<div class="contactCardDescription">
+				<input class="p-small" id="contact-phone-text" value="06 21374084">
+				<input type="button" name="button" value="Kopieer nummer" class="buttonSmall" id="contactPhone" onclick="phoneCopiedContact()">
+			</div>
+		</div>
+		<div class="contactCard" id="contact3">
+			<div class="contactCardTitle">
+				<div class="contactCardIcon contactCardIconLinkedin"></div>
+				<h4>Linkedin</h4>
+			</div>
+			<div class="contactCardDescription">
+				<p class="p-small">in/dion-van-der-riet-217479158</p>
+				<input type="button" name="button" value="Open link" class="buttonSmall" onclick="linkedIn()">
+			</div>
+		</div>
+
+		<div class="contactBackground1"></div>
+		<div class="contactBackground2"></div>
+	</div>
+
+	<div class="contactCardContainer" id="contactMobile">
+		<div class="contactCard" id="contact1">
+			<div class="contactCardTitle">
+				<div class="contactCardIcon contactCardIconEmail"></div>
+				<h3>E-mail</h3>
+			</div>
+			<div class="contactCardDescription">
+				<div class="contactCardDescriptionP">
+					<input class="p-small" id="contact-email-text-res" value="dionvanderriet@gmail.com">
+				</div>
+				<div class="contactCardDescriptionButton">
+					<input type="button" name="button" value="Kopieer adres" class="buttonSmall" id="contactEmailRes" onclick="emailCopiedContactRes()">
+				</div>
+			</div>
+		</div>
+		<div class="contactCard" id="contact2">
+			<div class="contactCardTitle">
+				<div class="contactCardIcon contactCardIconTelefoon"></div>
+				<h3>Telefoon</h3>
+			</div>
+			<div class="contactCardDescription">
+				<div class="contactCardDescriptionP">
+					<input class="p-small" id="contact-phone-text-res" value="06 21374084">
+				</div>
+
+				<div class="contactCardDescriptionButton">
+					<input type="button" name="button" value="Kopieer nummer" class="buttonSmall" id="contactPhoneRes" onclick="phoneCopiedContactRes()">
+				</div>
+			</div>
+		</div>
+		<div class="contactCard" id="contact3">
+			<div class="contactCardTitle">
+				<div class="contactCardIcon contactCardIconLinkedin"></div>
+				<h3>Linkedin</h3>
+			</div>
+			<div class="contactCardDescription">
+				<div class="contactCardDescriptionP">
+					<p class="p-small">in/dion-van-der-riet-217479158</p>
+				</div>
+
+				<div class="contactCardDescriptionButton">
+					<input type="button" name="button" value="Open link" class="buttonSmall" onclick="linkedIn()">
+				</div>
+			</div>
+		</div>
+		<div class="contactBackground1"></div>
+		<div class="contactBackground2"></div>
+	</div>
+</section>
+
+	<script type="text/javascript" src="../Javascript/case.js"></script>
+	<script type="text/javascript" src="../Javascript/index-animatie.js"></script>
+</body>
+</html>

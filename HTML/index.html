@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfoliowebsite Dion van der Riet</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/stylesheet.css">
+	<link rel="stylesheet" href="https://use.typekit.net/gqv3dkc.css">
+	<link rel="shortcut icon" type="image/png" href="../Afbeeldingen/favicon.ico"/>
+	<meta charset="UTF-8">
+</head>
+<body onload=" loadWebsiteCheck()">
+	<div id="loadWebsite">
+		<div id="loadWebsiteTitel">
+			<h2>Dion van der Riet</h2>
+			<p>UX- en Digital Designer uit Den Haag</p>
+			<div id="loadWebsiteBar">
+				<div id="loadWebsiteBarFilled"></div>
+				<div id="loadWebsiteBarBackground"></div>
+			</div>
+		</div>
+	</div>
+	<div id="loadWebsiteWit"></div>
+	<div id="caseSwitchAnimation"></div>
+	<header id="desktop" class="headerDefault">
+		<div class="progress-container">
+			<div class="progress-bar" id="myBar"></div>
+		</div>
+		<div id="headerContainer" class="headerContainerDefault">
+			<div id="headerItem1">
+				<h2 id="active-page-1">Welkom</h2>
+			</div>
+			<div id="headerItemDefault2" onmouseover="headerItemDefaultTwo()" onmouseout="headerItemDefaultTwoOff()" onclick="contact()">
+				<h2 id="inactive-page-1">Contact</h2>
+			</div>
+			<div id="headerContainer1" class="headerContainerActiveIndex"></div>
+			<div id="headerContainer2"></div>
+		</div>
+	</header>
+	<header id="responsive-nav" class="index-header">
+		<div class="responsive-nav-top">
+			<div class="arrow-left" id="arrow-left-home" onclick="home()">
+				<img src="../Afbeeldingen/arrow-left.svg" width="50px">
+			</div>
+			<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
+				<div id="hamburger-1"></div>
+				<div id="hamburger-2"></div>
+			</div>
+			<h2 id="nav-project-title">Welkom</h2>
+		</div>
+		<div id="responsive-nav-list">
+			<h2 id="responsive-nav-list-item-1" onclick="closeOverlay()">Welkom</h2>
+			<h2 id="responsive-nav-list-item-2" onclick="contact()">Contact</h2>
+		</div>
+	</header>
+	<section id="welkom" class="welkom">
+		<div id="welkom-bericht-desktop" class="welkom-bericht">
+			<h1 id="welkom-bericht-title">Portfolio Dion van der Riet</h1>
+			<div id="welkom-lijn"></div>
+			<p id="welkom-bericht-tekst">UX- en Digital Designer uit Den Haag</p>
+		</div>
+		<div id="welkom-foto-1"></div>
+		<div id="welkom-yellow"></div>
+	</section>
+	<div class="welkom-bericht-mobile-container">
+		<div id="welkom-bericht-mobile" class="welkom-bericht">
+			<h2 id="welkom-bericht-title-mobile">Portfolio Dion van der Riet</h2>
+			<div id="welkom-lijn"></div>
+			<p id="welkom-bericht-tekst">UX- en Digital Designer uit Den Haag</p>
+		</div>
+	</div>
+	<section class="welkom-introductie">
+		<h2 id="welkomIntroductieMobileTitle">Over mij</h2>
+		<div id="introductie-1">
+			<p>
+				Mijn passie voor design is enkele jaren voor mijn studie CMD begonnen bij grafisch design, een essentiële periode waar ik de liefde voor het vak heb leren kennen. In die periode was ik voornamelijk bezig met het creëren van de mooiste ontwerpen voor verschillende online klanten. Tijdens mijn studie heb ik naast het blijven ontwikkelen van mijn designstijl, steeds meer de focus leren leggen op de behoeften van de doelgroep. 
+			</p>
+			<div class="introductie-1-background"></div>
+		</div>
+		<div id="introductie-2">
+			<p>
+				Als UX- en Digital Designer haal ik veel plezier uit samen met de doelgroep komen tot een geschikt ontwerp waarmee hun problemen opgelost worden. Het uitvoeren van een usability test is dankzij de minor Usability Expert geen probleem voor mij, eveneens als verschillende onderzoeksmethoden zoals interviewen en enquêteren. 
+			</p>
+			<div class="introductie-2-background"></div>
+		</div>
+	</section>
+	<section class="welkom-projecten">
+		<div class="welkom-projecten-intro">
+			<h2 id="welkom-projecten-title">Case studies</h2>
+			<div id="welkom-projecten-scroll">
+				<p>Scroll voor alle projecten</p>
+			</div>
+		</div>
+		<div id="projectCardContainer">
+			<div class="projectCard projectCardFirst">
+				<div class="projectCardImage roadmappie-header"></div>
+				<div class="projectCardInfo">
+					<div class="projectCardLabel">
+						<h4>Appdesign</h4>
+					</div>
+					<h2>Roadmappie</h2>
+					<p>Plan je ultieme reis</p>
+					<input type="button" name="button" value="BEKIJK CASE" id="roadmappieButtonMobile" onclick="roadmappieWelkom()">
+				</div>
+			</div>
+			<div class="projectCard">
+				<div class="projectCardImage bykarlie-header"></div>
+				<div class="projectCardInfo">
+					<div class="projectCardLabel">
+						<h4>Web- & Appdesign</h4>
+					</div>
+					<h2>ByKarlie</h2>
+					<p>Redesign kleding webshop</p>
+					<input type="button" name="button" value="BEKIJK CASE" id="bykarlieButtonMobile" onclick="bykarlieWelkom()">
+				</div>
+			</div>
+			<div class="projectCard">
+				<div class="projectCardImage finance-header"></div>
+				<div class="projectCardInfo">
+					<div class="projectCardLabel">
+						<h4>Appdesign</h4>
+					</div>
+					<h2>Save Now</h2>
+					<p>Verbeter je financiële situatie</p>
+					<input type="button" name="button" value="BEKIJK CASE" id="saveNowButtonMobile" onclick="saveNowWelkom()">
+				</div>
+			</div>
+			<div class="projectCard projectCardLast">
+				<div class="projectCardImage play-next-header"></div>
+				<div class="projectCardInfo">
+					<div class="projectCardLabel">
+						<h4>Appdesign</h4>
+					</div>
+					<h2>Play Next</h2>
+					<p>Ontdek jouw volgende favoriete game</p>
+					<input type="button" name="button" value="BEKIJK CASE" id="playNextButtonMobile" onclick="playNextWelkom()">
+				</div>
+			</div>
+		</div>
+
+		<!-- Desktop -->
+
+		<h2 class="highlightTitle" id="highlightTitleDesktop">Case studies</h2>
+
+		<div id="welkom-roadmappie" class="roadmappie-header"></div>
+		<div class="welkom-projecten-info" id="roadmappie-project-info">
+			<h3 class="welkom-project-name">Roadmappie</h3>
+			<p>Het creëren van een app waarmee je dankzij de community de ultieme reis plant.</p>
+			<input type="button" name="button" value="BEKIJK CASE" id="roadmappieButton" onclick="roadmappieWelkom()" onmouseover="roadmappieWelkomHover()" onmouseout="roadmappieWelkomNormal()">
+		</div>
+
+		<div class="welkom-projecten-info" id="bykarlie-project-info">
+			<h3 class="welkom-project-name">ByKarlie</h3>
+			<p>Het creëren van een redesign voor een bestaande kleding webshop.</p>
+			<input type="button" name="button" value="BEKIJK CASE" id="bykarlieButton" onclick="bykarlieWelkom()" onmouseover="bykarlieWelkomHover()" onmouseout="bykarlieWelkomNormal()">
+		</div>
+		<div id="welkom-bykarlie" class="bykarlie-header"></div>
+
+		<div id="welkom-save-now" class="finance-header"></div>
+		<div class="welkom-projecten-info" id="save-now-project-info">
+			<h3 class="welkom-project-name">Save now</h3>
+			<p>Het creëren van een applicatie om alles te weten te komen over jouw aankopen en financiële situatie te verbeteren.</p>
+			<input type="button" name="button" value="BEKIJK CASE" id="saveNowButton" onclick="saveNowWelkom()" onmouseover="saveNowWelkomHover()" onmouseout="saveNowWelkomNormal()">
+		</div>
+				
+		<div class="welkom-projecten-info" id="play-next-project-info">
+			<h3 class="welkom-project-name">Play Next</h3>
+			<p>Het ontwerpen van een app waar gebruikers alles te weten komen over aankomende games.</p>
+			<input type="button" name="button" value="BEKIJK CASE" id="playNextButton" onclick="playNextWelkom()" onmouseover="playNextWelkomHover()" onmouseout="playNextWelkomNormal()">
+		</div>	
+		<div id="welkom-play-next" class="play-next-header"></div>	
+
+	</section>
+	<footer onmouseleave="emailDown()">
+		<div id="footer-transparent-left" onmouseover="emailDown()"></div>
+		<div id="email-popup">
+			<input type="text" value="dionvanderriet@gmail.com" id="email-popup-text">
+			<div id="emailCopy" onclick="emailCopied()">
+				<h5 id="emailCopyButton">KOPIËER</h5>
+			</div>
+		</div>
+		<h5>Dion van der Riet 2026</h5>
+			<div id="email" onmouseover="emailUp()"></div>
+			<div id="linkedIn" onclick="linkedIn()"></div>
+		<div class="footer-balk" onmouseout="emailDown()"></div>
+	</footer>
+	<script type="text/javascript" src="../Javascript/case.js"></script>
+	<script type="text/javascript" src="../Javascript/index-animatie.js"></script>
+</body>
+</html>

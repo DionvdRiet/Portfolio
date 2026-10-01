@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ByKarlie</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/stylesheet.css">
+	<link rel="stylesheet" href="https://use.typekit.net/gqv3dkc.css">
+	<link rel="shortcut icon" type="image/png" href="../Afbeeldingen/favicon.ico"/>
+	<meta charset="UTF-8">
+</head>
+<body onload="caseSwitchAnimationDown()">
+	<div id="caseSwitchAnimation"></div>
+	<header id="desktop">
+		<div class="progress-container">
+			<div class="progress-bar" id="myBar"></div>
+		</div>
+		<div id="headerContainer" class="headerContainerCase">
+			<div id="headerItem1" onmouseover="headerItemOne()" onmouseout="headerItemOffOne()" onclick="home()">
+				<h2 id="inactive-page-1">Welkom</h2>
+			</div>
+			<div id="headerItem3">
+				<h2 id="active-page-1">ByKarlie</h2>
+			</div>
+			<div id="headerItem2" onmouseover="headerItemTwo()" onmouseout="headerItemOffTwo()" onclick="contact()">
+				<h2 id="inactive-page-2">Contact</h2>
+			</div>
+
+			<div id="headerContainer1"></div>
+			<div id="headerContainer2" id="headerContainerActive"></div>
+			<div id="headerContainer3"></div>
+		</div>
+	</header>
+	<header id="responsive-nav">
+		<div class="progress-container">
+			<div class="progress-bar" id="myBarResponsive"></div>
+		</div>
+		<div class="responsive-nav-top">
+			<div class="arrow-left" id="arrow-left" onclick="home()">
+				<img src="../Afbeeldingen/arrow-left.svg" width="50px">
+			</div>
+			<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
+				<div id="hamburger-1"></div>
+				<div id="hamburger-2"></div>
+			</div>
+			<h2 id="nav-project-title">ByKarlie</h2>
+		</div>
+		<div id="responsive-nav-list">
+			<h2 id="responsive-nav-list-item-1" onclick="home()">Welkom</h2>
+			<h2 id="responsive-nav-list-item-2" onclick="contact()">Contact</h2>
+		</div>
+	</header>
+	
+	<div class="caseLanding">
+		<div id="case-header-title">
+			<p id="projectType" class="p-small">UX Case Study <span>-</span> Freelance project</p>
+			<h1 id="projectTitle">ByKarlie</h1>
+		</div>
+		<div id="projectDescriptionContainer">
+			<div id="case-header-line"></div>
+			<p id="projectDescription">Redesign kleding webshop</p>
+		</div>
+		<div class="case-header-content">
+			<div class="bykarlie-header" id="caseHeaderImage"></div>
+			<div id="case-header-description">
+				<p class="p-small">
+					Cliënte heeft zelf een webshop opgezet via een online service, maar is niet tevreden over het ontwerp.
+
+
+					<br>
+					<br>
+
+					Hoe geef je een bestaande webshop een nieuwe verfrissende look?
+				</p>
+			</div>
+			<div id="case-header-background"></div>
+		</div>
+	</div>
+
+	<div id="case-header-description-mobile">
+		<div id="case-description-dots">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<h4>
+			Cliënte heeft zelf een webshop opgezet via een online service, maar is niet tevreden over het ontwerp.
+			
+			<br>
+			<br>
+
+			Hoe geef je een bestaande webshop een nieuwe verfrissende look?
+		</h4>
+	</div>
+
+	<section>
+		<div class="sectie-indicatie-achtergrond" id="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>1/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Projectbeschrijving</h4>
+		</div>
+		<div class="ruimte"></div>
+		<h3 id="animateIn1">Opdracht</h3>
+		<p id="animateIn2">Cliënte beschikt over een eigen kleding webshop die ze samen met haar beste vriendin runt. De huidige site was door haar snel opgezet via Wix, waardoor de site niet goed paste bij de stijl die ze wil overbrengen aan haar (potentiële) klanten. Ze vroeg of ik er even naar kon kijken en op basis van een korte analyse hebben we samen besloten dat ik haar website zou gaan herontwerpen en voorzien van een responsive versie.</p>
+	</section>
+	<section id="animateIn5">
+		<div class="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>2/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Research</h4>
+		</div>
+		<div class="ruimte"></div>
+		<h3>Analyse huidige site</h3>
+		<p>Aan de start van dit project ben ik begonnen met een heuristic evaluation, met als doel om een algemene indruk te krijgen van de interactie op de website en de aanwezige stijl van teksten, kleurgebruik, afbeeldingen, etc.. 
+
+		Met deze nieuwe informatie heb ik een moodboard samengesteld aan de hand van drie kernwoorden: elegant, modern en casual, aangezien dit de stijl is die de cliënt graag terug wilde zien in haar website.</p>
+
+		<div class="wideImage">
+			<img src="../Afbeeldingen/Bykarlie/oud_home.jpg" width="100%"></img>
+			<div class="imageBackground"></div>
+			<cite>Oude homepagina</cite>
+		</div>
+
+		<div class="wideImage">
+			<img src="../Afbeeldingen/Bykarlie/oud_productpagina.jpg" width="100%"></img>
+			<div class="imageBackground"></div>
+			<cite>Oude productpagina</cite>
+		</div>
+
+		<div class="wideImage">
+			<img src="../Afbeeldingen/Bykarlie/oud_contact.jpg" width="100%"></img>
+			<div class="imageBackground"></div>
+			<cite>Oude contactpagina</cite>
+		</div>
+
+	</section>
+	<section>
+		<div class="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>3/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Prototype</h4>
+		</div>
+		<div class="ruimte"></div>
+
+
+		<h3>Ontwerpfase</h3>
+		<p>Na het bepalen van de stijl ben ik aan de slag gegaan met het opstellen van het design system. Hierbij heb ik bij de interactie elementen gekozen voor Google Material Design 3, vanwege moderne en herkenbare stijl die het uitstraalt.</p>
+
+		
+		<h3>Focuspunten</h3>
+		<p>Voor het ontwerp is de focus gelegd op de volgende kernwaarden:</p>
+			<div id="focus">
+				<div id="focus1">
+					<h3 class="focusTekst">Elegant</h3>
+					<div class="focusBackground">
+						<h2 id="focus1Getal">1<span class="focusPoint">.</span></h2>
+						<div id="focus1Yellow"></div>
+					</div>
+				</div>
+				<div id="focus2">
+					<h3 class="focusTekst">Modern</h3>
+					<div class="focusBackground">
+						<h2 id="focus2Getal">2<span class="focusPoint">.</span></h2>
+						<div id="focus2Yellow"></div>
+					</div>
+				</div>
+				<div id="focus3">
+					<h3 class="focusTekst">Casual</h3>
+					<div class="focusBackground">
+						<h2 id="focus3Getal">3<span class="focusPoint">.</span></h2>
+						<div id="focus3Yellow"></div>
+					</div>
+				</div>
+				<div id="focus-lijn"></div>
+			</div>
+
+		<div class="wideImage">
+			<img src="../Afbeeldingen/Bykarlie/stylesheet_Text.jpg" width="100%"></img>
+			<div class="imageBackground"></div>
+			<cite>Stylesheet: Tekststijlen</cite>
+		</div>
+
+		<div class="wideImage">
+			<img src="../Afbeeldingen/Bykarlie/stylesheet_Kleuren.jpg" width="100%"></img>
+			<div class="imageBackground"></div>
+			<cite>Stylesheet: Kleuren</cite>
+		</div>
+
+		<div class="wideImage">
+			<img src="../Afbeeldingen/Bykarlie/stylesheet_Buttons.jpg" width="100%"></img>
+			<div class="imageBackground"></div>
+			<cite>Stylesheet: Buttons</cite>
+		</div>
+
+		<div class="wideImage">
+			<img src="../Afbeeldingen/Bykarlie/stylesheet_Forms.jpg" width="100%"></img>
+			<div class="imageBackground"></div>
+			<cite>Stylesheet: Formulier elementen</cite>
+		</div>
+
+	</section>
+
+	<section>
+		<div class="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>4/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Eindresultaat</h4>
+		</div>
+		<div class="ruimte"></div>
+
+		<div class="mobileDesktopContainer">
+			<div class="mobileDesktop">
+				<img src="../Afbeeldingen/Bykarlie/homepage_desktop.jpg" width="100%" class="desktopResult"></img>
+				
+				<div class="mobileResultContainer">
+					<img src="../Afbeeldingen/Bykarlie/homepage_mobile.jpg" width="100%" class="mobileResult"></img>
+				</div>
+
+				<div class="imageBackground"></div>
+				<cite>Homepagina</cite>
+			</div>
+
+			<div class="mobileDesktop">
+				<img src="../Afbeeldingen/Bykarlie/productoverzicht_desktop.jpg" width="100%" class="desktopResult"></img>
+
+				<div class="mobileResultContainer">
+					<img src="../Afbeeldingen/Bykarlie/productoverzicht_mobile.jpg" width="100%" class="mobileResult"></img>
+				</div>
+
+				<div class="imageBackground"></div>
+				<cite>Productoverzicht</cite>
+			</div>
+
+			<div class="mobileDesktop">
+				<img src="../Afbeeldingen/Bykarlie/productpagina_desktop.jpg" width="100%" class="desktopResult"></img>
+
+				<div class="mobileResultContainer">
+					<img src="../Afbeeldingen/Bykarlie/productpagina_mobile.jpg" width="100%" class="mobileResult"></img>
+				</div>
+
+				<div class="imageBackground"></div>
+				<cite>Productpagina</cite>
+			</div>
+
+			<div class="mobileDesktop">
+				<img src="../Afbeeldingen/Bykarlie/about_desktop.jpg" width="100%" class="desktopResult"></img>
+
+				<div class="mobileResultContainer">
+					<img src="../Afbeeldingen/Bykarlie/about_mobile.jpg" width="100%" class="mobileResult"></img>
+				</div>
+
+				<div class="imageBackground"></div>
+				<cite>'Over ons'-pagina</cite>
+			</div>
+
+			<div class="mobileDesktop">
+				<img src="../Afbeeldingen/Bykarlie/contact_desktop.jpg" width="100%" class="desktopResult"></img>
+
+				<div class="mobileResultContainer">
+					<img src="../Afbeeldingen/Bykarlie/contact_mobile.jpg" width="100%" class="mobileResult"></img>
+				</div>
+
+				<div class="imageBackground"></div>
+				<cite>Contactpagina</cite>
+			</div>
+		</div>
+
+
+
+
+	</section>
+
+	<section id="volgendeCaseCard">
+		<div class="ruimte"></div>
+		<h2>Bedankt voor het lezen!</h2>
+		<p>Klaar voor de volgende case study?</p>
+
+		<div class="projectCard caseCard">
+			<div class="projectCardImage finance-header"></div>
+			<div class="projectCardInfo">
+				<div class="projectCardLabel">
+					<h4>Eigen project</h4>
+				</div>
+				<h2>Save Now</h2>
+				<p>Verbeter je financiële situatie</p>
+				<input type="button" name="button" value="BEKIJK CASE" onclick="saveNowWelkom()">
+			</div>
+		</div>
+	</section>
+
+	<section id="volgendeCaseStatic">
+		<div class="ruimte"></div>
+		<h3>Bedankt voor het lezen!</h3>
+		<p>Klaar voor de volgende case study?</p>
+		<div id="volgendeCaseNieuw">
+			<div id="volgendeCaseNieuwTekst">
+				<h2>Save now</h2>
+				<p>Verbeter je financiële situatie</p>
+				<input type="button" name="button" value="BEKIJK PROJECT" id="volgendeCaseButton" onclick="saveNowNieuw()" onmouseover="buttonOn()" onmouseout="buttonOff()">
+			</div>
+			<div class="volgendeCaseSaveNow" id="volgendeCaseImage"></div>
+		</div>
+	</section>
+
+	<footer onmouseleave="emailDown()">
+		<div id="footer-transparent-left" onmouseover="emailDown()"></div>
+		<div id="email-popup">
+			<input type="text" value="dionvanderriet@gmail.com" id="email-popup-text">
+			<div id="emailCopy" onclick="emailCopied()">
+				<h5 id="emailCopyButton">KOPIËER</h5>
+			</div>
+		</div>
+		<h5>Dion van der Riet 2026</h5>
+			<div id="email" onmouseover="emailUp()"></div>
+			<div id="linkedIn" onclick="linkedIn()"></div>
+		<div class="footer-balk" onmouseout="emailDown()"></div>
+	</footer>
+	<script type="text/javascript" src="../Javascript/case.js"></script>
+</body>
+</html>

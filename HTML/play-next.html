@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Play Next</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/stylesheet.css">
+	<link rel="stylesheet" href="https://use.typekit.net/gqv3dkc.css">
+	<link rel="shortcut icon" type="image/png" href="../Afbeeldingen/favicon.ico"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+</head>
+<body onload="caseSwitchAnimationDown()">
+	<div id="caseSwitchAnimation"></div>
+		<header id="desktop">
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div>
+			<div id="headerContainer" class="headerContainerCase">
+				<div id="headerItem1" onmouseover="headerItemOne()" onmouseout="headerItemOffOne()" onclick="home()">
+					<h2 id="inactive-page-1">Welkom</h2>
+				</div>
+				<div id="headerItem3">
+					<h2 id="active-page-1">Play Next</h2>
+				</div>
+				<div id="headerItem2" onmouseover="headerItemTwo()" onmouseout="headerItemOffTwo()" onclick="contact()">
+					<h2 id="inactive-page-2">Contact</h2>
+				</div>
+
+				<div id="headerContainer1"></div>
+				<div id="headerContainer2" class="headerContainerActive"></div>
+				<div id="headerContainer3"></div>
+			</div>
+		</header>
+	<header id="responsive-nav">
+		<div class="progress-container">
+			<div class="progress-bar" id="myBarResponsive"></div>
+		</div>
+		<div class="responsive-nav-top">
+			<div class="arrow-left" id="arrow-left" onclick="home()">
+				<img src="../Afbeeldingen/arrow-left.svg" width="50px">
+			</div>
+			<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
+				<div id="hamburger-1"></div>
+				<div id="hamburger-2"></div>
+			</div>
+			<h2 id="nav-project-title">Play Next</h2>
+		</div>
+		<div id="responsive-nav-list">
+			<h2 id="responsive-nav-list-item-1" onclick="home()">Welkom</h2>
+			<h2 id="responsive-nav-list-item-2" onclick="contact()">Contact</h2>
+		</div>
+	</header>
+	<div class="caseLanding">
+		<div id="case-header-title">
+			<p id="projectType" class="p-small">UX Case Study <span>-</span> Eigen Project</p>
+			<h1 id="projectTitle">Play Next</h1>
+		</div>
+		<div id="projectDescriptionContainer">
+			<div id="case-header-line"></div>
+			<p id="projectDescription">Ontdek je volgende favoriete game</p>
+		</div>
+		<div class="case-header-content">
+			<div class="play-next-case-header" id="caseHeaderImage"></div>
+			<div id="case-header-description">
+				<p class="p-small">
+					Dagelijks komen er nieuwe games op de markt die elk een andere doelgroep interesseren. 
+
+					<br>
+					<br>
+
+					Hoe ga je als designer om met zoveel keuze aan games en hoe maak je het overzichtelijk voor gamers?
+				</p>
+			</div>
+			<div id="case-header-background"></div>
+		</div>
+	</div>
+	<div id="case-header-description-mobile">
+		<div id="case-description-dots">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<h4>
+			Dagelijks komen er nieuwe games op de markt die elk een andere doelgroep interesseren. 
+
+			<br>
+			<br>
+
+			Hoe ga je als designer om met zoveel keuze aan games en hoe maak je het overzichtelijk voor gamers?
+		</h4>
+	</div>
+	<section>
+		<div class="sectie-indicatie-achtergrond" id="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>1/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Projectbeschrijving</h4>
+		</div>
+		<div class="ruimte"></div>
+		<h3 id="animateIn1">Opdracht</h3>
+		<p id="animateIn2">Er bestaan veel gaming-gerelateerde websites. Sommige van deze websites geven aan welke spellen er binnenkort uitkomen, maar dit overzicht is zeer beperkt tot vaak slechts de games die volgende maand uitkomen.</p>
+
+		<h3>Probleemstelling</h3>
+		<p>Er bestaat nog geen gaming-gerelateerde website waar in detail een uitgebreid overzicht wordt gegeven van aankomende games.</p>
+
+		<h3>Doelstelling</h3>
+		<p>Het ontwerpen van een app waar gebruikers alles te weten komen over aankomende games.</p>
+
+	</section>
+	<section id="animateIn3">
+		<div class="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>2/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Research</h4>
+		</div>
+		<div class="ruimte"></div>
+		<h3>Enquête</h3>
+		<p>Voorafgaand aan het ontwerpproces, ben ik meer te weten gekomen over de doelgroep doormiddel van het houden van een enquête voor 18 respondenten, om erachter te komen wat de behoeften van de doelgroep zijn. Hierdoor ben ik onder andere erachter gekomen welke elementen binnen de applicatie belangrijk zijn voor deze doelgroep en welke websites/apps ze momenteel gebruiken, zodat ik een concurrentenanalyse kon uitvoeren.</p>
+
+		<h3>Deskresearch</h3>
+		<p>Om een beter beeld te krijgen van de doelgroep heb ik middels deskresearch gezocht naar de algemene informatie over de gemiddelde gamer, zoals de favoriete genres en welke factoren meespelen bij het aanschaffen van een game. Uit het rapport gepubliceerd door Ipsos blijkt dat <span>71%</span> van alle mannen tussen de 18 en 24 jaar op console of PC speelt.</p>
+
+		<p>Het rapport van ESA (Entertainment Software Association) heb ik gehanteerd om meer te weten te komen over het aanschafgedrag van gamers. Uit hun onderzoek blijkt dat de meeste gamers voornamelijk letten op de prijs <span>(66%)</span> en de graphics <span>(63%)</span> voordat ze een spel aanschaffen. Daarnaast kijken ze graag naar YouTube video's en gamereviews om te bepalen of een game hun geld waard is.</p>
+
+		<h3>Doelgroep</h3>
+		<p>Casual gamers die af en toe een game aanschaffen en graag met vrienden spelen.</p>
+		<div class="researchContainer">
+			<div class="quote" id="research1">
+				<blockquote cite="#">
+				71% van de 18-24-jarige mannen speelt op console of PC (stabiel tussen 2012 en 2016)
+				</blockquote>
+				<a href="https://www.ipsos.com/sites/default/files/2017-04/Ipsos_Connect_Gaming_TP_Feb_17.pdf" target="_blank">
+					<p id="researchBron">Ipsos Connect: The New Faces of Gaming</p>
+				</a>
+			</div>
+			<div id="researchImage" class="researchImageGaming"></div>
+			<div class="quote" id="research2">
+				<blockquote>De mannelijke 18-34-jarige gamer:</blockquote>
+				<blockquote cite="#" id="gamingResearch2">
+				<div class="quote-getal-flex">
+					<div class="quote-getal">
+						<h2>83%</h2>
+						<p>Speelt het liefste action games</p>
+					</div>
+					<div class="quote-getal">
+						<h2>66%</h2>
+						<p>Speelt samen met vrienden</p>
+					</div>
+				</div>
+				</blockquote>
+				<a href="https://www.theesa.com/wp-content/uploads/2019/05/ESA_Essential_facts_2019_final.pdf" target="_blank">
+					<p id="researchBron">ESA Essential facts 2019</p>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>3/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Prototype</h4>
+		</div>
+		<div class="ruimte"></div>
+		<div class="prototypeContainer">
+			<h3>Focuspunten</h3>
+			<p>Vanaf de conceptfase is de focus gelegd op de volgende onderdelen:</p>
+			<div id="focus">
+				<div id="focus1">
+					<h3 class="focusTekst">Games ontdekken</h3>
+					<div class="focusBackground">
+						<h2 id="focus1Getal">1<span class="focusPoint">.</span></h2>
+						<div id="focus1Yellow"></div>
+					</div>
+				</div>
+				<div id="focus2">
+					<h3 class="focusTekst">Laatste nieuws</h3>
+					<div class="focusBackground">
+						<h2 id="focus2Getal">2<span class="focusPoint">.</span></h2>
+						<div id="focus2Yellow"></div>
+					</div>
+				</div>
+				<div id="focus3">
+					<h3 class="focusTekst">Community</h3>
+					<div class="focusBackground">
+						<h2 id="focus3Getal">3<span class="focusPoint">.</span></h2>
+						<div id="focus3Yellow"></div>
+					</div>
+				</div>
+				<div id="focus-lijn"></div>
+			</div>
+			<div class="focusUitleg">
+				<h3> 1. Games ontdekken</h3>
+				<p> Nieuwe games ontdekken die binnenkort uit zullen komen.</p>
+
+				<h3> 2. Laatste nieuws </h3> 
+				<p> Op de hoogte blijven van het laatste nieuws over nieuwe games, of de laatste reviews over een game die binnenkort uit zal komen </p>
+
+				<h3> 3. Community </h3> 
+				<p>Gebruikers van de app kunnen zelf discussies beginnen of erop reageren. Ook de populariteit van een game wordt door deze groep bepaalt.</p>
+
+				<div class="focusUitlegGrijs"></div>
+			</div>
+			<h3>Eerste iteratie schetsen</h3>
+			<p>Bij het op papier zetten van de eerste schetsen heb ik gekeken naar manieren waarop de gebruiker nieuwe games kan ontdekken. Dit kan aan de hand van de 'News-pagina' en de Explore-pagina'. Daarbij is een eerste versie van een detailpagina uitgewerkt voor wanneer de gebruiker meer te weten wil komen over een specifieke game. 
+
+			<br><br>
+
+			Daarnaast is besloten om op de 'Home-pagina' informatie weer te geven over games die de gebruiker zelf volgt, maar ook games die over het algemeen populair zijn per week.
+
+			<br><br>
+
+			Op de 'Following-pagina' wordt bij elke game een timer weergegeven wanneer het spel uitkomt.
+			</p>
+			<div class="wideImage">
+				<img src="../Afbeeldingen/Gaming/schetsen/schetsen1.jpg" width="100%"></img>
+				<div class="imageBackground"></div>
+				<cite>Eerste iteratie schetsen: Ontdekken nieuwe games</cite>
+			</div>
+
+			<h3>Tweede iteratie schetsen</h3>
+			<p>Bij de tweede iteratie schetsen is de focus meer gelegd op het gebruiken van verschillende cards. Aan de hand hiervan is de lay-out verbeterd op de 'Nieuws-pagina', 'Discovery-pagina' en 'Community-pagina'</p>
+			<div class="wideImage">
+				<img src="../Afbeeldingen/Gaming/schetsen/schetsen2.jpg" width="100%"></img>
+				<div class="imageBackground"></div>
+				<cite>Tweede iteratie schetsen: Verbetering 'Nieuws-pagina', 'Discovery-pagina' en 'Community-pagina'</cite>
+			</div>
+
+			<h3>Wireframes</h3>
+			<p>Verbeterde homepagina met teller en nieuwsartikelen, gemakkelijk nieuwe games ontdekken per genre en met andere gamers erover praten.</p>
+			<div class="wideImage">
+				<img src="../Afbeeldingen/Gaming/Wireframes/wireframes-nieuw.jpg" width="100%"></img>
+				<div class="imageBackground"></div>
+				<cite>Wireframes: Verbeterde homepagina, games ontdekken per genre, praten met anderen op 'Community-pagina'</cite>
+			</div>
+		</div>
+	</section>
+	<section class="eindresultaat-section" id="eindresultaat-section-desktop">
+		<div class="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>4/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Eindresultaat</h4>
+		</div>
+		<div class="ruimte"></div>
+		<div class="eindresultaatTile">
+			<div class="eindresultaatTileImage play-next-header"></div>
+			<div class="eindresultaatTileTekst">
+				<h2>Ontdek nieuwe games</h2>
+				<p>en behaal nieuwe highscores!</p>
+			</div>
+		</div>
+		<div class="eindresultaatContainer eindResultaatStart">
+			<div class="eindresultaatImageTekst" id="eindresultaatITHome">
+				<h4 class="color-pn">1/5</h4>
+				<h3>Home</h3>
+				<p>Bekijk in een overzicht hoe lang het duurt voordat jouw favoriete games uitkomen, krijg het laatste nieuws mee en kom te weten of er een nieuwe trailer uit is gekomen voor een van de games die je volgt!</p>
+			</div>
+			<img src="../Afbeeldingen/Gaming/HifiNieuw/home-image.png" width="100%" class="eindresultaatImage" id="eindresultaatHome"></img>
+		</div>
+		<div class="eindresultaatContainer">
+			<div class="eindresultaatImageTekst" id="eindresultaatITNews">
+				<h4 class="color-pn">2/5</h4>
+				<h3>News</h3>
+				<p>Lees het laatste gaming-gerelateerde nieuws in een handig overzicht. Je kan zelf bepalen of je de meest populaire artikelen leest, de meest recente, of juist artikelen die zijn geschreven over de games die jij volgt. Mocht je een artikel later willen lezen, kan je deze opslaan in je Bookmark lijst.</p>
+			</div>
+			<img src="../Afbeeldingen/Gaming/HifiNieuw/news-image.png" width="100%" class="eindresultaatImage" id="eindresultaatNews"></img>
+		</div>
+		<div class="eindresultaatContainer">
+			<div class="eindresultaatImageTekst" id="eindresultaatITDiscover">
+				<h4 class="color-pn">3/5</h4>
+				<h3>Discover</h3>
+				<p>Ontdek nieuwe games door te bekijken wat er binnenkort uit wordt gebracht , sorteer games op genre en krijg aanbevelingen gebaseerd op jouw persoonlijke voorkeuren en activiteit.</p>
+			</div>
+			<img src="../Afbeeldingen/Gaming/HifiNieuw/discover-image.png" width="100%" class="eindresultaatImage" id="eindresultaatDiscover"></img>
+		</div>
+		<div class="eindresultaatContainer">
+			<div class="eindresultaatImageTekst" id="eindresultaatITCommunity">
+				<h4 class="color-pn">4/5</h4>
+				<h3>Community</h3>
+				<p>Krijg meer te weten over een spel door bestaande threads te bekijken of zelf een thread te beginnen. Krijg meer te weten over een spel door bestaande threads te bekijken of zelf een thread te beginnen.</p>
+			</div>
+			<img src="../Afbeeldingen/Gaming/HifiNieuw/community-image.png" width="100%" class="eindresultaatImage" id="eindresultaatCommunity"></img>
+		</div>
+		<div class="eindresultaatContainer">
+			<div class="eindresultaatImageTekst" id="eindresultaatITFollowing">
+				<h4 class="color-pn">5/5</h4>
+				<h3>Following</h3>
+				<p>Krijg een duidelijk overzicht van op welke dagen er deze maand games uitkomen. Zie daarnaast welke games die je volgt binnenkort uitkomen, of bekijk de volledige lijst.</p>
+			</div>
+			<img src="../Afbeeldingen/Gaming/HifiNieuw/following-image.png" width="100%" class="eindresultaatImage" id="eindresultaatFollowing"></img>
+		</div>
+	</section>
+	<section id="volgendeCaseStatic">
+		<div class="ruimte"></div>
+		<h3>Bedankt voor het lezen!</h3>
+		<p>Klaar voor de volgende case study?</p>
+		<div id="volgendeCaseNieuw">
+			<div id="volgendeCaseNieuwTekst">
+				<h2>Ben Verlengproces</h2>
+				<p>Verlengen kan simpel zijn</p>
+				<input type="button" name="button" value="BEKIJK PROJECT" id="volgendeCaseButton" onclick="benVerlengprocesNieuw()" onmouseover="buttonOn()" onmouseout="buttonOff()">
+			</div>
+			<div class="volgendeCaseBen" id="volgendeCaseImage"></div>
+		</div>
+	</section>
+	<section class="eindresultaat-responsive">
+		<div class="sectie-indicatie-achtergrond">
+			<div class="sectie-indicatie">
+				<h6>4/4</h6>
+			</div>
+			<h4 class="sectie-indicatie-titel">Eindresultaat</h4>
+		</div>
+		<div class="ruimte"></div>
+
+		<div class="eindresultaatTileTekst">
+			<h2>Ontdek nieuwe games</h2>
+			<p>en behaal nieuwe highscores!</p>
+		</div>
+
+		<div class="play-next-header" id="eindresultaatImageMobile"></div>
+
+		<div class="eindresultaat-links">
+			<div class="backdrop-grey"></div>
+			<img  src="../Afbeeldingen/Gaming/HiFi/home.jpg" width="100%">
+		</div>
+
+		<div class="responsive-eindresultaat-beschrijving">
+			<h4 class="color-pn">1/5</h4>
+			<h2 class="">Home</h2>
+			<div class="responsive-eindresultaat-line"></div>
+			<p>Bekijk in een overzicht hoe lang het duurt voordat jouw favoriete games uitkomen, krijg het laatste nieuws mee en kom te weten of er een nieuwe trailer uit is gekomen voor een van de games die je volgt!</p>
+		</div>
+
+		<div class="eindresultaat-dubbel">
+			<div class="backdrop-grey"></div>
+			<img class="eindresultaat-dubbel-links" src="../Afbeeldingen/Gaming/HiFi/news.jpg" width="100%">
+			<img class="eindresultaat-dubbel-rechts" src="../Afbeeldingen/Gaming/HiFi/news-article.jpg" width="100%">
+		</div>
+
+		<div class="responsive-eindresultaat-beschrijving">
+			<h4 class="color-pn">2/5</h4>
+			<h2 class="">News</h2>
+			<div class="responsive-eindresultaat-line"></div>
+			<p>Lees het laatste gaming-gerelateerde nieuws in een handig overzicht. Je kan zelf bepalen of je de meest populaire artikelen leest, de meest recente, of juist artikelen die zijn geschreven over de games die jij volgt. Mocht je een artikel later willen lezen, kan je deze opslaan in je Bookmark lijst.</p>
+		</div>
+
+		<div class="eindresultaat-dubbel">
+			<div class="backdrop-grey"></div>
+			<img class="eindresultaat-dubbel-links" src="../Afbeeldingen/Gaming/HiFi/discover.jpg" width="100%">
+			<img class="eindresultaat-dubbel-rechts" src="../Afbeeldingen/Gaming/HiFi/discover-scrolled.jpg" width="100%">
+		</div>
+
+		<div class="responsive-eindresultaat-beschrijving">
+			<h4 class="color-pn">3/5</h4>
+			<h2 class="">Discover</h2>
+			<div class="responsive-eindresultaat-line"></div>
+			<p>Ontdek nieuwe games door te bekijken wat er binnenkort uit wordt gebracht , sorteer games op genre en krijg aanbevelingen gebaseerd op jouw persoonlijke voorkeuren en activiteit.</p>
+		</div>
+
+		<div class="eindresultaat-rechts">
+			<div class="backdrop-grey"></div>
+			<img  src="../Afbeeldingen/Gaming/HiFi/community.jpg" width="100%">
+		</div>
+
+		<div class="responsive-eindresultaat-beschrijving">
+			<h4 class="color-pn">4/5</h4>
+			<h2 class="">Community</h2>
+			<div class="responsive-eindresultaat-line"></div>
+			<p>Krijg meer te weten over een spel door bestaande threads te bekijken of zelf een thread te beginnen. Krijg meer te weten over een spel door bestaande threads te bekijken of zelf een thread te beginnen.</p>
+		</div>
+
+		<div class="eindresultaat-links">
+			<div class="backdrop-grey"></div>
+			<img  src="../Afbeeldingen/Gaming/HiFi/following.jpg" width="100%">
+		</div>
+
+		<div class="responsive-eindresultaat-beschrijving">
+			<h4 class="color-pn">5/5</h4>
+			<h2 class="">Following</h2>
+			<div class="responsive-eindresultaat-line"></div>
+			<p>Krijg een duidelijk overzicht van op welke dagen er deze maand games uitkomen. Zie daarnaast welke games die je volgt binnenkort uitkomen, of bekijk de volledige lijst.</p>
+		</div>
+	</section>
+	<section id="volgendeCaseCard">
+		<div class="ruimte"></div>
+		<h2>Bedankt voor het lezen!</h2>
+		<p>Klaar voor de volgende case study?</p>
+
+		<div class="projectCard caseCard">
+			<div class="projectCardImage ben-header"></div>
+			<div class="projectCardInfo">
+				<div class="projectCardLabel">
+					<h4>Groepsproject</h4>
+				</div>
+				<h2>Ben Verlengproces</h2>
+				<p>Verlengen kan simpel zijn</p>
+				<input type="button" name="button" value="BEKIJK CASE" onclick="benVerlengprocesWelkom()">
+			</div>
+		</div>
+	</section>
+	<footer onmouseleave="emailDown()">
+		<div id="footer-transparent-left" onmouseover="emailDown()"></div>
+		<div id="email-popup">
+			<input type="text" value="dionvanderriet@gmail.com" id="email-popup-text">
+			<div id="emailCopy" onclick="emailCopied()">
+				<h5 id="emailCopyButton">KOPIËER</h5>
+			</div>
+		</div>
+		<h5>Dion van der Riet 2026</h5>
+			<div id="email" onmouseover="emailUp()"></div>
+			<div id="linkedIn" onclick="linkedIn()"></div>
+		<div class="footer-balk" onmouseout="emailDown()"></div>
+	</footer>
+	<script type="text/javascript" src="../Javascript/case.js"></script>
+	<script type="text/javascript" src="../Javascript/jquery-3.4.1.min.js"></script>
+</body>
+</html>
