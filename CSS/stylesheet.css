@@ -1146,31 +1146,34 @@ body{
 	.research-container > .persona-wrapper {
 	  display: flex;
 	  grid-column: 2 / -1;
-	  gap: 3.75rem; /* 60px (60 / 16 = 3.75rem) */
+	  
+	  /* 1. CRUCIELE FIX: Voorkomt dat het Flex/Grid item de pagina uitrekt */
+	  min-width: 0;
+	  max-width: 100%;
+
+	  gap: 1.5rem; /* Tip: 3.75rem (60px) is erg groot op mobiel, 1.5rem / 24px werkt vaak prettiger */
 	  overflow-x: auto;
 	  scroll-snap-type: x mandatory;
 	  
-	  /* Zorgt voor soepel scrollen op mobiel en verbergt lelijke scrollbars */
 	  scroll-behavior: smooth;
 	  -webkit-overflow-scrolling: touch;
 	  scrollbar-width: none; /* Firefox */
-	  
-	  /* Ruimte aan de zijkant zodat de kaarten niet strak aan de rand plakken */
+
+	  /* Ruimte onderaan en rechts */
 	  padding-bottom: 1rem; 
-	  padding-right: 3.75rem;
+	  padding-right: 1.5rem;
 	}
 
-	/* Verberg scrollbar voor Chrome, Safari en Edge */
-	.persona-wrapper::-webkit-scrollbar {
+	/* Verberg scrollbar voor Chrome, Safari en Opera */
+	.research-container > .persona-wrapper::-webkit-scrollbar {
 	  display: none;
 	}
 
-	.persona-wrapper figure {
-	  /* Elke kaart pakt bijv. 85% van de container, 
-	     waardoor de 2e kaart automatisch voor 15% (minus de gap) in beeld piekt */
-	  flex: 0 0 85%; 
-	  scroll-snap-align: start;
-	  margin: 0; /* Reset standaard figure margin */
+	/* 2. Zorg dat de individuele persona-kaarten niet in elkaar krimpen */
+	.research-container > .persona-wrapper > * {
+	  flex: 0 0 85%; /* Elke kaart pakt 85% van de zichtbare breedte (zodat de volgende alvast uitsteekt) */
+	  max-width: 320px; /* Optioneel: voorkomt dat kaarten te groot worden */
+	  scroll-snap-align: start; /* Zorgt dat kaarten netjes vastklikken bij het scrollen */
 	}
 
 	.map-card {
@@ -1931,6 +1934,10 @@ body{
 		line-height: 1.3;
 	}
 
+	.section-title{
+		margin-bottom: 0.3rem;
+	}
+
 	h4{
 		font-size: 1.25rem; 
 		line-height: 1.35;
@@ -1956,6 +1963,16 @@ body{
   		line-height: 1.6;
   		margin-top:0;
 	}
+
+	.full-width-text{
+		display: grid;
+		grid-template-columns: 1.5rem auto 1.5rem;
+		width: 100%;
+	}
+
+		.full-width-text > *{
+			grid-column: 2/3
+		}
 
 	.welkom-projecten-info input[type="button"]{
 		display: flex;
