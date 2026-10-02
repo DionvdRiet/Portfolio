@@ -2362,6 +2362,13 @@ body{
 		animation: welkomFoto 2s cubic-bezier(.365,.305,0,1) forwards;
 	}
 
+	.persona-wrapper figure picture,
+	  .persona-wrapper figure img {
+	    display: block;
+	    width: 100%;
+	    height: auto;
+	  }
+
 	@keyframes welkomFoto{
 		from {background-size: 140%;}
 		to {background-size: 110%;}

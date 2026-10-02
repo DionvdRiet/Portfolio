@@ -142,28 +142,91 @@
 			<p class="hero-text">Deze inzichten zijn verwerkt in persona’s voor de twee doelgroepen: Gen-Z Reiziger en Millennial Reiziger.</p>
 
 			<div class="persona-wrapper">
-				<figure>
-				  <img 
-				    src="../Afbeeldingen/Roadmappie/Research/Persona_GenZ.png" 
-				    srcset="../Afbeeldingen/Roadmappie/Research/Persona_GenZ.png 1x, ../Afbeeldingen/Roadmappie/Research/Persona_GenZ@2x.png 2x" 
-				    alt="Persona Lisa - Gen-Z Reiziger"
-				    width="100%"
-				    style="max-width: 100%; height: auto;"
-				  >
-				  <figcaption>Persona: Gen-Z Reiziger</figcaption>
-				</figure>
 
-				<figure>
-				  <img 
-				    src="../Afbeeldingen/Roadmappie/Research/Persona_Millennial.png" 
-				    srcset="../Afbeeldingen/Roadmappie/Research/Persona_Millennial.png 1x, ../Afbeeldingen/Roadmappie/Research/Persona_Millennial@2x.png 2x" 
-				    alt="Persona Jim - Millennialreiziger"
-				    width="100%"
-				    style="max-width: 100%; height: auto;"
-				  >
-				  <figcaption>Persona: Millennialreiziger</figcaption>
-				</figure>
-			</div>
+  <!-- ==================== GEN-Z PERSONA ==================== -->
+  <figure>
+    <picture>
+      <!-- Desktop versie (1 grote kaart op schermen > 768px) -->
+      <source 
+        media="(min-width: 769px)" 
+        srcset="
+          ../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Desktop.png 1x,
+          ../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Desktop@2x.png 2x
+        "
+      >
+      <!-- Mobiele versie 1 (Fall-back en mobiele weergave) -->
+      <img 
+        src="../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Mobile_1.png" 
+        srcset="
+          ../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Mobile_1.png 1x,
+          ../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Mobile_1@2x.png 2x
+        " 
+        alt="Persona Lisa - Gen-Z Reiziger (Deel 1)"
+        loading="lazy"
+      >
+    </picture>
+    <figcaption>Persona: Gen-Z Reiziger</figcaption>
+  </figure>
+
+  <!-- Alleen op mobiel zichtbaar: Gen-Z Deel 2 -->
+  <figure class="mobile-only">
+    <picture>
+      <img 
+        src="../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Mobile_2.png" 
+        srcset="
+          ../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Mobile_2.png 1x,
+          ../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Mobile_2@2x.png 2x
+        " 
+        alt="Persona Lisa - Gen-Z Reiziger (Deel 2)"
+        loading="lazy"
+      >
+    </picture>
+    <figcaption>Persona: Gen-Z Reiziger (Details)</figcaption>
+  </figure>
+
+
+  <!-- ==================== MILLENNIAL PERSONA ==================== -->
+  <figure>
+    <picture>
+      <!-- Desktop versie -->
+      <source 
+        media="(min-width: 769px)" 
+        srcset="
+          ../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Desktop.png 1x,
+          ../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Desktop@2x.png 2x
+        "
+      >
+      <!-- Mobiele versie 1 -->
+      <img 
+        src="../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Mobile_1.png" 
+        srcset="
+          ../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Mobile_1.png 1x,
+          ../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Mobile_1@2x.png 2x
+        " 
+        alt="Persona Jim - Millennialreiziger (Deel 1)"
+        loading="lazy"
+      >
+    </picture>
+    <figcaption>Persona: Millennialreiziger</figcaption>
+  </figure>
+
+  <!-- Alleen op mobiel zichtbaar: Millennial Deel 2 -->
+  <figure class="mobile-only">
+    <picture>
+      <img 
+        src="../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Mobile_2.png" 
+        srcset="
+          ../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Mobile_2.png 1x,
+          ../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Mobile_2@2x.png 2x
+        " 
+        alt="Persona Jim - Millennialreiziger (Deel 2)"
+        loading="lazy"
+      >
+    </picture>
+    <figcaption>Persona: Millennialreiziger (Details)</figcaption>
+  </figure>
+
+</div>
 		</div>
 
 	</section>
