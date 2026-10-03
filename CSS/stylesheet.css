@@ -1161,7 +1161,6 @@ body{
 
 	  /* Ruimte onderaan en rechts */
 	  padding-bottom: 1rem; 
-	  padding-right: 1.5rem;
 	}
 
 	/* Verberg scrollbar voor Chrome, Safari en Opera */
@@ -2016,9 +2015,7 @@ body{
 		}
 
 		#case-header-title{
-			width: 100%;
-			grid-column: 2/6;
-			grid-row: 2/3;
+			/*width: 100%;*/
 		}
 
 		#projectDescriptionContainer{
@@ -2367,6 +2364,15 @@ body{
 	    display: block;
 	    width: 100%;
 	    height: auto;
+	  }
+
+	.research-container .persona-wrapper > figure {
+	    /* 80% breedte MIN de gap-ruimte */
+	    flex: 0 0 calc(85% - 1.5rem);
+	    max-width: calc(85% - 1.5rem);
+	    min-width: 0;
+	    scroll-snap-align: start;
+	    margin: 0;
 	  }
 
 	@keyframes welkomFoto{
@@ -3877,6 +3883,7 @@ body{
 
 	.persona-wrapper {
 		gap: 3.75rem;
+		grid-column: 2/-1;
 	}
 	.persona-wrapper figure {
 	/* Op desktop kun je ze eventueel breder of juist naast elkaar tonen */
