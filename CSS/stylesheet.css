@@ -723,7 +723,6 @@ body{
 
 		.stay-showcase figure.is-wide,
 		  .stay-showcase picture {
-		    display: block;
 		    width: 100%;
 		    margin: 0;
 		  }
@@ -1166,13 +1165,6 @@ body{
 	/* Verberg scrollbar voor Chrome, Safari en Opera */
 	.research-container > .persona-wrapper::-webkit-scrollbar {
 	  display: none;
-	}
-
-	/* 2. Zorg dat de individuele persona-kaarten niet in elkaar krimpen */
-	.research-container > .persona-wrapper > * {
-	  flex: 0 0 85%; /* Elke kaart pakt 85% van de zichtbare breedte (zodat de volgende alvast uitsteekt) */
-	  max-width: 320px; /* Optioneel: voorkomt dat kaarten te groot worden */
-	  scroll-snap-align: start; /* Zorgt dat kaarten netjes vastklikken bij het scrollen */
 	}
 
 	.map-card {
@@ -2375,6 +2367,13 @@ body{
 	    margin: 0;
 	  }
 
+	/* 2. Zorg dat de individuele persona-kaarten niet in elkaar krimpen */
+	.research-container > .persona-wrapper > * {
+	  flex: 0 0 85%; /* Elke kaart pakt 85% van de zichtbare breedte (zodat de volgende alvast uitsteekt) */
+	  max-width: 320px; /* Optioneel: voorkomt dat kaarten te groot worden */
+	  scroll-snap-align: start; /* Zorgt dat kaarten netjes vastklikken bij het scrollen */
+	}
+
 	@keyframes welkomFoto{
 		from {background-size: 140%;}
 		to {background-size: 110%;}
@@ -3521,7 +3520,7 @@ body{
 		margin: 80px 0px 120px 0px;
 	}
 
-	.text-left{
+	.text-left, .full-width-text{
 		grid-column: 2 / 6;
 	}
 
