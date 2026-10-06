@@ -600,8 +600,6 @@ function noOpacity(){
 
     document.getElementById("caseHeaderImage").style.backgroundPosition = "52% 20%";
     document.getElementById("caseHeaderImage").style.height = "80%";
-
-    document.getElementById("case-header-description").style.transform = "translateX(0%)"
 }
 
 function linkedIn(){
