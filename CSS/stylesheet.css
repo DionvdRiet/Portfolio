@@ -42,7 +42,7 @@ body{
 			transition: transform 1s cubic-bezier(.365,.305,0,1);
 		}
 
-		#loadWebsiteTitel h2{
+		#loadWebsiteTitel span{
 			margin-bottom: 0px;
 		}
 
@@ -481,7 +481,7 @@ body{
 		font-size: 28px;
 	}
 
- 	h1,h2,h3,h4,h5,h6{
+ 	h1,h2,h3,h4,h5,h6,#nav-project-title{
  		font-family: paralucent, sans-serif;
  		font-weight: 500;
  		font-style: normal;
@@ -489,17 +489,28 @@ body{
  		text-align: left;
  	}
 
- 	p{
+ 	p, figcaption{
  		font-family: 'Work Sans', sans-serif;
- 		font-weight: 400;
  		font-style: normal;
  		color: #5C5C5C;
+ 	}
+
+ 	p{
+ 		font-weight: 400;
  		text-align: left;
+ 		margin:0;
  	}
 
  		p > span{
  			font-weight: 700;
  		}
+
+ 	figcaption{
+ 		margin-top: 1.5rem;
+ 		font-size: 0.875rem;
+ 		font-weight: 600;
+ 		text-align: center;
+ 	}
 
 		#case-title{
 			z-index: 1;
@@ -1178,13 +1189,6 @@ body{
 	  border-radius: 16px;
 	}
 
-	figcaption {
-	  margin-top: 12px;
-	  font-size: 14px;
-	  color: #666; /* Subtiele kleur voor bijschrift */
-	  text-align: center;
-	}
-
 	.crop-img {
 	  width: 100%;
 	  height: 100%;
@@ -1526,8 +1530,6 @@ body{
 			#volgendeCaseNieuwTekst p{
 				color: #5c5c5c;
 				font-weight: 400;
-				margin-bottom: 32px;
-				margin-top: 16px;
 			}
 
 		input[type="button"]{
@@ -1636,7 +1638,7 @@ body{
 		}
 
 		.bykarlie-header{
-			background-image: url('../Afbeeldingen/Bykarlie/header.jpg');
+			background-image: url('../Afbeeldingen/Bykarlie/Header.jpg');
 		}
 
 		.bykarlie-header-responsive{
@@ -1900,10 +1902,10 @@ body{
 
 	h1{
 		font-size: 2rem;
-		line-height: 1.2;
+		line-height: 1.20;
 	}
 
-	#loadWebsiteTitel h2{
+	#loadWebsiteTitel span{
 		font-size: 3rem;
 		margin-bottom: 8px;
 	}
@@ -1913,16 +1915,21 @@ body{
 	}
 
 	h2{
-		font-size: 1.5rem; 
-		line-height: 1.25;
 	}
 
  	h3{
-		font-size: 1.25rem; 
-		line-height: 1.3;
+		font-size: 1.15rem; 
+		line-height: 1.30;
+	}
+
+	.hero-title{
+		font-size: 1.75rem; 
+		line-height: 1.20;
 	}
 
 	.section-title{
+		font-size: 1.35rem; 
+		line-height: 1.25;
 		margin-bottom: 0.3rem;
 	}
 
@@ -1948,7 +1955,7 @@ body{
 
 	p{
 		font-size: 1rem;
-  		line-height: 1.6;
+  		line-height: 1.60;
   		margin-top:0;
 	}
 
@@ -2491,6 +2498,7 @@ body{
 	}
 
 	#nav-project-title{
+		font-size: 1.125rem;
 		align-self: center;
 		opacity: 1;
 		transform: translateY(0%);
@@ -2561,7 +2569,7 @@ body{
 			display: flex;
 			position: relative;
 			justify-content: center;
-			max-height: 4rem;
+			height: 4rem;
 		}
 
 			#responsive-nav-list{
@@ -2577,7 +2585,7 @@ body{
 				transition: opacity .3s cubic-bezier(.365,.305,0,1);
 			}
 
-			#responsive-nav-list h2{
+			#responsive-nav-list a{
 				align-self: center;
 				font-family: paralucent, sans-serif;
 				font-style: normal;
@@ -3520,10 +3528,6 @@ body{
 		display: block;
 	}
 
-	.hero-text{
-		margin: 80px 0px 120px 0px;
-	}
-
 	.text-left, .full-width-text{
 		grid-column: 2 / 6;
 	}
@@ -3536,8 +3540,9 @@ body{
 		grid-column: 8/12;
 	}
 
-	.research-container > .hero-text{
+	.research-container > .callout-text{
 		grid-column: 4/10;
+		margin: 80px 0px 120px 0px;
 		font-size: 32px;
 		font-weight: 600;
 		color: #757575;
@@ -3547,7 +3552,6 @@ body{
  	p{
 		font-size: 1.125rem;
 		line-height: 1.8;
-		margin-top:0px;
 	}
 
 		.p-small{
@@ -3559,23 +3563,45 @@ body{
 	}
 
 	h2{
-		font-size: 2.5rem;
+		
 	}
 
  	h3{
-		font-size: 1.375rem;
+		font-size: 1.35rem;
 	}
 
 	h4{
-		font-size: 1.25rem;
+		font-size: 1.15rem;
 	}
 
 	h5{
-		font-size: 1.125rem;
+		font-size: 1rem;
 	}
 
 	h6{
-		font-size: 1rem;
+		font-size: 0.875rem;
+	}
+
+	.hero-title{
+		font-size: 2.5rem;
+	}
+
+	.section-title{
+		font-size: 1.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-title{
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.next-case-title{
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.next-case-subtitle{
 	}
 
 	input[type="button"]{
@@ -3638,10 +3664,6 @@ body{
 		display: grid;
 	}
 
-		#volgendeCaseStatic h3{
-			margin-bottom: 0px;
-		}
-
 	.indexHeader{
 		opacity: 0;
 		animation-duration: 1s;
@@ -3689,6 +3711,10 @@ body{
 		}
 
 			#active-page-1, #inactive-page-1, #inactive-page-2{
+				font-family: paralucent, sans-serif;
+				font-weight: 500;
+				font-style: normal;
+				text-align: left;
 				color: #131824;
 				font-size: 16px;
 				align-self: center;
@@ -4088,7 +4114,7 @@ body{
 
 	footer{
 		grid-template-columns: 140px auto auto 200px 50px 50px 1%;
-		grid-template-rows: 50px 50px;
+		grid-template-rows: repeat(2, 3.125rem);
 	}
 
 	.affinity{

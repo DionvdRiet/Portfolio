@@ -16,13 +16,13 @@
 		</div>
 		<div id="headerContainer" class="headerContainerCase">
 			<div id="headerItem1" onmouseover="headerItemOne()" onmouseout="headerItemOffOne()" onclick="home()">
-				<h2 id="inactive-page-1">Welkom</h2>
+				<a id="inactive-page-1">Welkom</a>
 			</div>
 			<div id="headerItem3">
-				<h2 id="active-page-1">Roadmappie</h2>
+				<span id="active-page-1">Roadmappie</span>
 			</div>
 			<div id="headerItem2" onmouseover="headerItemTwo()" onmouseout="headerItemOffTwo()" onclick="contact()">
-				<h2 id="inactive-page-2">Contact</h2>
+				<a id="inactive-page-2">Contact</a>
 			</div>
 
 			<div id="headerContainer1"></div>
@@ -40,11 +40,11 @@
 				<div id="hamburger-1"></div>
 				<div id="hamburger-2"></div>
 			</div>
-			<h2 id="nav-project-title">Roadmappie</h2>
+			<span id="nav-project-title">Roadmappie</span>
 		</div>
 		<div id="responsive-nav-list">
-			<h2 id="responsive-nav-list-item-1" onclick="home()">Welkom</h2>
-			<h2 id="responsive-nav-list-item-2" onclick="contact()">Contact</h2>
+			<a id="responsive-nav-list-item-1" onclick="home()">Welkom</a>
+			<a id="responsive-nav-list-item-2" onclick="contact()">Contact</a>
 		</div>
 	</header>
 	
@@ -72,11 +72,11 @@
 
 		<div class="research-container">
 			<div class="opdracht-container">
-				<h2>Opdracht</h2>
+				<h2 class="hero-title">Opdracht</h2>
 				<p>Maak een reisapp voor Gen-z'ers en millennials, van deskresearch tot aan branding en hi-fi prototype.</p>
 			</div>
 
-			<p class="hero-text">De reissector is gigantisch. Omdat het plannen en boeken reizen een wereldwijd begrijp zijn en er continu onderzoek wordt gedaan naar reisgedrag- en behoeften heb ik uitsluitend deskresearch uitgevoerd om tot mijn data te komen voor dit project.</p>
+			<p class="callout-text">De reissector is gigantisch. Omdat het plannen en boeken reizen een wereldwijd begrijp zijn en er continu onderzoek wordt gedaan naar reisgedrag- en behoeften heb ik uitsluitend deskresearch uitgevoerd om tot mijn data te komen voor dit project.</p>
 
 			<div class="presentation-cards is-full-width">
 				<img 
@@ -139,14 +139,12 @@
 				<figcaption>Belangrijkste inzichten uit Affinity Map</figcaption>
 			</figure>
 
-			<p class="hero-text">Deze inzichten zijn verwerkt in persona’s voor de twee doelgroepen: Gen-Z Reiziger en Millennial Reiziger.</p>
+			<p class="callout-text">Deze inzichten zijn verwerkt in persona’s voor de twee doelgroepen: Gen-Z Reiziger en Millennial Reiziger.</p>
 
 			<div class="persona-wrapper">
 
-  <!-- ==================== GEN-Z PERSONA ==================== -->
   <figure>
     <picture>
-      <!-- Desktop versie (1 grote kaart op schermen > 768px) -->
       <source 
         media="(min-width: 769px)" 
         srcset="
@@ -154,7 +152,6 @@
           ../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Desktop@2x.png 2x
         "
       >
-      <!-- Mobiele versie 1 (Fall-back en mobiele weergave) -->
       <img 
         src="../Afbeeldingen/Roadmappie/Research/Persona_GenZ_Mobile_1.png" 
         srcset="
@@ -168,7 +165,6 @@
     <figcaption>Persona: Gen-Z Reiziger</figcaption>
   </figure>
 
-  <!-- Alleen op mobiel zichtbaar: Gen-Z Deel 2 -->
   <figure class="mobile-only">
     <picture>
       <img 
@@ -185,10 +181,8 @@
   </figure>
 
 
-  <!-- ==================== MILLENNIAL PERSONA ==================== -->
   <figure>
     <picture>
-      <!-- Desktop versie -->
       <source 
         media="(min-width: 769px)" 
         srcset="
@@ -196,7 +190,6 @@
           ../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Desktop@2x.png 2x
         "
       >
-      <!-- Mobiele versie 1 -->
       <img 
         src="../Afbeeldingen/Roadmappie/Research/Persona_Millennial_Mobile_1.png" 
         srcset="
@@ -210,7 +203,6 @@
     <figcaption>Persona: Millennialreiziger</figcaption>
   </figure>
 
-  <!-- Alleen op mobiel zichtbaar: Millennial Deel 2 -->
   <figure class="mobile-only">
     <picture>
       <img 
@@ -522,12 +514,12 @@
 
 	<section id="volgendeCaseStatic">
 		<div class="ruimte"></div>
-		<h3>Bedankt voor het lezen!</h3>
+		<h2 class="footer-title">Bedankt voor het lezen!</h2>
 		<p>Klaar voor de volgende case study?</p>
 		<div id="volgendeCaseNieuw">
 			<div id="volgendeCaseNieuwTekst">
-				<h2>ByKarlie</h2>
-				<p>Redesign kleding webshop</p>
+				<h3 class="next-case-title">ByKarlie</h3>
+				<p class="next-case-subtitle">Redesign kleding webshop</p>
 				<input type="button" name="button" value="BEKIJK PROJECT" id="volgendeCaseButton" onclick="bykarlieNieuw()" onmouseover="buttonOn()" onmouseout="buttonOff()">
 			</div>
 			<div class="volgendeCaseBykarlie" id="volgendeCaseImage"></div>
