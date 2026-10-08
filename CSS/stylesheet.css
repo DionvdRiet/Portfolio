@@ -91,12 +91,14 @@ body{
 			}
 
 	.progress-container, .progess-bar{
-		height: 2px;
+		height: 0.125rem;
 	}
 
 	.progress-container{
-	  width: 100%;
-	  background: transparent;
+		grid-column: 1/-1;
+		grid-row: 1/2;
+		width: 100%;
+		background: transparent;
 	}
 
 		.progress-bar{
@@ -273,12 +275,6 @@ body{
 			grid-column: 2/3;
 		}
 
-	header{
-		position: fixed;
-		background-color: transparent;
-		border-bottom:1px solid rgba(112,112,112,0.15); 
-	}
-
 		header h1{
 			align-self: center;
 			display: flex;
@@ -296,7 +292,7 @@ body{
 			}
 
 				#projectTitle,  #projectType, #projectDescription{
-					margin: 8px 0px;
+					margin: 0.5rem 0px;
 				}
 
 				#projectTitle{
@@ -1483,7 +1479,7 @@ body{
 			}
 
 			.volgendeCaseBykarlie{
-				background-image: url('../Afbeeldingen/ByKarlie/header.jpg');
+				background-image: url('../Afbeeldingen/ByKarlie/Header.jpg');
 			}
 
 			.volgendeCaseCardSaveNow, .volgendeCaseCardPlayNext, .volgendeCaseCardBen, .volgendeCaseCardbykarlie{
@@ -1638,7 +1634,7 @@ body{
 		}
 
 		.bykarlie-header{
-			background-image: url('../Afbeeldingen/Bykarlie/Header.jpg');
+			background-image: url('../Afbeeldingen/ByKarlie/Header.jpg');
 		}
 
 		.bykarlie-header-responsive{
@@ -3645,7 +3641,7 @@ body{
 
 	.caseLanding{
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: 8vh 16vh 3.375rem 60vh;
+		grid-template-rows: 4.5rem 16vh 3.375rem 1fr;
 		min-height: 100vh;
 	}
 
@@ -3671,31 +3667,90 @@ body{
 	}
 
 	#desktop{
+		position: fixed;
+		top: 1.5rem;
 		display: grid;
-		grid-template-columns: 35% auto 35%;
+		grid-template-columns: 8.75rem auto 8.75rem;
+		grid-template-rows: 0.125rem 4.25rem 0.125rem;
 		width: 100vw;
 		z-index: 3;
-		margin-top: -4px;
-		background-color: transparent;
-		border-bottom: 1px solid rgba(112,112,112,0.15);
 		transition: background-color .6s cubic-bezier(.365,.305,0,1);  
-
 	}
-
-		#desktop, #headerContainer{
-			height: 8vh;
-			background-color: white;
-			/*transition: height .6s cubic-bezier(.365,.305,0,1);*/
-		}
 
 		#headerContainer{
 			display: grid;
-			grid-template-rows: 100% 4px;
+			grid-template-columns: 8.75rem 7.50rem auto 7.50rem 8.75rem;
 			grid-column: 2/3;
-			/*height: auto;*/
+			grid-row: 2/3;
+			height: 4.25rem;
 			width: 100%;
-			background-color: transparent;
+			background-color: rgba(239, 239, 239, 0.30);
+			border-radius: 1.5rem;
 			/*box-shadow: 0px 10px 20px rgba(112,112,112,0.05);*/
+		}
+
+			.headerItems{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+				grid-column: 3/4;
+			}
+
+			.lang-switch{
+				display: flex;
+				justify-content: space-around;
+				flex-direction: row;
+				row-gap: 2.875rem;
+				position: absolute;
+				right: 10.75rem;
+				border-radius: 100px;
+				background-color: #FFED00;
+				grid-column: 4/5;
+				width: 7.50rem;
+				height: 1.75rem;
+				align-self: center;	
+				transform: translateX(0px);
+			}
+
+				.lang-switch > button{
+					z-index: 2;
+					background: none;
+					border: none;
+					font-family: paralucent, sans-serif;
+					font-style: normal;
+				}
+
+				.lang-btn {
+				  font-weight: 400;
+				  color: #948A00;
+				}
+
+					.lang-btn:hover{
+						color:#131A2B;
+						font-weight: 500;
+					}
+
+				/* Actieve status */
+				.active-lang {
+				  font-weight: 500;
+				  color:#131A2B;
+				}
+
+				.lang-indicator{
+					z-index: 1;
+					position: absolute;
+					height: 1.25rem;
+					left: 0.25rem;
+					top: 0.25rem;
+					width: 3.25rem;
+					background-color: white;
+					border-radius: 100px;
+					transition: transform 0.4s cubic-bezier(.365,.305,0,1);
+				}
+
+		.headerIndicator{
+			grid-column: 2/3;
+			grid-row: 3/4;
 		}
 
 		.headerContainerDefault{
@@ -3749,7 +3804,7 @@ body{
 			}
 
 			#headerContainer1, #headerContainer2, #headerContainer3{
-				height: 2px;
+				height: 0.125;
 				width: 100%;
 				/*transform: translateY(-100px);*/
 			}

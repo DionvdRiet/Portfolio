@@ -15,20 +15,33 @@
 			<div class="progress-bar" id="myBar"></div>
 		</div>
 		<div id="headerContainer" class="headerContainerCase">
-			<div id="headerItem1" onmouseover="headerItemOne()" onmouseout="headerItemOffOne()" onclick="home()">
-				<a id="inactive-page-1">Welkom</a>
-			</div>
-			<div id="headerItem3">
-				<span id="active-page-1">Roadmappie</span>
-			</div>
-			<div id="headerItem2" onmouseover="headerItemTwo()" onmouseout="headerItemOffTwo()" onclick="contact()">
-				<a id="inactive-page-2">Contact</a>
+			<div class="headerItems">
+				<div id="headerItem1" onmouseover="headerItemOne()" onmouseout="headerItemOffOne()" onclick="home()">
+					<a id="inactive-page-1">Welkom</a>
+				</div>
+				<div id="headerItem3">
+					<span id="active-page-1">Roadmappie</span>
+				</div>
+				<div id="headerItem2" onmouseover="headerItemTwo()" onmouseout="headerItemOffTwo()" onclick="contact()">
+					<a id="inactive-page-2">Contact</a>
+				</div>
 			</div>
 
+			<div class="lang-switch" role="radiogroup" aria-label="Taalselectie">
+			  <div class="lang-indicator"></div>
+			  
+			  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands" onclick="langToNL()">NL</button>
+			  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels" onclick="langToEn()">EN</button>
+			</div>
+
+		</div>
+		<div class="headerIndicator">
 			<div id="headerContainer1"></div>
 			<div id="headerContainer2" id="headerContainerActive"></div>
 			<div id="headerContainer3"></div>
 		</div>
+
+		
 	</header>
 	<header id="responsive-nav">
 		<div class="progress-container">
@@ -55,7 +68,7 @@
 		</div>
 		<div id="projectDescriptionContainer">
 			<div id="case-header-line"></div>
-			<p id="projectDescription">Reisapp waar de community centraal staat</p>
+			<p data-i18n="projectDescription" id="projectDescription">Reisapp waar de community centraal staat</p>
 		</div>
 		<div class="case-header-content">
 			<div class="roadmappie-header" id="caseHeaderImage"></div>
@@ -539,6 +552,7 @@
 			<div id="linkedIn" onclick="linkedIn()"></div>
 		<div class="footer-balk" onmouseout="emailDown()"></div>
 	</footer>
-	<script type="text/javascript" src="../Javascript/case.js"></script>
+	<script type="text/javascript" src="../Javascript/script.js"></script>
+	<script type="text/javascript" src="../Javascript/jquery-3.4.1.min.js"></script>
 </body>
 </html>
