@@ -22,36 +22,99 @@ aanHetScrollen();
 startAnimation(x);
 };
 
+// 1. Alle vertalingen overzichtelijk genest
 const translations = {
   nl: {
-    projectDescription: "Reisapp waar de community centraal staat",
-    // Hier kun je later eenvoudig nieuwe sleutels toevoegen:
-    // heroTitle: "Welkom op mijn portfolio",
+    common: {
+      navWelkom: "Welkom",
+      briefTitle: "Opdracht"
+    },
+    roadmappie: {
+      projectDescription: "Reisapp waar de community centraal staat",
+      briefText: "Maak een reisapp voor Gen-z'ers en millennials, van deskresearch tot aan branding en hi-fi prototype.",
+      calloutDeskresearch: "De reissector is gigantisch. Omdat het plannen en boeken reizen een wereldwijd begrijp zijn en er continu onderzoek wordt gedaan naar reisgedrag- en behoeften heb ik uitsluitend deskresearch uitgevoerd om tot mijn data te komen voor dit project.",
+      reisgedragTitle: "Waardevolle patronen ontdekken in reisgedrag",
+      reisgedragText: "Via uitgebreid deskresearch verzamelde ik bronnen over het reisgedrag van Gen-Z en Millennials. Door internationale, Europese en Amerikaanse onderzoeken te vergelijken, filterde ik de belangrijkste overlap én ontdekte ik culturele nuances. Deze data vormde de basis voor gerichte ontwerpkeuzes.",
+      affinity1: "Affinity Map: Ruwe data per bron",
+      affinity2: "Affinity Map: Gecategoriseerd op thema's",
+      affinity3: "Belangrijkste inzichten uit Affinity Map",
+      calloutPersona: "Deze inzichten zijn verwerkt in persona’s voor de twee doelgroepen: Gen-Z Reiziger en Millennial Reiziger.",
+      personaGenZ: "Persona: Gen-Z Reiziger",
+      personaMillennial: "Persona: Millennialreiziger",
+      designSystemText: "Het gehele designsysteem is van de grond af opgebouwd voor zowel de wireframes als de hi-fi designs.",
+      staysTitle: "Het vertrekpunt voor jouw perfecte verblijf",
+      staysText: "Vanaf de homepagina ontdek en boek je moeiteloos het ideale verblijf op jouw droombestemming. Snel, overzichtelijk en afgestemd op jouw reisgezelschap.",
+      flightsTitle: "Ook de vlucht regel je in de app",
+      flightsText: "Vind direct de vlucht die naadloos aansluit op jouw reisschema. Met slimme filters selecteer je duurzamere opties en zie je in één oogopslag hoeveel CO₂-uitstoot je bespaart of compenseert.",
+      communityTitle: "De community is het hart van Roadmappie",
+      communityText: "Gebruikers kunnen op hun profiel hun eigen top 3 lijsten maken van de stad waarin ze wonen of gewoond hebben. De beste restaurants, activiteiten en bezienswaardigheden voeg je snel en gemakkelijk toe.",
+      activityTitle: "Inspiratie voor onvergetelijke momenten",
+      activityText: "Van boottocht tot museumbezoek: elke stad heeft een eigen overzichtspagina boordevol inspiratie. Hier vind je de hoogst gewaardeerde ervaringen, tipt door medereizigers én de lokale community.",
+      groupTitle: "De complete groepsreis op een centrale plek",
+      groupText: "Accommodaties, vluchten, huurauto's en dagplanningen overzichtelijk gebundeld. Op de Group Trip-pagina vloeit alles vlekkeloos samen, zodat je altijd up-to-date bent met je vakantie.",
+
+    }
   },
   en: {
-    projectDescription: "Travel app centered around the community",
-    // heroTitle: "Welcome to my portfolio",
+    common: {
+      navWelkom: "Welcome",
+      briefTitle: "Brief"
+    },
+    roadmappie: {
+      projectDescription: "Travel app centered around the community",
+      briefText: "Create a travel app for Gen Z and millennials, covering everything from desk research to branding and a high-fidelity prototype.",
+      calloutDeskresearch: "The travel sector is enormous. Since planning and booking trips are global phenomena and research into travel behavior and needs is constantly being conducted, I relied exclusively on desk research to gather the data for this project.",
+      reisgedragTitle: "Uncovering valuable patterns in travel behavior",
+      reisgedragText: "Through extensive desk research, I gathered sources on the travel behavior of Gen Z and Millennials. By comparing international, European, and American studies, I filtered out key overlaps and identified cultural nuances. This data formed the foundation for targeted design choices.",
+      affinity1: "Affinity Map: Raw data per source",
+      affinity2: "Affinity Map: Categorized by themes",
+      affinity3: "Key insights from the Affinity Map",
+      calloutPersona: "These insights were incorporated into personas for the two target groups: Gen Z Traveler and Millennial Traveler.",
+      personaGenZ: "Persona: Gen Z Traveler",
+      personaMillennial: "Persona: Millennial Traveler",
+      designSystemText: "The entire design system was built from the ground up for both the wireframes and hi-fi designs.",
+      staysTitle: "The starting point for your perfect stay",
+      staysText: "From the home page, effortlessly discover and book the ideal stay at your dream destination. Fast, intuitive, and tailored to your travel group.",
+      flightsTitle: "Book your flight directly within the app",
+      flightsText: "Instantly find flights that seamlessly fit your travel schedule. Smart filters allow you to select more sustainable options and view your CO₂ savings or offsets at a glance.",
+      communityTitle: "Community is at the heart of Roadmappie",
+      communityText: "Users can create top 3 lists on their profiles for cities they live or have lived in. Quickly and easily add the best restaurants, activities, and sights.",
+      activityTitle: "Inspiration for unforgettable moments",
+      activityText: "From boat tours to museum visits: every city features a dedicated overview page packed with inspiration. Discover top-rated experiences recommended by fellow travelers and the local community.",
+      groupTitle: "Your entire group trip in one central place",
+      groupText: "Accommodations, flights, rental cars, and daily itineraries neatly bundled together. On the Group Trip page, everything flows together seamlessly so you're always up to date on your vacation.",
+    }
   }
 };
 
-
-const langSwitch = document.querySelector('.lang-switch');
+// 2. Elementen selecteren
 const nlBtn = document.querySelector('[data-lang="nl"]');
 const enBtn = document.querySelector('[data-lang="en"]');
 const langIndicator = document.querySelector('.lang-indicator');
 
+// 3. Universele vertaalfunctie
 function setLanguage(lang) {
-  // Zoek alle elementen met data-i18n
   const elementsToTranslate = document.querySelectorAll('[data-i18n]');
 
   elementsToTranslate.forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      element.textContent = translations[lang][key];
+    // Splits paden zoals "roadmappie.projectDescription"
+    const keyPath = element.getAttribute('data-i18n').split('.');
+    
+    // Door het translations object navigeren
+    let translation = translations[lang];
+    keyPath.forEach(key => {
+      if (translation) {
+        translation = translation[key];
+      }
+    });
+
+    // Tekst updaten als de vertaling bestaat
+    if (translation) {
+      element.textContent = translation;
     }
   });
 
-  // Update de knoppen en indicator-status
+  // Actieve status en indicator-positie bijwerken
   if (lang === 'en') {
     nlBtn.classList.remove('active-lang');
     enBtn.classList.add('active-lang');
@@ -63,13 +126,13 @@ function setLanguage(lang) {
   }
 }
 
-// 4. Event Listeners
-if (enBtn) {
-  enBtn.addEventListener('click', () => setLanguage('en'));
-}
-
+// 4. Event Listeners (vervangers van onclick)
 if (nlBtn) {
   nlBtn.addEventListener('click', () => setLanguage('nl'));
+}
+
+if (enBtn) {
+  enBtn.addEventListener('click', () => setLanguage('en'));
 }
 
 function projectenIndicator(){

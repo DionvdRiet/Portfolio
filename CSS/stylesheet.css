@@ -3673,8 +3673,7 @@ body{
 		grid-template-columns: 8.75rem auto 8.75rem;
 		grid-template-rows: 0.125rem 4.25rem 0.125rem;
 		width: 100vw;
-		z-index: 3;
-		transition: background-color .6s cubic-bezier(.365,.305,0,1);  
+		z-index: 3;  
 	}
 
 		#headerContainer{
@@ -3685,9 +3684,18 @@ body{
 			height: 4.25rem;
 			width: 100%;
 			background-color: rgba(239, 239, 239, 0.30);
-			border-radius: 1.5rem;
+			border-radius: 0.4rem;
+			opacity: 0.7;
+			transition: all 6s cubic-bezier(.365,.305,0,1);
 			/*box-shadow: 0px 10px 20px rgba(112,112,112,0.05);*/
 		}
+
+			#headerContainer:hover{
+				opacity: 1;
+				border:1px solid rgba(239, 239, 239, 1.0);
+				box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.04);
+				background-color: rgba(255, 255, 255, 0.9);
+			} 
 
 			.headerItems{
 				display: flex;
@@ -3696,18 +3704,45 @@ body{
 				grid-column: 3/4;
 			}
 
+			.arrow-left {
+			  position: absolute;
+			  left: 1.5rem;
+			  align-self: center;
+
+			  /* Flexbox centreert het icoontje exact in het midden */
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+
+			  /* Optie A: Vaste afmetingen voor een vierkante knop */
+			  width: 2.25rem;  /* 36px */
+			  height: 2.25rem; /* 36px */
+
+			  border-radius: 0.4rem;
+			  border: none;
+			  background-color: #E3C9FC;
+			  cursor: pointer;
+			}
+
+			/* De afbeelding behoudt altijd zijn strakke 20x20px verhouding */
+			.arrow-left img {
+			  width: 1.25rem;  /* 20px */
+			  height: 1.25rem; /* 20px */
+			  display: block;  /* Haalt ongewenste witruimte onder afbeeldingen weg */
+			}
+
 			.lang-switch{
 				display: flex;
 				justify-content: space-around;
 				flex-direction: row;
 				row-gap: 2.875rem;
 				position: absolute;
-				right: 10.75rem;
-				border-radius: 100px;
+				right: 10.25rem;
+				border-radius: 0.4rem;
 				background-color: #FFED00;
 				grid-column: 4/5;
 				width: 7.50rem;
-				height: 1.75rem;
+				height: 2.25rem;
 				align-self: center;	
 				transform: translateX(0px);
 			}
@@ -3739,12 +3774,12 @@ body{
 				.lang-indicator{
 					z-index: 1;
 					position: absolute;
-					height: 1.25rem;
+					height: 1.75rem;
 					left: 0.25rem;
 					top: 0.25rem;
 					width: 3.25rem;
 					background-color: white;
-					border-radius: 100px;
+					border-radius: 0.4rem;
 					transition: transform 0.4s cubic-bezier(.365,.305,0,1);
 				}
 

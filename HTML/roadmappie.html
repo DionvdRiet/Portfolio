@@ -16,22 +16,19 @@
 		</div>
 		<div id="headerContainer" class="headerContainerCase">
 			<div class="headerItems">
-				<div id="headerItem1" onmouseover="headerItemOne()" onmouseout="headerItemOffOne()" onclick="home()">
-					<a id="inactive-page-1">Welkom</a>
-				</div>
+				<button type="button" class="arrow-left" id="arrow-left" onclick="home()">
+					<img src="../Afbeeldingen/arrow-left.svg">
+				</button>
 				<div id="headerItem3">
 					<span id="active-page-1">Roadmappie</span>
-				</div>
-				<div id="headerItem2" onmouseover="headerItemTwo()" onmouseout="headerItemOffTwo()" onclick="contact()">
-					<a id="inactive-page-2">Contact</a>
 				</div>
 			</div>
 
 			<div class="lang-switch" role="radiogroup" aria-label="Taalselectie">
 			  <div class="lang-indicator"></div>
 			  
-			  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands" onclick="langToNL()">NL</button>
-			  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels" onclick="langToEn()">EN</button>
+			  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands">NL</button>
+			  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels">EN</button>
 			</div>
 
 		</div>
@@ -56,7 +53,7 @@
 			<span id="nav-project-title">Roadmappie</span>
 		</div>
 		<div id="responsive-nav-list">
-			<a id="responsive-nav-list-item-1" onclick="home()">Welkom</a>
+			<a data-i18n="common.navWelkom" id="responsive-nav-list-item-1" onclick="home()">Welkom</a>
 			<a id="responsive-nav-list-item-2" onclick="contact()">Contact</a>
 		</div>
 	</header>
@@ -68,7 +65,7 @@
 		</div>
 		<div id="projectDescriptionContainer">
 			<div id="case-header-line"></div>
-			<p data-i18n="projectDescription" id="projectDescription">Reisapp waar de community centraal staat</p>
+			<p data-i18n="roadmappie.projectDescription" id="projectDescription">Reisapp waar de community centraal staat</p>
 		</div>
 		<div class="case-header-content">
 			<div class="roadmappie-header" id="caseHeaderImage"></div>
@@ -85,11 +82,11 @@
 
 		<div class="research-container">
 			<div class="opdracht-container">
-				<h2 class="hero-title">Opdracht</h2>
-				<p>Maak een reisapp voor Gen-z'ers en millennials, van deskresearch tot aan branding en hi-fi prototype.</p>
+				<h2 data-i18n="common.briefTitle" class="hero-title">Opdracht</h2>
+				<p data-i18n="roadmappie.briefText">Maak een reisapp voor Gen-z'ers en millennials, van deskresearch tot aan branding en hi-fi prototype.</p>
 			</div>
 
-			<p class="callout-text">De reissector is gigantisch. Omdat het plannen en boeken reizen een wereldwijd begrijp zijn en er continu onderzoek wordt gedaan naar reisgedrag- en behoeften heb ik uitsluitend deskresearch uitgevoerd om tot mijn data te komen voor dit project.</p>
+			<p data-i18n="roadmappie.calloutDeskresearch" class="callout-text">De reissector is gigantisch. Omdat het plannen en boeken reizen een wereldwijd begrijp zijn en er continu onderzoek wordt gedaan naar reisgedrag- en behoeften heb ik uitsluitend deskresearch uitgevoerd om tot mijn data te komen voor dit project.</p>
 
 			<div class="presentation-cards is-full-width">
 				<img 
@@ -112,20 +109,20 @@
 			<div class="affinity">
 
 				<div class="text-left">
-					<h3 class="section-title">Waardevolle patronen ontdekken in reisgedrag</h3>
-					<p>Via uitgebreid deskresearch verzamelde ik bronnen over het reisgedrag van Gen-Z en Millennials. Door internationale, Europese en Amerikaanse onderzoeken te vergelijken, filterde ik de belangrijkste overlap én ontdekte ik culturele nuances. Deze data vormde de basis voor gerichte ontwerpkeuzes.</p>
-				</div>
+					<h3 data-i18n="roadmappie.reisgedragTitle" class="section-title">Waardevolle patronen ontdekken in reisgedrag</h3>
+					<p data-i18n="roadmappie.reisgedragText">Via uitgebreid deskresearch verzamelde ik bronnen over het reisgedrag van Gen-Z en Millennials. Door internationale, Europese en Amerikaanse onderzoeken te vergelijken, filterde ik de belangrijkste overlap én ontdekte ik culturele nuances. Deze data vormde de basis voor gerichte ontwerpkeuzes.</p>
+				</div>v
 
 				<div class="maps-wrapper">
 
 					<figure class="map-card">
 					    <img src="../Afbeeldingen/Roadmappie/Research/Affinity_1.jpg" alt="Affinity map voor sorteren" class="crop-img">
-					    <figcaption>Affinity Map: Ruwe data per bron</figcaption>
+					    <figcaption data-i18n="roadmappie.affinity1">Affinity Map: Ruwe data per bron</figcaption>
 					</figure>
 
 					<figure class="map-card">
 				 		<img src="../Afbeeldingen/Roadmappie/Research/Affinity_3.jpg" alt="Affinity map na sorteren" class="crop-img affinity_3">
-				    	<figcaption>Affinity Map: Gecategoriseerd op thema's</figcaption>
+				    	<figcaption data-i18n="roadmappie.affinity2">Affinity Map: Gecategoriseerd op thema's</figcaption>
 				  	</figure>
 				</div>
 			</div>
@@ -149,10 +146,10 @@
 				    alt="Belangrijkste inzichten uit Affinity Map"
 				  >
 				</picture>
-				<figcaption>Belangrijkste inzichten uit Affinity Map</figcaption>
+				<figcaption data-i18n="roadmappie.affinity3">Belangrijkste inzichten uit Affinity Map</figcaption>
 			</figure>
 
-			<p class="callout-text">Deze inzichten zijn verwerkt in persona’s voor de twee doelgroepen: Gen-Z Reiziger en Millennial Reiziger.</p>
+			<p data-i18n="roadmappie.calloutPersona" class="callout-text">Deze inzichten zijn verwerkt in persona’s voor de twee doelgroepen: Gen-Z Reiziger en Millennial Reiziger.</p>
 
 			<div class="persona-wrapper">
 
@@ -175,7 +172,7 @@
         loading="lazy"
       >
     </picture>
-    <figcaption>Persona: Gen-Z Reiziger</figcaption>
+    <figcaption data-i18n="roadmappie.personaGenZ">Persona: Gen-Z Reiziger</figcaption>
   </figure>
 
   <figure class="mobile-only">
@@ -190,7 +187,7 @@
         loading="lazy"
       >
     </picture>
-    <figcaption>Persona: Gen-Z Reiziger (Details)</figcaption>
+    <!-- <figcaption>Persona: Gen-Z Reiziger (Details)</figcaption> -->
   </figure>
 
 
@@ -213,7 +210,7 @@
         loading="lazy"
       >
     </picture>
-    <figcaption>Persona: Millennialreiziger</figcaption>
+    <figcaption data-i18n="roadmappie.personaMillennial">Persona: Millennialreiziger</figcaption>
   </figure>
 
   <figure class="mobile-only">
@@ -228,7 +225,7 @@
         loading="lazy"
       >
     </picture>
-    <figcaption>Persona: Millennialreiziger (Details)</figcaption>
+    <!-- <figcaption>Persona: Millennialreiziger (Details)</figcaption> -->
   </figure>
 
 </div>
@@ -242,7 +239,7 @@
 		
 		<div class="text-left">
 			<h3 class="section-title">Design System</h3>
-			<p>Het gehele designsysteem is van de grond af opgebouwd voor zowel de wireframes als de hi-fi designs.</p>
+			<p data-i18n="roadmappie.designSystemText">Het gehele designsysteem is van de grond af opgebouwd voor zowel de wireframes als de hi-fi designs.</p>
 		</div>
 
 		<figure class="right-half">
@@ -294,8 +291,8 @@
 		<div class="stay-showcase">
 
 			<div class="text-left">
-				<h3 class="section-title">Het vertrekpunt voor jouw perfecte verblijf</h3>
-				<p>Vanaf de homepagina ontdek en boek je moeiteloos het ideale verblijf op jouw droombestemming. Snel, overzichtelijk en afgestemd op jouw reisgezelschap.</p>
+				<h3 data-i18n="roadmappie.staysTitle" class="section-title">Het vertrekpunt voor jouw perfecte verblijf</h3>
+				<p data-i18n="roadmappie.staysText">Vanaf de homepagina ontdek en boek je moeiteloos het ideale verblijf op jouw droombestemming. Snel, overzichtelijk en afgestemd op jouw reisgezelschap.</p>
 			</div>
 
 			<figure class="is-wide">
@@ -360,8 +357,8 @@
 		<div class="flights-showcase is-full-width">
 
 			<div class="full-width-text">
-				<h3 class="section-title">Ook de vlucht regel je in de app</h3>
-				<p>Vind direct de vlucht die naadloos aansluit op jouw reisschema. Met slimme filters selecteer je duurzamere opties en zie je in één oogopslag hoeveel CO₂-uitstoot je bespaart of compenseert.</p>
+				<h3 data-i18n="roadmappie.flightsTitle" class="section-title">Ook de vlucht regel je in de app</h3>
+				<p data-i18n="roadmappie.flightsText">Vind direct de vlucht die naadloos aansluit op jouw reisschema. Met slimme filters selecteer je duurzamere opties en zie je in één oogopslag hoeveel CO₂-uitstoot je bespaart of compenseert.</p>
 			</div>
 
 			<img 
@@ -386,14 +383,11 @@
 
 	</section>
 
-
-		
-
 	<section>
 		<div class="profile-showcase">
 			<div class="text-left">
-					<h3 class="section-title">De community is het hart van Roadmappie</h3>
-					<p>Gebruikers kunnen op hun profiel hun eigen top 3 lijsten maken van de stad waarin ze wonen of gewoond hebben. De beste restaurants, activiteiten en bezienswaardigheden voeg je snel en gemakkelijk toe.</p>
+					<h3 data-i18n="roadmappie.communityTitle" class="section-title">De community is het hart van Roadmappie</h3>
+					<p data-i18n="roadmappie.communityText">Gebruikers kunnen op hun profiel hun eigen top 3 lijsten maken van de stad waarin ze wonen of gewoond hebben. De beste restaurants, activiteiten en bezienswaardigheden voeg je snel en gemakkelijk toe.</p>
 				</div>
 
 				<figure class="right-half">
@@ -423,8 +417,8 @@
 			<div class="stay-showcase">
 
 				<div class="text-left">
-					<h3 class="section-title">Inspiratie voor onvergetelijke momenten</h3>
-					<p>Van boottocht tot museumbezoek: elke stad heeft een eigen overzichtspagina boordevol inspiratie. Hier vind je de hoogst gewaardeerde ervaringen, tipt door medereizigers én de lokale community.</p>
+					<h3 data-i18n="roadmappie.activityTitle" class="section-title">Inspiratie voor onvergetelijke momenten</h3>
+					<p data-i18n="roadmappie.activityText">Van boottocht tot museumbezoek: elke stad heeft een eigen overzichtspagina boordevol inspiratie. Hier vind je de hoogst gewaardeerde ervaringen, tipt door medereizigers én de lokale community.</p>
 				</div>	
 
 				<figure class="is-wide">
@@ -467,8 +461,8 @@
 		<div class="stay-showcase">
 
 			<div class="full-width-text">
-				<h3 class="section-title">De complete groepsreis op een centrale plek</h3>
-				<p>Accommodaties, vluchten, huurauto's en dagplanningen overzichtelijk gebundeld. Op de Group Trip-pagina vloeit alles vlekkeloos samen, zodat je altijd up-to-date bent met je vakantie. </p>
+				<h3 data-i18n="roadmappie.groupTitle" class="section-title">De complete groepsreis op een centrale plek</h3>
+				<p data-i18n="roadmappie.groupText">Accommodaties, vluchten, huurauto's en dagplanningen overzichtelijk gebundeld. Op de Group Trip-pagina vloeit alles vlekkeloos samen, zodat je altijd up-to-date bent met je vakantie. </p>
 			</div>	
 
 			<figure class="is-wide">
