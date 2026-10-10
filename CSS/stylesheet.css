@@ -275,6 +275,16 @@ body{
 			grid-column: 2/3;
 		}
 
+		.arrow-left {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		  	position: absolute;
+		  	background-color: #E3C9FC;
+		  	align-self: center;
+		  	border:none;
+		 }
+
 		header h1{
 			align-self: center;
 			display: flex;
@@ -2503,7 +2513,6 @@ body{
 
 	#arrow-left{
 		opacity: 1;
-		transform: translateY(-50%);
 		transition: transform .6s cubic-bezier(.365,.305,0,1) 0.2s, opacity .3s cubic-bezier(.365,.305,0,1) 0.2s;
 	}
 
@@ -2525,9 +2534,6 @@ body{
 
 	header{
 		z-index: 2;
-		height: 120px;
-		background-color: white;
-		padding-right: 4px;
 		border: none;
 	}
 
@@ -2552,20 +2558,25 @@ body{
 	}
 
 	#responsive-nav{
+		display: grid;
+		grid-template-columns: 1rem auto 1rem;
 		position: fixed;
-		top:0;
+		top:1.25rem;
 		left: 0;
 		grid-column: 1/3;
 		width: 100%;
-		height: 4rem;
+		height: 2.5rem;
 		transition: height .3s cubic-bezier(.365,.305,0,1);
 		z-index: 6;
 	}
 		.responsive-nav-top{
 			display: flex;
+			grid-column: 2/3;
 			position: relative;
 			justify-content: center;
-			height: 4rem;
+			height: 2.5rem;
+			background-color: rgba(239, 239, 239, 0.3);
+			border-radius: 1rem;
 		}
 
 			#responsive-nav-list{
@@ -2587,7 +2598,7 @@ body{
 				font-style: normal;
 				font-weight: 500;
 				font-size: 60px;
-				margin: 9.375rem;
+				/*margin: 9.375rem;*/
 				opacity: 0;
 				transition: opacity .3s cubic-bezier(.365,.305,0,1);
 			}
@@ -2626,23 +2637,29 @@ body{
 				transition: height .5s ease-in;
 			}
 
+		.arrow-left, .hamburger-menu{
+			border-radius: 0.6rem;
+			width: 2rem;                  
+			height: 2rem;
+		}
+
 		.arrow-left {
 		  position: absolute;
-		  top: 50%;                     /* Zet de bovenkant van de pijl halverwege de nav */
-		  transform: translateY(-50%);  /* Trek de pijl exact met de helft van z'n eigen hoogte omhoog */
-		  left: 1.5rem;                 /* ~24px afstand vanaf de linkerrand op mobiel */
-		  width: 2rem;                  /* ~32px breedte (subtieler & beter in verhouding voor mobiel) */
-		  height: auto;                 /* Behoudt de verhoudingen van het icoon */
+		  align-self: center;                     /* Zet de bovenkant van de pijl halverwege de nav */
+		  left: 0.25rem;              
 		  cursor: pointer;
+		}
+
+		.arrow-left img {
+		  width: 1rem;  /* 20px */
+		  height: 1rem; /* 20px */
+		  display: block;  /* Haalt ongewenste witruimte onder afbeeldingen weg */
 		}
 
 		.hamburger-menu{
 			background-color: #FFED00;
-			height: 4rem;
-			width: 4rem;
 			position: absolute;
-			top:0px;
-			right: 0px;
+			right: 0.25rem;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
@@ -2652,8 +2669,8 @@ body{
 		.hamburger-menu div{
 			align-self: center;
 			width: 40%;
-			height: 0.3rem;
-			margin: 0.313rem;
+			height: 0.2rem;
+			margin: 0.2rem;
 			transition: background-color .3s cubic-bezier(.365,.305,0,1);
 			transition: margin-top .3s cubic-bezier(.365,.305,0,1);
 			transition: margin-bottom .3s cubic-bezier(.365,.305,0,1);
@@ -3705,14 +3722,9 @@ body{
 			}
 
 			.arrow-left {
-			  position: absolute;
 			  left: 1.5rem;
-			  align-self: center;
 
 			  /* Flexbox centreert het icoontje exact in het midden */
-			  display: flex;
-			  align-items: center;
-			  justify-content: center;
 
 			  /* Optie A: Vaste afmetingen voor een vierkante knop */
 			  width: 2.25rem;  /* 36px */
@@ -3720,7 +3732,6 @@ body{
 
 			  border-radius: 0.4rem;
 			  border: none;
-			  background-color: #E3C9FC;
 			  cursor: pointer;
 			}
 
