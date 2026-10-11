@@ -307,7 +307,6 @@ body{
 
 				#projectTitle{
 					margin-top: 8px;
-					letter-spacing: auto;
 					opacity: 0;
 					transition: opacity 0.3s cubic-bezier(.365,.305,0,1), letter-spacing 1s cubic-bezier(.365,.305,0,1);
 				}
@@ -487,12 +486,16 @@ body{
 		font-size: 28px;
 	}
 
- 	h1,h2,h3,h4,h5,h6,#nav-project-title{
+ 	h1,h2,h3,h4,h5,h6, #desktop-project-title, #mobile-project-title{
  		font-family: paralucent, sans-serif;
  		font-weight: 500;
  		font-style: normal;
  		color: #131824;
  		text-align: left;
+ 	}
+
+ 	#desktop-project-title, #mobile-project-title{
+ 		align-self: center;
  	}
 
  	p, figcaption{
@@ -1907,7 +1910,7 @@ body{
 @media screen and (max-width: 1000px){
 
 	h1{
-		font-size: 2rem;
+		font-size: 1.75rem;
 		line-height: 1.20;
 	}
 
@@ -1963,6 +1966,14 @@ body{
 		font-size: 1rem;
   		line-height: 1.60;
   		margin-top:0;
+	}
+
+	#mobile-project-title{
+		font-size: 1rem;
+		align-self: center;
+		opacity: 1;
+		transform: translateY(0%);
+		transition: transform .6s cubic-bezier(.365,.305,0,1) 0.2s, opacity .3s cubic-bezier(.365,.305,0,1) 0.2s;
 	}
 
 	.full-width-text{
@@ -2503,14 +2514,6 @@ body{
 		border-left: 5px solid #FFED00;
 	}
 
-	#nav-project-title{
-		font-size: 1.125rem;
-		align-self: center;
-		opacity: 1;
-		transform: translateY(0%);
-		transition: transform .6s cubic-bezier(.365,.305,0,1) 0.2s, opacity .3s cubic-bezier(.365,.305,0,1) 0.2s;
-	}
-
 	#arrow-left{
 		opacity: 1;
 		transition: transform .6s cubic-bezier(.365,.305,0,1) 0.2s, opacity .3s cubic-bezier(.365,.305,0,1) 0.2s;
@@ -2682,9 +2685,6 @@ body{
 				transition: transform 0.3s cubic-bezier(.365,.305,0,1);
 			}
 
-		.left-arrow{
-		}
-
 		#responsive-nav-item-1,#responsive-nav-item-2,#responsive-nav-item-3{
 			display: none;
 		}
@@ -2693,7 +2693,7 @@ body{
 			color: #FFED00;
 		}
 
-		#responsive-menu h2, #responsive-nav-item-2 h2, #responsive-nav-item-3 h2{
+		#responsive-menu a{
 			color: #131A2B;
 		}
 
@@ -3537,39 +3537,6 @@ body{
 
 @media screen and (min-width: 1001px){
 	
-	.desktop-only{
-		display: block;
-	}
-
-	.text-left, .full-width-text{
-		grid-column: 2 / 6;
-	}
-
-	.right-half{
-		grid-column: 7 / -1;
-	}
-
-	.text-right{
-		grid-column: 8/12;
-	}
-
-	.research-container > .callout-text{
-		grid-column: 4/10;
-		margin: 80px 0px 120px 0px;
-		font-size: 32px;
-		font-weight: 600;
-		color: #757575;
-		line-height: 1.6;
-	}	
-
- 	p{
-		font-size: 1.125rem;
-		line-height: 1.8;
-	}
-
-		.p-small{
-			font-size: 1rem
-		}
 
 	h1{
 		font-size: 3.125rem;
@@ -3595,6 +3562,19 @@ body{
 		font-size: 0.875rem;
 	}
 
+ 	p{
+		font-size: 1.125rem;
+		line-height: 1.8;
+	}
+
+		.p-small{
+			font-size: 1rem
+		}
+
+	#desktop-project-title{
+		font-size: 1rem;
+	}
+
 	.hero-title{
 		font-size: 2.5rem;
 	}
@@ -3616,6 +3596,31 @@ body{
 
 	.next-case-subtitle{
 	}
+
+	.desktop-only{
+		display: block;
+	}
+
+	.text-left, .full-width-text{
+		grid-column: 2 / 6;
+	}
+
+	.right-half{
+		grid-column: 7 / -1;
+	}
+
+	.text-right{
+		grid-column: 8/12;
+	}
+
+	.research-container > .callout-text{
+		grid-column: 4/10;
+		margin: 80px 0px 120px 0px;
+		font-size: 32px;
+		font-weight: 600;
+		color: #757575;
+		line-height: 1.6;
+	}	
 
 	input[type="button"]{
 		font-size: 1.125rem;
@@ -3658,7 +3663,7 @@ body{
 
 	.caseLanding{
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: 4.5rem 16vh 3.375rem 1fr;
+		grid-template-rows: 6rem 16vh 3.375rem 1fr;
 		min-height: 100vh;
 	}
 
@@ -4311,49 +4316,61 @@ body{
 	}
 
 	.flights-showcase, .profile-showcase {
-  display: grid;
-  /* 12-koloms grid */
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 32px;
-  grid-column: 1 / -1;
-  align-items: start; /* Voorkomt dat afbeeldingen verticaal opgerekt worden */
-}
+	  display: grid;
+	  /* 12-koloms grid */
+	  grid-template-columns: repeat(12, 1fr);
+	  grid-gap: 2rem;
+	  grid-column: 1 / -1;
+	  align-items: start; /* Voorkomt dat afbeeldingen verticaal opgerekt worden */
+	}
 
 		.flights-showcase > .text-right {
 		  grid-column: 8 / 12; /* Smakelijker uitgelijnd met de rechterkolom */
-		  grid-row: 1;
+		  grid-row: 1/2;
 		}
 
 		.text-right * {
 		  text-align: right;
 		}
 
+		.flights-imgs{
+			display: grid;
+			grid-column: 1/-1;
+			/*width: 100%;*/
+			height: 100vh;
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 66vh 34vh;
+			gap:2rem;
+		}
+
 		/* Standaard afbeeldingsgedrag: behoud originele verhoudingen (GEEN inzoomen) */
-		.flights-showcase img {
+		.flights-imgs img {
 		  width: 100%;
-		  height: auto;
+		  height: 100%;
 		  display: block;
+		  object-fit: cover;
+		  object-position: top;
 		}
 
 		/* Linker grote afbeelding (pakt nu 7 kolommen i.p.v. 6) */
 		#flights-eco {
-		  grid-column: 1 / 8; /* Van lijn 1 tot 8 (breder dan de rechterkant) */
-		  grid-row: 2 / 4; 
-		  border-radius: 0px 24px 24px 0px;
+		  grid-column: 1/2; /* Van lijn 1 tot 8 (breder dan de rechterkant) */
+		  grid-row: 1/3; 
+		  border-radius: 0px 0.75rem 0.75rem 0px;
 		}
 
 		/* Rechter bovenste afbeelding */
 		#flights-default {
-		  grid-column: 8 / -1; /* Van lijn 8 tot het einde */
-		  grid-row: 2;
-		  border-radius: 24px 0px 0px 24px;
+		  grid-column: 2/3; /* Van lijn 8 tot het einde */
+		  grid-row: 1/2;
+		  border-radius: 0.75rem 0px 0px 0.75rem;
 		}
 
 		/* Rechter onderste afbeelding */
 		#flights-eco-bottom {
-		  grid-column: 8 / -1;
-		  grid-row: 3;
-		  border-radius: 24px 0px 0px 24px;
+		  grid-column: 2/3;
+		  grid-row: 2/3;
+		  border-radius: 0.75rem 0px 0px 0.75rem;
 		}
 
 		.profile-showcase{

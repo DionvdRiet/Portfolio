@@ -847,7 +847,7 @@ function noOpacity(){
 	document.getElementById("caseSwitchAnimation").style.display = "none";
 	document.getElementById('responsive-nav-list').style.display = "none";
 
-    document.getElementById("projectTitle").style.letterSpacing = "12px";
+    document.getElementById("projectTitle").style.letterSpacing = "0.25rem";
     document.getElementById("projectTitle").style.opacity = "1";
     document.getElementById("projectType").style.opacity = "1";
     document.getElementById("projectType").style.transform = "translateY(0%)";
