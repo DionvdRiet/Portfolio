@@ -18,7 +18,6 @@ saveNowAnalyse();
 saveNowArticles();
 saveNowDebt();
 volgendeCase();
-aanHetScrollen();
 startAnimation(x);
 };
 
@@ -27,8 +26,20 @@ const translations = {
   nl: {
     common: {
       navWelkom: "Welkom",
-      briefTitle: "Opdracht"
+      briefTitle: "Opdracht",
+      viewCase: "Bekijk case"
     },
+
+    index: {
+        introductie1: "Mijn passie voor design is begonnen op de middelbare school met grafisch design, een essentiële periode waar ik de liefde voor het vak heb ontdekt. Tijdens mijn studie CMD verlegde ik mijn focus naar de gebruiker: hoe transformeer je complexe wensen en vraagstukken naar een intuïtief, digitaal product?",
+        introductie2: "Als UX- en Digital Designer werk ik gestructureerd en haal ik de meeste energie uit prototyping en het opzetten van complexe design systems. Dit stelt me in staat om ontwerpen vroegtijdig te testen met gebruikers en in nauwe samenwerking met stakeholders het product continu te verbeteren.",
+        scroll: "Scroll om alle projecten te zien",
+        projectRoadmappie: "Het designen van een app waarmee je dankzij de community de ultieme reis plant.",
+        projectBykarlie: "Het designen van een redesign voor een bestaande kleding webshop.",
+        projectSavenow: "Het designen van een applicatie om alles te weten te komen over jouw aankopen en financiële situatie te verbeteren.",
+        projectPlaynext: "Het designen van een app waar gebruikers alles te weten komen over aankomende games."
+    },
+
     roadmappie: {
       projectDescription: "Reisapp waar de community centraal staat",
       briefText: "Maak een reisapp voor Gen-z'ers en millennials, van deskresearch tot aan branding en hi-fi prototype.",
@@ -58,8 +69,20 @@ const translations = {
   en: {
     common: {
       navWelkom: "Welcome",
-      briefTitle: "Brief"
+      briefTitle: "Brief",
+      viewCase: "View case"
     },
+
+    index: {
+        introductie1: "My passion for design began in high school with graphic design—a pivotal period during which I discovered my love for the craft. During my studies in Communication & Multimedia Design (CMD), I shifted my focus to the user: how do you transform complex requirements and challenges into an intuitive digital product?",
+        introductie2: "As a UX and digital designer, I work in a structured manner and derive the most energy from prototyping and building complex design systems. This enables me to test designs with users at an early stage and continuously improve the product in close collaboration with stakeholders.",
+        scroll: "Scroll to view all projects",
+        projectRoadmappie: "Designing an app that lets you plan the ultimate trip, with the help of the community.",
+        projectBykarlie: "Designing a redesign for an existing online clothing store.",
+        projectSavenow: "Designing an application to learn everything about your purchases and improve your financial situation.",
+        projectPlaynext: "Designing an app where users can find out everything about upcoming games."
+    },
+
     roadmappie: {
       projectDescription: "Travel app centered around the community",
       briefText: "Create a travel app for Gen Z and millennials, covering everything from desk research to branding and a high-fidelity prototype.",
@@ -150,31 +173,31 @@ function projectenIndicator(){
 }
 
 
-function aanHetScrollen() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        // document.getElementById("scroll-beneden").style.opacity = "0";
-        document.getElementById("desktop").style.height = "50px";
-        document.getElementById("desktop").style.gridTemplateColumns = "550px auto 550px";
-        document.getElementById("headerContainer").style.height = "50px";
-        document.getElementById("inactive-page-1").style.fontSize = "18px";
-        document.getElementById("active-page-1").style.fontSize = "18px";
-        // document.getElementById("inactive-page").style.alignSelf = "center";
-        // document.getElementById("inactive-page").style.textDecorationColor = "white";
-    } 
+// function aanHetScrollen() {
+//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//         // document.getElementById("scroll-beneden").style.opacity = "0";
+//         document.getElementById("desktop").style.height = "50px";
+//         document.getElementById("desktop").style.gridTemplateColumns = "550px auto 550px";
+//         document.getElementById("headerContainer").style.height = "50px";
+//         document.getElementById("inactive-page-1").style.fontSize = "18px";
+//         document.getElementById("active-page-1").style.fontSize = "18px";
+//         // document.getElementById("inactive-page").style.alignSelf = "center";
+//         // document.getElementById("inactive-page").style.textDecorationColor = "white";
+//     } 
 
-    else{
-        // document.getElementById("scroll-beneden").style.opacity = "1";
-        document.getElementById("desktop").style.height = "inherit";
-        document.getElementById("desktop").style.gridTemplateColumns = "500px auto 500px";
-        document.getElementById("headerContainer").style.height = "50px";
-        document.getElementById("active-page-1").style.fontSize = "18px";
-        document.getElementById("inactive-page-1").style.fontSize = "18px";
-        document.getElementById("active-page").style.margin = "0px 30px";
-        document.getElementById("inactive-page-1").style.margin = "0px 30px";
-        document.getElementById("active-page").style.color = "#131824";
-        document.getElementById("inactive-page-1").style.color = "#131824";
-    }
-}
+//     else{
+//         // document.getElementById("scroll-beneden").style.opacity = "1";
+//         document.getElementById("desktop").style.height = "inherit";
+//         document.getElementById("desktop").style.gridTemplateColumns = "500px auto 500px";
+//         document.getElementById("headerContainer").style.height = "50px";
+//         document.getElementById("active-page-1").style.fontSize = "18px";
+//         document.getElementById("inactive-page-1").style.fontSize = "18px";
+//         document.getElementById("active-page").style.margin = "0px 30px";
+//         document.getElementById("inactive-page-1").style.margin = "0px 30px";
+//         document.getElementById("active-page").style.color = "#131824";
+//         document.getElementById("inactive-page-1").style.color = "#131824";
+//     }
+// }
 
 function roadmappieWelkomHover(){
     document.getElementById("welkom-roadmappie").style.transform = "translateY(-4%)";
@@ -433,63 +456,60 @@ function openProject(){
 	document.getElementById('button-1').style.textShadow = "none";
 }
 
-function aanHetScrollen() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        // document.getElementById("scroll-beneden").style.opacity = "0";
-        document.getElementById("desktop").style.gridTemplateColumns = "40% auto 40%";
-        document.getElementById("desktop").style.backgroundColor = "white";
-        document.getElementById("desktop").style.borderBottom = "1px solid rgba(112,112,112,0.15)";
-        document.getElementById("headerContainer2").style.backgroundColor = "#FFED00";
-        // document.getElementById("headerContainer").style.height = "50px"
+// function aanHetScrollen() {
+//     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+//         // document.getElementById("scroll-beneden").style.opacity = "0";
+//         document.getElementById("desktop").style.gridTemplateColumns = "40% auto 40%";
+//         document.getElementById("desktop").style.backgroundColor = "white";
+//         document.getElementById("desktop").style.borderBottom = "1px solid rgba(112,112,112,0.15)";
+//         document.getElementById("headerContainer2").style.backgroundColor = "#FFED00";
+//         // document.getElementById("headerContainer").style.height = "50px"
 
-            document.getElementById("active-page-1").style.fontSize = "18px";
-            document.getElementById("inactive-page-1").style.fontSize = "18px";
-            document.getElementById("inactive-page-2").style.fontSize = "18px";
+//             document.getElementById("active-page-1").style.fontSize = "18px";
+//             document.getElementById("inactive-page-1").style.fontSize = "18px";
+//             document.getElementById("inactive-page-2").style.fontSize = "18px";
 
-            document.getElementById("active-page-1").style.color = "#131824";
-            document.getElementById("inactive-page-1").style.color = "#131824";
-            document.getElementById("inactive-page-2").style.color = "#131824";
+//             document.getElementById("active-page-1").style.color = "#131824";
+//             document.getElementById("inactive-page-1").style.color = "#131824";
+//             document.getElementById("inactive-page-2").style.color = "#131824";
 
-    } 
+//     } 
 
-    else{
-    	// document.getElementById("scroll-beneden").style.opacity = "1";
-    	// document.getElementById("desktop").style.height = "inherit";
-		// document.getElementById("desktop").style.gridTemplateColumns = "500px auto 500px";
-		// document.getElementById("headerContainer").style.height = "65px";
-    }
-}
+//     else{
 
-function headerItemDefaultTwo(){
-		document.getElementById("headerContainer1").style.transform = "translateX(100%)";
-}
+//     }
+// }
 
-function headerItemDefaultTwoOff(){
-		document.getElementById("headerContainer1").style.transform = "translateX(0%)";
-}
+// function headerItemDefaultTwo(){
+// 		document.getElementById("headerContainer1").style.transform = "translateX(100%)";
+// }
 
-function headerItemOne(){
-        // document.getElementById("headerContainer1").classList.add('headerContainerActive');
-        document.getElementById("headerContainer2").style.transform = "translate(-100%, -2px)";
-        document.getElementById("headerContainer2").style.animationName = "headerContainer";
-}
+// function headerItemDefaultTwoOff(){
+// 		document.getElementById("headerContainer1").style.transform = "translateX(0%)";
+// }
 
-function headerItemTwo(){
-		document.getElementById("headerContainer2").style.transform = "translate(100%, -2px)";
-		document.getElementById("headerContainer2").style.animationName = "headerContainer";
-        // document.getElementById("headerContainer3").classList.add('headerContainerActive');
-}
+// function headerItemOne(){
+//         // document.getElementById("headerContainer1").classList.add('headerContainerActive');
+//         document.getElementById("headerContainer2").style.transform = "translate(-100%, -2px)";
+//         document.getElementById("headerContainer2").style.animationName = "headerContainer";
+// }
 
-function headerItemOffOne(){
-        document.getElementById("headerContainer1").classList.remove('headerContainerActive');
-        document.getElementById("headerContainer2").style.transform = "translate(0%, -2px)";
-}
+// function headerItemTwo(){
+// 		document.getElementById("headerContainer2").style.transform = "translate(100%, -2px)";
+// 		document.getElementById("headerContainer2").style.animationName = "headerContainer";
+//         // document.getElementById("headerContainer3").classList.add('headerContainerActive');
+// }
 
-function headerItemOffTwo(){
-        document.getElementById("headerContainer3").classList.remove('headerContainerActive');
-        document.getElementById("headerContainer2").style.transform = "translate(0%, -2px)";
-        document.getElementById("headerContainer2").style.width = "100%";
-}
+// function headerItemOffOne(){
+//         document.getElementById("headerContainer1").classList.remove('headerContainerActive');
+//         document.getElementById("headerContainer2").style.transform = "translate(0%, -2px)";
+// }
+
+// function headerItemOffTwo(){
+//         document.getElementById("headerContainer3").classList.remove('headerContainerActive');
+//         document.getElementById("headerContainer2").style.transform = "translate(0%, -2px)";
+//         document.getElementById("headerContainer2").style.width = "100%";
+// }
 
 function headerSizeNormal(){
 		// document.getElementById("desktop").style.height = "65px";
@@ -500,8 +520,8 @@ function headerSizeNormal(){
   //   	document.getElementById("inactive-page-2").style.fontSize = "22px";
 		// document.getElementById("active-page").style.margin = "0px 30px";
 	 //    document.getElementById("inactive-page").style.margin = "0px 30px";
-	    document.getElementById("active-page").style.color = "#131824";
-	    document.getElementById("inactive-page").style.color = "#131824";
+    	    // document.getElementById("active-page").style.color = "#131824";
+    	    // document.getElementById("inactive-page").style.color = "#131824";
 }
 
 function startAnimation() {
@@ -536,15 +556,15 @@ function startResponsiveAnimation() {
 }
 
 function home(){
-	document.getElementById("nav-project-title").style.transform = "translateY(+90%)";
-	document.getElementById("nav-project-title").style.opacity = "0";
-	document.getElementById("arrow-left").style.transform = "translateY(+90%)";
-	document.getElementById("arrow-left").style.opacity = "0";
+	document.getElementById("mobile-nav-title").style.transform = "translateY(+90%)";
+	document.getElementById("mobile-nav-title").style.opacity = "0";
+	document.getElementById("arrow-left-mobile").style.transform = "translateY(+90%)";
+	document.getElementById("arrow-left-mobile").style.opacity = "0";
 
 	setTimeout(function(){ 
-	document.getElementById("nav-project-title").innerHTML = "Welkom";
-	document.getElementById("nav-project-title").style.transform = "translateY(0%)";
-	document.getElementById("nav-project-title").style.opacity = "1";
+	document.getElementById("mobile-nav-title").innerHTML = "Welkom";
+	document.getElementById("mobile-nav-title").style.transform = "translateY(0%)";
+	document.getElementById("mobile-nav-title").style.opacity = "1";
 	}, 1000);
 
 	document.getElementById('caseSwitchAnimation').style.opacity = "1";

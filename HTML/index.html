@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" type="image/png" href="../Afbeeldingen/favicon.ico"/>
 	<meta charset="UTF-8">
 </head>
-<body onload=" loadWebsiteCheck()">
+<body onload="loadWebsiteCheck()">
 	<div id="loadWebsite">
 		<div id="loadWebsiteTitel">
 			<span>Dion van der Riet</span>
@@ -20,7 +20,34 @@
 	</div>
 	<div id="loadWebsiteWit"></div>
 	<div id="caseSwitchAnimation"></div>
-	<header id="desktop" class="headerDefault">
+
+	<header id="desktop">
+		<div class="progress-container">
+			<div class="progress-bar" id="myBar"></div>
+		</div>
+		<div id="headerContainer" class="headerContainerCase">
+			<div class="headerPages">
+				<span class="header-active-page">Welkom</span>
+				<a class="header-inactive-page" onclick="contact()">Contact</a>
+			</div>
+
+			<div class="lang-switch" role="radiogroup" aria-label="Taalselectie">
+			  <div class="lang-indicator"></div>
+			  
+			  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands">NL</button>
+			  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels">EN</button>
+			</div>
+
+		</div>
+		<!-- <div class="headerIndicator">
+			<div id="headerContainer1"></div>
+			<div id="headerContainer2" id="headerContainerActive"></div>
+			<div id="headerContainer3"></div>
+		</div> -->
+	</header>
+
+
+	<!-- <header id="desktop" class="headerDefault">
 		<div class="progress-container">
 			<div class="progress-bar" id="myBar"></div>
 		</div>
@@ -34,7 +61,9 @@
 			<div id="headerContainer1" class="headerContainerActiveIndex"></div>
 			<div id="headerContainer2"></div>
 		</div>
-	</header>
+	</header> -->
+
+
 	<header id="responsive-nav" class="index-header">
 		<div class="responsive-nav-top">
 			<div class="arrow-left" id="arrow-left-home" onclick="home()">
@@ -44,7 +73,7 @@
 				<div id="hamburger-1"></div>
 				<div id="hamburger-2"></div>
 			</div>
-			<span id="nav-project-title">Welkom</span>
+			<span id="mobile-nav-title">Welkom</span>
 		</div>
 		<div id="responsive-nav-list">
 			<span id="responsive-nav-list-item-1" onclick="closeOverlay()">Welkom</span>
@@ -70,14 +99,14 @@
 	<section class="welkom-introductie">
 		<h2 id="welkomIntroductieMobileTitle">Over mij</h2>
 		<div id="introductie-1">
-			<p>
-				Mijn passie voor design is enkele jaren voor mijn studie CMD begonnen bij grafisch design, een essentiële periode waar ik de liefde voor het vak heb leren kennen. In die periode was ik voornamelijk bezig met het creëren van de mooiste ontwerpen voor verschillende online klanten. Tijdens mijn studie heb ik naast het blijven ontwikkelen van mijn designstijl, steeds meer de focus leren leggen op de behoeften van de doelgroep. 
+			<p data-i18n="index.introductie1">
+				Mijn passie voor design is begonnen op de middelbare school met grafisch design, een essentiële periode waar ik de liefde voor het vak heb ontdekt. Tijdens mijn studie CMD verlegde ik mijn focus naar de gebruiker: hoe transformeer je complexe wensen en vraagstukken naar een intuïtief, digitaal product? 
 			</p>
 			<div class="introductie-1-background"></div>
 		</div>
 		<div id="introductie-2">
-			<p>
-				Als UX- en Digital Designer haal ik veel plezier uit samen met de doelgroep komen tot een geschikt ontwerp waarmee hun problemen opgelost worden. Het uitvoeren van een usability test is dankzij de minor Usability Expert geen probleem voor mij, eveneens als verschillende onderzoeksmethoden zoals interviewen en enquêteren. 
+			<p data-i18n="index.introductie2">
+				Als UX- en Digital Designer werk ik gestructureerd en haal ik de meeste energie uit prototyping en het opzetten van complexe design systems. Dit stelt me in staat om ontwerpen vroegtijdig te testen met gebruikers en in nauwe samenwerking met stakeholders het product continu te verbeteren. 
 			</p>
 			<div class="introductie-2-background"></div>
 		</div>
@@ -86,7 +115,7 @@
 		<div class="welkom-projecten-intro">
 			<h2 id="welkom-projecten-title">Case studies</h2>
 			<div id="welkom-projecten-scroll">
-				<p>Scroll voor alle projecten</p>
+				<p data-i18n="index.scroll">Scroll om alle projecten te zien</p>
 			</div>
 		</div>
 		<div id="projectCardContainer">
@@ -97,8 +126,8 @@
 						<h4>Appdesign</h4>
 					</div>
 					<h2>Roadmappie</h2>
-					<p>Plan je ultieme reis</p>
-					<input type="button" name="button" value="BEKIJK CASE" id="roadmappieButtonMobile" onclick="roadmappieWelkom()">
+					<p data-i18n="index.projectRoadmappie">Het designen van een app waarmee je dankzij de community de ultieme reis plant.</p>
+					<button type="button" name="button" data-i18n="common.viewCase" id="roadmappieButtonMobile" onclick="roadmappieWelkom()">Bekijk case</button>
 				</div>
 			</div>
 			<div class="projectCard">
@@ -108,8 +137,8 @@
 						<h4>Web- & Appdesign</h4>
 					</div>
 					<h2>ByKarlie</h2>
-					<p>Redesign kleding webshop</p>
-					<input type="button" name="button" value="BEKIJK CASE" id="bykarlieButtonMobile" onclick="bykarlieWelkom()">
+					<p data-i18n="index.projectBykarlie">Het designen van een redesign voor een bestaande kleding webshop.</p>
+					<button type="button" name="button" data-i18n="common.viewCase" id="bykarlieButtonMobile" onclick="bykarlieWelkom()">Bekijk case</button>
 				</div>
 			</div>
 			<div class="projectCard">
@@ -119,8 +148,8 @@
 						<h4>Appdesign</h4>
 					</div>
 					<h2>Save Now</h2>
-					<p>Verbeter je financiële situatie</p>
-					<input type="button" name="button" value="BEKIJK CASE" id="saveNowButtonMobile" onclick="saveNowWelkom()">
+					<p data-i18n="index.projectSavenow">Het designen van een applicatie om alles te weten te komen over jouw aankopen en financiële situatie te verbeteren.</p>
+					<button type="button" name="button" data-i18n="common.viewCase" id="saveNowButtonMobile" onclick="saveNowWelkom()">Bekijk case</button>
 				</div>
 			</div>
 			<div class="projectCard projectCardLast">
@@ -130,8 +159,8 @@
 						<h4>Appdesign</h4>
 					</div>
 					<h2>Play Next</h2>
-					<p>Ontdek jouw volgende favoriete game</p>
-					<input type="button" name="button" value="BEKIJK CASE" id="playNextButtonMobile" onclick="playNextWelkom()">
+					<p data-i18n="index.projectPlaynext">Het designen van een app waar gebruikers alles te weten komen over aankomende games.</p>
+					<button type="button" name="button" data-i18n="common.viewCase" id="playNextButtonMobile" onclick="playNextWelkom()">Bekijk case</button>
 				</div>
 			</div>
 		</div>
@@ -143,28 +172,28 @@
 		<div id="welkom-roadmappie" class="roadmappie-header"></div>
 		<div class="welkom-projecten-info" id="roadmappie-project-info">
 			<h3 class="welkom-project-name">Roadmappie</h3>
-			<p>Het creëren van een app waarmee je dankzij de community de ultieme reis plant.</p>
-			<input type="button" name="button" value="BEKIJK CASE" id="roadmappieButton" onclick="roadmappieWelkom()" onmouseover="roadmappieWelkomHover()" onmouseout="roadmappieWelkomNormal()">
+			<p data-i18n="index.projectRoadmappie">Het designen van een app waarmee je dankzij de community de ultieme reis plant.</p>
+			<button type="button" name="button" data-i18n="common.viewCase" class="caseButton" id="roadmappieButton" onclick="roadmappieWelkom()" onmouseover="roadmappieWelkomHover()" onmouseout="roadmappieWelkomNormal()">Bekijk case</button>
 		</div>
 
 		<div class="welkom-projecten-info" id="bykarlie-project-info">
 			<h3 class="welkom-project-name">ByKarlie</h3>
-			<p>Het creëren van een redesign voor een bestaande kleding webshop.</p>
-			<input type="button" name="button" value="BEKIJK CASE" id="bykarlieButton" onclick="bykarlieWelkom()" onmouseover="bykarlieWelkomHover()" onmouseout="bykarlieWelkomNormal()">
+			<p data-i18n="index.projectBykarlie">Het designen van een redesign voor een bestaande kleding webshop.</p>
+			<button type="button" name="button" data-i18n="common.viewCase" class="caseButton" id="bykarlieButton" onclick="bykarlieWelkom()" onmouseover="bykarlieWelkomHover()" onmouseout="bykarlieWelkomNormal()">Bekijk case</button>
 		</div>
 		<div id="welkom-bykarlie" class="bykarlie-header"></div>
 
 		<div id="welkom-save-now" class="finance-header"></div>
 		<div class="welkom-projecten-info" id="save-now-project-info">
 			<h3 class="welkom-project-name">Save now</h3>
-			<p>Het creëren van een applicatie om alles te weten te komen over jouw aankopen en financiële situatie te verbeteren.</p>
-			<input type="button" name="button" value="BEKIJK CASE" id="saveNowButton" onclick="saveNowWelkom()" onmouseover="saveNowWelkomHover()" onmouseout="saveNowWelkomNormal()">
+			<p data-i18n="index.projectSavenow">Het designen van een applicatie om alles te weten te komen over jouw aankopen en financiële situatie te verbeteren.</p>
+			<button type="button" name="button" data-i18n="common.viewCase" class="caseButton" id="saveNowButton" onclick="saveNowWelkom()" onmouseover="saveNowWelkomHover()" onmouseout="saveNowWelkomNormal()">Bekijk case</button>
 		</div>
 				
 		<div class="welkom-projecten-info" id="play-next-project-info">
 			<h3 class="welkom-project-name">Play Next</h3>
-			<p>Het ontwerpen van een app waar gebruikers alles te weten komen over aankomende games.</p>
-			<input type="button" name="button" value="BEKIJK CASE" id="playNextButton" onclick="playNextWelkom()" onmouseover="playNextWelkomHover()" onmouseout="playNextWelkomNormal()">
+			<p data-i18n="index.projectPlaynext">Het designen van een app waar gebruikers alles te weten komen over aankomende games.</p>
+			<button type="button" name="button" data-i18n="common.viewCase" class="caseButton" id="playNextButton" onclick="playNextWelkom()" onmouseover="playNextWelkomHover()" onmouseout="playNextWelkomNormal()">Bekijk case</button>
 		</div>	
 		<div id="welkom-play-next" class="play-next-header"></div>	
 
@@ -173,6 +202,7 @@
 		<div id="footer-transparent-left" onmouseover="emailDown()"></div>
 		<div id="email-popup">
 			<input type="text" value="dionvanderriet@gmail.com" id="email-popup-text">
+			<button type="button" id="email-popup-text">dionvanderriet@gmail.com</button>
 			<div id="emailCopy" onclick="emailCopied()">
 				<h5 id="emailCopyButton">KOPIËER</h5>
 			</div>

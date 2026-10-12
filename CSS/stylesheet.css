@@ -486,7 +486,7 @@ body{
 		font-size: 28px;
 	}
 
- 	h1,h2,h3,h4,h5,h6, #desktop-project-title, #mobile-project-title{
+ 	h1,h2,h3,h4,h5,h6, #desktop-project-title, #mobile-nav-title{
  		font-family: paralucent, sans-serif;
  		font-weight: 500;
  		font-style: normal;
@@ -494,7 +494,7 @@ body{
  		text-align: left;
  	}
 
- 	#desktop-project-title, #mobile-project-title{
+ 	#desktop-project-title, #mobile-nav-title{
  		align-self: center;
  	}
 
@@ -1393,7 +1393,7 @@ body{
 				color: #131824;
 			}
 
-		li, a, input[type="button"]{
+		li, a, button{
 			cursor: pointer;
 		}
 
@@ -1541,14 +1541,14 @@ body{
 				font-weight: 400;
 			}
 
-		input[type="button"]{
+		button{
 			font-family: paralucent, sans-serif;
 			border: none;
 			font-weight: 700;
 			font-style: normal;
 			color: #131824;
 			background-color: #FFED00;
-			border-radius: 12px;
+			border-radius: 0.75rem;
 			background-image: url("../Afbeeldingen/arrow-right.svg");
 			background-size: 0%;
 			background-repeat: no-repeat;
@@ -1578,7 +1578,7 @@ body{
 				transition: transform .6s cubic-bezier(.365,.305,0,1);
 			}
 
-			input[type="button"]:focus{
+			button:focus{
 				outline: none;
 			}
 
@@ -1862,7 +1862,7 @@ body{
 					width: 100%;
 				}
 
-					.contactCardDescription input:focus{
+					.contactCardDescription button:focus{
 						outline: none;
 					}
 
@@ -1957,7 +1957,7 @@ body{
 		line-height: 1.4;
 	}
 
-	input[type="button"]{
+	button{
 		font-size: 1.125rem;
   		padding: 0.875rem 1.5rem;
 	}
@@ -1968,7 +1968,7 @@ body{
   		margin-top:0;
 	}
 
-	#mobile-project-title{
+	#mobile-nav-title{
 		font-size: 1rem;
 		align-self: center;
 		opacity: 1;
@@ -1986,11 +1986,11 @@ body{
 			grid-column: 2/3
 		}
 
-	.welkom-projecten-info input[type="button"]{
+	.welkom-projecten-info button{
 		display: flex;
 		justify-content: center;
-		padding: 20px;
-		bottom:-80px;
+		padding: 1.25rem;
+		bottom: -5rem;
 		width: 60%;
 		text-shadow: none;
 		box-shadow: none;
@@ -2514,7 +2514,7 @@ body{
 		border-left: 5px solid #FFED00;
 	}
 
-	#arrow-left{
+	#arrow-left-mobile{
 		opacity: 1;
 		transition: transform .6s cubic-bezier(.365,.305,0,1) 0.2s, opacity .3s cubic-bezier(.365,.305,0,1) 0.2s;
 	}
@@ -3454,8 +3454,8 @@ body{
 							background-color: purple;
 						}
 
-							.contactCardDescriptionButton input{
-								margin-top: -40px !important;
+							.contactCardDescriptionButton button{
+								margin-top: -2.5rem !important;
 							}
 
 					.contactCard p, .contactCard .p-small{
@@ -3622,13 +3622,13 @@ body{
 		line-height: 1.6;
 	}	
 
-	input[type="button"]{
+	.caseButton{
 		font-size: 1.125rem;
 		font-style: normal;
 		outline:none;
 		color: #131824;
 		background-color: #FFED00;
-		padding: 16px 32px;
+		padding: 1rem 2rem;
 		background-image: url("../Afbeeldingen/arrow-right.svg");
 		background-size: 0%;
 		background-repeat: no-repeat;
@@ -3714,9 +3714,8 @@ body{
 
 			#headerContainer:hover{
 				opacity: 1;
-				border:1px solid rgba(239, 239, 239, 1.0);
-				box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.04);
-				background-color: rgba(255, 255, 255, 0.9);
+				border:1px solid rgba(239, 239, 239, 0.4);
+				/*box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.04);*/
 			} 
 
 			.headerItems{
@@ -3725,6 +3724,15 @@ body{
 				justify-content: space-evenly;
 				grid-column: 3/4;
 			}
+
+				.headerPages{
+					display: flex;
+					flex-direction: row;
+					gap:2rem;
+					position: absolute;
+					left:0;
+					height: 100%;
+				}
 
 			.arrow-left {
 			  left: 1.5rem;
@@ -3777,14 +3785,14 @@ body{
 				}
 
 					.lang-btn:hover{
-						color:#131A2B;
+						color:#131824;
 						font-weight: 500;
 					}
 
 				/* Actieve status */
 				.active-lang {
 				  font-weight: 500;
-				  color:#131A2B;
+				  color:#131824;
 				}
 
 				.lang-indicator{
@@ -3816,16 +3824,31 @@ body{
 			transition: height .3s cubic-bezier(.365,.305,0,1);
 		}
 
-			#active-page-1, #inactive-page-1, #inactive-page-2{
+			.headerPages{
+				left:1.5rem;
+			}
+
+			.headerPages > *{
 				font-family: paralucent, sans-serif;
-				font-weight: 500;
 				font-style: normal;
 				text-align: left;
-				color: #131824;
-				font-size: 16px;
+				font-weight: 500;
+				font-size: 1rem;
 				align-self: center;
 				transition: color .6s cubic-bezier(.365,.305,0,1);
 			}
+
+			.header-active-page{
+				color: #131824;
+			}
+
+			.header-inactive-page{
+				color: #71747C;
+			}
+
+				.header-inactive-page:hover{
+					color:#131824;
+				}
 
 			#headerItem1, #headerItem2, #headerItem3, #headerItemDefault2{
 				display: flex;
@@ -4570,7 +4593,7 @@ body{
 			line-height: 80px;
 		}
 
-		.welkom-projecten-info input[type="button"]{
+		.welkom-projecten-info button{
 			bottom:-40px;
 			font-size: 35px;
 			height: 80px;
