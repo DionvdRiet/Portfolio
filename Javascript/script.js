@@ -634,13 +634,13 @@ function caseOff(){
 }
 
 function roadmappieWelkom(){
-    document.getElementById("nav-project-title").style.transform = "translateY(+90%)";
-    document.getElementById("nav-project-title").style.opacity = "0";
+    document.getElementById("mobile-nav-title").style.transform = "translateY(+90%)";
+    document.getElementById("mobile-nav-title").style.opacity = "0";
 
     setTimeout(function(){ 
-    document.getElementById("nav-project-title").innerHTML = "Roadmappie";
-    document.getElementById("nav-project-title").style.transform = "translateY(0%)";
-    document.getElementById("nav-project-title").style.opacity = "1";
+    document.getElementById("mobile-nav-title").innerHTML = "Roadmappie";
+    document.getElementById("mobile-nav-title").style.transform = "translateY(0%)";
+    document.getElementById("mobile-nav-title").style.opacity = "1";
     document.getElementById("arrow-left-home").style.transform = "translateY(0%)";
     document.getElementById("arrow-left-home").style.opacity = "1";
     }, 1000);
@@ -655,13 +655,13 @@ function roadmappieWelkom(){
 }
 
 function bykarlieWelkom(){
-    document.getElementById("nav-project-title").style.transform = "translateY(+90%)";
-    document.getElementById("nav-project-title").style.opacity = "0";
+    document.getElementById("mobile-nav-title").style.transform = "translateY(+90%)";
+    document.getElementById("mobile-nav-title").style.opacity = "0";
 
     setTimeout(function(){ 
-    document.getElementById("nav-project-title").innerHTML = "ByKarlie";
-    document.getElementById("nav-project-title").style.transform = "translateY(0%)";
-    document.getElementById("nav-project-title").style.opacity = "1";
+    document.getElementById("mobile-nav-title").innerHTML = "ByKarlie";
+    document.getElementById("mobile-nav-title").style.transform = "translateY(0%)";
+    document.getElementById("mobile-nav-title").style.opacity = "1";
     document.getElementById("arrow-left-home").style.transform = "translateY(0%)";
     document.getElementById("arrow-left-home").style.opacity = "1";
     }, 1000);
@@ -676,13 +676,13 @@ function bykarlieWelkom(){
 }
 
 function saveNowWelkom(){
-	document.getElementById("nav-project-title").style.transform = "translateY(+90%)";
-	document.getElementById("nav-project-title").style.opacity = "0";
+	document.getElementById("mobile-nav-title").style.transform = "translateY(+90%)";
+	document.getElementById("mobile-nav-title").style.opacity = "0";
 
 	setTimeout(function(){ 
-	document.getElementById("nav-project-title").innerHTML = "Save Now";
-	document.getElementById("nav-project-title").style.transform = "translateY(0%)";
-	document.getElementById("nav-project-title").style.opacity = "1";
+	document.getElementById("mobile-nav-title").innerHTML = "Save Now";
+	document.getElementById("mobile-nav-title").style.transform = "translateY(0%)";
+	document.getElementById("mobile-nav-title").style.opacity = "1";
 	document.getElementById("arrow-left-home").style.transform = "translateY(0%)";
 	document.getElementById("arrow-left-home").style.opacity = "1";
 	}, 1000);
@@ -698,13 +698,13 @@ function saveNowWelkom(){
 }
 
 function playNextWelkom(){
-	document.getElementById("nav-project-title").style.transform = "translateY(+90%)";
-	document.getElementById("nav-project-title").style.opacity = "0";
+	document.getElementById("mobile-nav-title").style.transform = "translateY(+90%)";
+	document.getElementById("mobile-nav-title").style.opacity = "0";
 
 	setTimeout(function(){ 
-	document.getElementById("nav-project-title").innerHTML = "Play Next";
-	document.getElementById("nav-project-title").style.transform = "translateY(0%)";
-	document.getElementById("nav-project-title").style.opacity = "1";
+	document.getElementById("mobile-nav-title").innerHTML = "Play Next";
+	document.getElementById("mobile-nav-title").style.transform = "translateY(0%)";
+	document.getElementById("mobile-nav-title").style.opacity = "1";
 	document.getElementById("arrow-left-home").style.transform = "translateY(0%)";
 	document.getElementById("arrow-left-home").style.opacity = "1";
 	}, 1000);
@@ -716,27 +716,6 @@ function playNextWelkom(){
 	document.getElementById("caseSwitchAnimation").style.animationName = "caseSwitch";
 
 	setTimeout("location.href = 'play-next.html';",1500)
-}
-
-function benVerlengprocesWelkom(){
-	document.getElementById("nav-project-title").style.transform = "translateY(+90%)";
-	document.getElementById("nav-project-title").style.opacity = "0";
-
-	setTimeout(function(){ 
-	document.getElementById("nav-project-title").innerHTML = "Ben Verlengproces";
-	document.getElementById("nav-project-title").style.transform = "translateY(0%)";
-	document.getElementById("nav-project-title").style.opacity = "1";
-	document.getElementById("arrow-left-home").style.transform = "translateY(0%)";
-	document.getElementById("arrow-left-home").style.opacity = "1";
-	}, 1000);
-
-	document.getElementById('caseSwitchAnimation').style.display = "block";
-	document.getElementById('caseSwitchAnimation').style.position = "fixed";
-	document.getElementById("caseSwitchAnimation").style.height = "100vh";
-	document.getElementById("caseSwitchAnimation").style.bottom = "0px";
-	document.getElementById("caseSwitchAnimation").style.animationName = "caseSwitch";
-
-	setTimeout("location.href = 'ben-verlengproces.html';",1500)
 }
 
 function buttonOn(){
