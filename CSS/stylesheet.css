@@ -43,7 +43,7 @@ body{
 		}
 
 		#loadWebsiteTitel span{
-			margin-bottom: 0px;
+			margin-bottom: 0;
 		}
 
 		#loadWebsiteTitel p{
@@ -129,7 +129,16 @@ body{
 		}
 
 		#welkom-bericht-title, .highlightTitle, .welkom-project-name{
-			letter-spacing: 4px;
+			letter-spacing: 0.25px;
+		}
+
+		.welkom-project-name{
+			font-size: 1.75rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.welkom-project-description{
+			margin-bottom: 3rem;
 		}
 
 		#welkom-bericht-title, #welkom-bericht-title-mobile{
@@ -140,13 +149,6 @@ body{
 
 		#welkom-bericht-title{
 			margin: 16px 0px;
-		}
-
-		#welkom-bericht-tekst{
-			width: 80%;
-			opacity: 0;
-			transform: translateY(-20%);
-			transition: transform 0.6s cubic-bezier(.365,.305,0,1) 1.3s, opacity 0.6s cubic-bezier(.365,.305,0,1) 1.3s;
 		}
 
 		#welkom-lijn{
@@ -198,8 +200,10 @@ body{
 			}
 			
 			.highlightTitle{
-				grid-column: 2/12;
-				margin-bottom: 16px;
+				grid-column: 1/-1;
+				font-size: 3rem;
+				margin-bottom: 4rem;
+				justify-self: center;
 			}
 
 			#highlightTitleDesktop{
@@ -241,7 +245,7 @@ body{
 			}
 
 			#welkom-roadmappie{
-				background-position: 15% 60%;
+				background-position: 100% 50%;
 				transition: transform 1s cubic-bezier(.365,.305,0,1), box-shadow 1s cubic-bezier(.365,.305,0,1), background-position 1s cubic-bezier(.365,.305,0,1);
 			}
 
@@ -256,7 +260,6 @@ body{
 			}
 
 			#welkom-bykarlie{
-				margin-bottom: 0px;
 				background-position: 0% 50%;
 				background-size: 300%;
 				transition: transform 1s cubic-bezier(.365,.305,0,1), box-shadow 1s cubic-bezier(.365,.305,0,1), background-position 1s cubic-bezier(.365,.305,0,1);
@@ -483,10 +486,10 @@ body{
 	}
 
 	#welkom-bericht-desktop h1{
-		font-size: 28px;
+		font-size: 2rem;
 	}
 
- 	h1,h2,h3,h4,h5,h6, #desktop-project-title, #mobile-nav-title{
+ 	h1,h2,h3,h4,h5,h6, #desktop-project-title, #mobile-nav-title, #loadWebsiteTitel span{
  		font-family: paralucent, sans-serif;
  		font-weight: 500;
  		font-style: normal;
@@ -1968,6 +1971,13 @@ body{
   		margin-top:0;
 	}
 
+	#welkom-bericht-tekst-mobile{
+		width: 80%;
+		opacity: 0;
+		transform: translateY(-20%);
+		transition: transform 0.6s cubic-bezier(.365,.305,0,1) 1.3s, opacity 0.6s cubic-bezier(.365,.305,0,1) 1.3s;
+	}
+
 	#mobile-nav-title{
 		font-size: 1rem;
 		align-self: center;
@@ -2343,15 +2353,6 @@ body{
 
 			#welkom-bericht-title-mobile{
 				margin: 48px 0px 16px 0px;
-			}
-
-			#welkom-bericht-tekst{
-				width: 100%;
-				margin: 0px 0px 60px 0px;
-				opacity: 0;
-				transform: translateY(50px);
-				animation: welkomBericht .6s cubic-bezier(.365,.305,0,1) forwards;
-				animation-delay: .6s;
 			}
 
 			@keyframes welkomBericht{
@@ -3497,7 +3498,7 @@ body{
 				}
 
 				.contactCardDescription .p-small{
-					font-size: 32px;
+					font-size: 2rem;
 				}
 
 				#contact1, #contact2, #contact3{
@@ -3543,7 +3544,7 @@ body{
 	}
 
 	h2{
-		
+		font-size: 2rem;
 	}
 
  	h3{
@@ -3565,6 +3566,15 @@ body{
  	p{
 		font-size: 1.125rem;
 		line-height: 1.8;
+	}
+
+	#loadWebsiteTitel span{
+		font-size: 2rem;
+		margin-bottom: 0;
+	}
+
+	#loadWebsiteTitel p{
+		margin-bottom: 1rem;
 	}
 
 		.p-small{
@@ -3592,6 +3602,16 @@ body{
 	.next-case-title{
 		font-size: 3rem;
 		margin-bottom: 0.5rem;
+	}
+
+	#welkom-bericht-tekst-desktop{
+		width: 100%;
+		margin: 0px 0px 60px 0px;
+		opacity: 0;
+		animation: welkomBericht .6s cubic-bezier(.365,.305,0,1) forwards;
+		animation-delay: .6s;
+		transform: translateY(-20%);
+		transition: transform 0.6s cubic-bezier(.365,.305,0,1) 1.3s, opacity 0.6s cubic-bezier(.365,.305,0,1) 1.3s;
 	}
 
 	.next-case-subtitle{
@@ -4467,7 +4487,7 @@ body{
 				margin-left: 24px;
 			}
 
-			.contactCard p{
+			.contactCard p, .contactCard a{
 				letter-spacing: 1px;
 				margin-bottom: 0px;
 			}

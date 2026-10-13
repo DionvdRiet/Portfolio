@@ -37,7 +37,13 @@ const translations = {
         projectRoadmappie: "Het designen van een app waarmee je dankzij de community de ultieme reis plant.",
         projectBykarlie: "Het designen van een redesign voor een bestaande kleding webshop.",
         projectSavenow: "Het designen van een applicatie om alles te weten te komen over jouw aankopen en financiële situatie te verbeteren.",
-        projectPlaynext: "Het designen van een app waar gebruikers alles te weten komen over aankomende games."
+        projectPlaynext: "Het designen van een app waar gebruikers alles te weten komen over aankomende games.",
+        beschrijving: "UX- en Digital Designer uit Den Haag"
+    },
+
+    contact: {
+        email: "E-mail",
+        phone: "Telefoon"
     },
 
     roadmappie: {
@@ -80,7 +86,13 @@ const translations = {
         projectRoadmappie: "Designing an app that lets you plan the ultimate trip, with the help of the community.",
         projectBykarlie: "Designing a redesign for an existing online clothing store.",
         projectSavenow: "Designing an application to learn everything about your purchases and improve your financial situation.",
-        projectPlaynext: "Designing an app where users can find out everything about upcoming games."
+        projectPlaynext: "Designing an app where users can find out everything about upcoming games.",
+        beschrijving: "UX and Digital Designer from The Hague"
+    },
+
+    contact: {
+        email: "Email",
+        phone: "Phone"
     },
 
     roadmappie: {
@@ -202,17 +214,16 @@ function projectenIndicator(){
 function roadmappieWelkomHover(){
     document.getElementById("welkom-roadmappie").style.transform = "translateY(-4%)";
     document.getElementById("welkom-roadmappie").style.boxShadow = "0px 10px 20px rgba(0,0,0,0.06)";
-    document.getElementById("welkom-roadmappie").style.backgroundPosition = "0% 60%";
+    document.getElementById("welkom-roadmappie").style.backgroundPosition = "100% 10%";
     document.getElementById("roadmappieButton").style.backgroundPosition = "90% 46%";
     document.getElementById("roadmappieButton").style.backgroundSize = "8%";
     document.getElementById("roadmappieButton").style.padding = "16px 60px 16px 32px";
-    document.getElementById("highlightTitleDesktop").style.transform = "translateY(-44%)";
 }
 
 function roadmappieWelkomNormal(){
     document.getElementById("welkom-roadmappie").style.transform = "translateY(0%)";
     document.getElementById("welkom-roadmappie").style.boxShadow = "none";
-    document.getElementById("welkom-roadmappie").style.backgroundPosition = "0% 50%";
+    document.getElementById("welkom-roadmappie").style.backgroundPosition = "100% 50%";
     document.getElementById("roadmappieButton").style.backgroundPosition = "100% 50%";
     document.getElementById("roadmappieButton").style.backgroundSize = "0%";
     document.getElementById("roadmappieButton").style.padding = "16px 32px";
@@ -223,7 +234,7 @@ function roadmappieWelkomNormal(){
 function bykarlieWelkomHover(){
     document.getElementById("welkom-bykarlie").style.transform = "translateY(-4%)";
     document.getElementById("welkom-bykarlie").style.boxShadow = "0px 10px 20px rgba(0,0,0,0.06)";
-    document.getElementById("welkom-bykarlie").style.backgroundPosition = "0% 60%";
+    document.getElementById("welkom-bykarlie").style.backgroundPosition = "0% 10%";
     document.getElementById("bykarlieButton").style.backgroundPosition = "90% 46%";
     document.getElementById("bykarlieButton").style.backgroundSize = "8%";
     document.getElementById("bykarlieButton").style.padding = "16px 60px 16px 32px";
@@ -242,7 +253,7 @@ function bykarlieWelkomNormal(){
 function saveNowWelkomHover(){
     document.getElementById("welkom-save-now").style.transform = "translateY(-4%)";
     document.getElementById("welkom-save-now").style.boxShadow = "0px 10px 20px rgba(0,0,0,0.06)";
-    document.getElementById("welkom-save-now").style.backgroundPosition = "30% 30%";
+    document.getElementById("welkom-save-now").style.backgroundPosition = "30% 10%";
     document.getElementById("saveNowButton").style.backgroundPosition = "90% 46%";
     document.getElementById("saveNowButton").style.backgroundSize = "8%";
     document.getElementById("saveNowButton").style.padding = "16px 60px 16px 32px";
@@ -261,7 +272,7 @@ function saveNowWelkomNormal(){
 function playNextWelkomHover(){
     document.getElementById("welkom-play-next").style.transform = "translateY(-4%)";
     document.getElementById("welkom-play-next").style.boxShadow = "0px 10px 20px rgba(0,0,0,0.06)";
-    document.getElementById("welkom-play-next").style.backgroundPosition = "20% 80%";
+    document.getElementById("welkom-play-next").style.backgroundPosition = "20% 60%";
     document.getElementById("playNextButton").style.backgroundPosition = "90% 46%";
     document.getElementById("playNextButton").style.backgroundSize = "8%";
     document.getElementById("playNextButton").style.padding = "16px 60px 16px 32px";
@@ -332,10 +343,10 @@ function loadWebsite(){
        document.getElementById('welkom-lijn').style.width = "100%";
        document.getElementById('welkom-bericht-title').style.transform = "translateY(0%)";
        document.getElementById('welkom-bericht-title-mobile').style.transform = "translateY(0%)";
-       document.getElementById('welkom-bericht-tekst').style.transform = "translateY(0%)";
+       document.getElementById('welkom-bericht-tekst-desktop').style.transform = "translateY(0%)";
        document.getElementById('welkom-bericht-title').style.opacity = "1";
        document.getElementById('welkom-bericht-title-mobile').style.opacity = "1";
-       document.getElementById('welkom-bericht-tekst').style.opacity = "1";
+       document.getElementById('welkom-bericht-tekst-desktop').style.opacity = "1";
 
 	}, 3000);
 
@@ -375,10 +386,10 @@ function websiteIsLoaded(){
     document.getElementById('welkom-lijn').style.width = "100%";
     document.getElementById('welkom-bericht-title').style.transform = "translateY(0%)";
     document.getElementById('welkom-bericht-title-mobile').style.transform = "translateY(0%)";
-    document.getElementById('welkom-bericht-tekst').style.transform = "translateY(0%)";
+    document.getElementById('welkom-bericht-tekst-desktop').style.transform = "translateY(0%)";
     document.getElementById('welkom-bericht-title').style.opacity = "1";
     document.getElementById('welkom-bericht-title-mobile').style.opacity = "1";
-    document.getElementById('welkom-bericht-tekst').style.opacity = "1";
+    document.getElementById('welkom-bericht-tekst-desktop').style.opacity = "1";
 
 	setTimeout(function(){
 		document.getElementById('caseSwitchAnimation').style.display = "none";
