@@ -14,21 +14,30 @@
 			<div class="progress-bar" id="myBar"></div>
 		</div>
 		<div id="headerContainer" class="headerContainerCase">
-			<div id="headerItem1" onmouseover="headerItemOne()" onmouseout="headerItemOffOne()" onclick="home()">
-				<a id="inactive-page-1">Welkom</a>
-			</div>
-			<div id="headerItem3">
-				<span id="active-page-1">ByKarlie</span>
-			</div>
-			<div id="headerItem2" onmouseover="headerItemTwo()" onmouseout="headerItemOffTwo()" onclick="contact()">
-				<a id="inactive-page-2">Contact</a>
+			<div class="headerItems">
+				<button type="button" class="arrow-left" id="arrow-left-desktop" onclick="home()">
+					<img src="../Afbeeldingen/arrow-left.svg">
+				</button>
+				<div id="headerItem3">
+					<span id="desktop-project-title">ByKarlie</span>
+				</div>
 			</div>
 
+			<div class="lang-switch" role="radiogroup" aria-label="Taalselectie">
+			  <div class="lang-indicator"></div>
+			  
+			  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands">NL</button>
+			  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels">EN</button>
+			</div>
+
+		</div>
+		<div class="headerIndicator">
 			<div id="headerContainer1"></div>
 			<div id="headerContainer2" id="headerContainerActive"></div>
 			<div id="headerContainer3"></div>
 		</div>
 	</header>
+
 	<header id="responsive-nav">
 		<div class="progress-container">
 			<div class="progress-bar" id="myBarResponsive"></div>

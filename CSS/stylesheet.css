@@ -3615,6 +3615,7 @@ body{
 	}
 
 	.next-case-subtitle{
+		margin-bottom: 1.5rem;
 	}
 
 	.desktop-only{
@@ -4270,6 +4271,7 @@ body{
 		display: grid;
 		grid-template-columns: repeat(10, 1fr);
 		grid-template-rows: auto auto;
+		row-gap: 3.75rem;
 	}
 
 		.affinity > .text-left{
