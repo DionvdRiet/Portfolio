@@ -1927,6 +1927,8 @@ body{
 	}
 
 	h2{
+		font-size: 1.30rem; 
+		line-height: 1.20;
 	}
 
  	h3{
@@ -1972,8 +1974,7 @@ body{
 	}
 
 	#welkom-bericht-tekst-mobile{
-		width: 80%;
-		opacity: 0;
+		opacity: 1;
 		transform: translateY(-20%);
 		transition: transform 0.6s cubic-bezier(.365,.305,0,1) 1.3s, opacity 0.6s cubic-bezier(.365,.305,0,1) 1.3s;
 	}
@@ -2321,7 +2322,7 @@ body{
 
 	#welkom{
 		display: grid;
-		grid-template-columns: 100px 1fr 2fr 1fr 100px;
+		grid-template-columns: 1rem 1fr 2fr 1fr 1rem;
 		grid-template-rows: 10vh 40vh;
 		width: 100vw;
 		height:50vh;
@@ -2333,16 +2334,16 @@ body{
 			display: grid;
 			width: 100vw;
 			height: 100%;
-			grid-template-columns: 100px 1fr 100px;
+			grid-template-columns: 1rem auto 1rem;
 		}
 
 		#welkom-bericht-mobile{
 			display: grid;
-			grid-template-columns: 100px auto 100px;
+			grid-template-columns: 1rem auto 1rem;
 			grid-column: 2/4;
 			background-color: #F6F6F6;
-			margin: 0px;
-			border-radius: 0px 0px 0px 12px;
+			margin: 0;
+			border-radius: 0px 0px 0px 0.75rem;
 		}
 
 			#welkom-bericht-mobile *{
@@ -2352,7 +2353,7 @@ body{
 			}
 
 			#welkom-bericht-title-mobile{
-				margin: 48px 0px 16px 0px;
+				margin: 2rem 0px 1rem 0px;
 			}
 
 			@keyframes welkomBericht{
@@ -2409,18 +2410,18 @@ body{
 
 	.welkom-introductie{
 		display: grid;
-		grid-template-columns: 50px auto 50px;
+		grid-template-columns: 1rem auto 1rem;
 		grid-template-rows: 48px auto 100px auto;
 		position: relative;
 	}
 
 	.welkom-introductie p{
-		line-height: 60px;
-		padding: 60px;
+		/*line-height: 60px;*/
+		padding: 1rem;
 	}
 
 	#welkomIntroductieMobileTitle{
-		margin-top: 80px;
+		/*margin-top: 80px;*/
 		display: block;
 		grid-column: 2/3;
 		grid-row: 1/2;
@@ -2484,11 +2485,8 @@ body{
 	}
 
 	.welkom-projecten{
-		height: auto;
-	}
-
-	.welkom-introductie, .welkom-projecten{
-		grid-template-columns: 60px auto 60px;
+		grid-template-rows: auto auto;
+		row-gap: 1rem;
 	}
 
 	#welkom-projecten-indicator{
@@ -2561,9 +2559,12 @@ body{
 		grid-template-rows: auto auto auto;
 	}
 
-	#responsive-nav{
+	#responsive-nav, .welkom-introductie, .welkom-projecten{
 		display: grid;
 		grid-template-columns: 1rem auto 1rem;
+	}
+
+	#responsive-nav{
 		position: fixed;
 		top:1.25rem;
 		left: 0;
@@ -2807,14 +2808,15 @@ body{
 		content: none;
 	}
 
-	#projectCardContainer{
-		display: flex;
-		flex-wrap: nowrap;
-		overflow-x: auto;
-		width: 100%;
-		grid-column: 1/4;
-		height: 840px;
-		scrollbar-width: none;
+	#projectCardContainer {
+	    display: flex;
+	    flex-wrap: nowrap;
+	    overflow-x: auto;
+	    overflow-y: hidden;
+	    align-items: stretch; /* DIT DWT ALLE CARDS NAAR DERZELFE HOOGTE */
+	    width: 100%;
+	    grid-column: 1 / 4;
+	    scrollbar-width: none;
 	}
 
 	#projectCardContainer::-webkit-scrollbar{
@@ -2822,66 +2824,49 @@ body{
 	}
 
 		.projectCardFirst{
-			margin-left: 60px;
+			margin-left: 1rem;
 		}
 
 		.projectCardLast{
-			margin-right: 60px;
+			margin-right: 1rem;
 		}
 
-		.projectCard{
-			flex: 0 0 auto;
-			display: grid;
-			grid-template-rows: 50% 50%;
-			grid-template-columns: 48px auto 48px;
-			width: 80%;
-			margin-right: 48px;
-			border: 1px solid #F6F6F6;
-			border-radius: 16px;
+		.projectCard {
+		    flex: 0 0 80%; /* 80% breedte per kaart */
+		    display: flex;
+		    flex-direction: column; /* Stapel afbeelding en info onder elkaar */
+		    margin-right: 1rem;
+		    border: 1px solid #F6F6F6;
+		    border-radius: 1rem;
+		    overflow: hidden;
 		}
 
-			.projectCardImage{
-				grid-row: 1/2;
-				grid-column: 1/4;
-				height: 100%;
-				width: 100%;
-				border-radius: 16px 16px 0px 0px;
-				background-size: 100%;
+			.projectCardImage {
+			    width: 100%;
+			    height: 10rem; /* Of pas dit aan naar wens, bijv. aspect-ratio: 16/9 */
+			    object-fit: cover;
 			}
 
-			.projectCardInfo{
-				grid-row: 2/3;
-				grid-column: 2/3;
-				height: 100%;
-				width: 100%;
+			.projectCardInfo {
+			    display: flex;
+			    flex-direction: column;
+			    padding: 1.5rem 1rem;
+			    flex-grow: 1; /* Neemt alle overgebleven verticale ruimte in beslag */
 			}
 
-				.projectCardInfo h2{
-					margin: 40px 0px 16px 0px;
+				.projectCardInfo h3{
+					font-size: 1.25rem;
+					margin: 0 0 0.50rem 0;
 				}
 
 				.projectCardInfo p{
+					margin-bottom: 2rem;
 					color: #757575;
-					margin:0px;
 				}
 
-			.projectCardLabel{
-				display: inline-block;
-				height: 100px;
-				/*width: 40%;*/
-				padding-right: 48px;
-				/*background-color: white;*/
-				transform: translateY(8px);
-				margin-left: -48px;
-				margin-bottom: -100px;
-				border-radius: 0px 20px 0px 0px;
+			.projectCardInfo button {
+			    margin-top: auto; /* Duwt de knop naar de onderkant van de kaart */
 			}
-
-				.projectCardLabel h4{
-					align-self: center;
-					margin-left: 48px;
-					color: #757575;
-				}
 
 		#welkom-projecten-scroll{
 			display: flex;
@@ -3009,22 +2994,24 @@ body{
 	}
 
 	footer{
-		grid-template-columns: 60px auto auto 1fr 100px 100px;
-		grid-template-rows: 100px 80px;
+		grid-template-columns: 1rem auto auto 1fr repeat(2, 2rem);
+		grid-template-rows: 3rem 1rem;
 		width: 100vw;
-		height: 200px;
+		height: 4rem;
 	}
 
 		.footer-balk{
 			grid-row: 2/3;
 			grid-column: 1/5;
 			width: 100%;
-			height: 80px;
+			height: 1rem;
 			z-index: -1; 
 		}
 
-		footer h5{
-		 	letter-spacing: 3px;
+		footer p{
+			margin:0;
+			font-weight: 700;
+		 	color:#131A2B;
 		}
 
 		#footer-transparent-left{
@@ -3032,8 +3019,8 @@ body{
 		}
 
 		#email, #linkedIn{
-			height: 100px;
-			width: 100px;
+			height: 2rem;
+			width: 2rem;
 		}
 
 		#email-popup{
