@@ -768,7 +768,7 @@ function playNextNieuw(){
 	setTimeout("location.href = 'play-next.html';",1500)
 }
 
-function benVerlengprocesNieuw(){
+function roadmappieNieuw(){
 	document.getElementById('caseSwitchAnimation').style.display = "block";
 	document.getElementById('caseSwitchAnimation').style.opacity = "1";
 	document.getElementById('caseSwitchAnimation').style.position = "fixed";
@@ -776,7 +776,7 @@ function benVerlengprocesNieuw(){
 	document.getElementById("caseSwitchAnimation").style.bottom = "0px";
 	document.getElementById("caseSwitchAnimation").style.animationName = "caseSwitch";
 
-	setTimeout("location.href = 'ben-verlengproces.html';",1500)
+	setTimeout("location.href = 'roadmappie.html';",1500)
 }
 
 function bykarlieNieuw(){
