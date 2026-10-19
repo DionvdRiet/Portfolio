@@ -332,6 +332,10 @@ body{
 						color:#F64F21;
 					}
 
+					.save-now-brand{
+						color: #3962d4;
+					}
+
 			#projectDescriptionContainer{
 				display: grid;
 			}
@@ -1585,11 +1589,13 @@ body{
 				outline: none;
 			}
 
-		.finance-header{
+		.save-now-header{
 			background-image: url('../Afbeeldingen/Finance/header.jpg');
+			background-position: 30% 50%;
+			background-size: cover;
 		}
 
-		.finance-header-responsive{
+		.save-now-header-responsive{
 			background-image: linear-gradient(to bottom, rgba(37,46,69,0.50), rgba(37,46,69,0.40), transparent), url('../Afbeeldingen/Finance/header-responsive.jpg');
 		}
 
@@ -2411,13 +2417,42 @@ body{
 	.welkom-introductie{
 		display: grid;
 		grid-template-columns: 1rem auto 1rem;
-		grid-template-rows: 48px auto 100px auto;
+		/*grid-template-rows: 48px auto 100px auto;*/
 		position: relative;
 	}
 
+		.introductie-container{
+			display: flex;
+			grid-column: 1/4;
+			flex-direction: column;
+			/*margin-bottom: -2rem;*/
+		}
+
+			#introductie-1{
+				z-index: 2;
+				margin-left: auto;
+			}
+
+				#introductie-1 p{
+					grid-row: 1/3;
+				}
+
+			#introductie-2{
+				z-index: 1;
+				margin-right: auto;
+				transform: translateY(-2rem);
+			}
+
+				#introductie-2 p{
+					grid-row: 2/4;
+					padding-top: 3rem;
+				}
+
 	.welkom-introductie p{
 		/*line-height: 60px;*/
-		padding: 1rem;
+		padding: 1.5rem 1.5rem;
+		font-size: 0.875rem;
+		line-height: 1.50rem;
 	}
 
 	#welkomIntroductieMobileTitle{
@@ -2427,40 +2462,11 @@ body{
 		grid-row: 1/2;
 	}
 
-	#introductie-1{
-		width: 100%;
-		grid-column: 2/4;
-		grid-row: 2/4;
-		grid-template-rows: 50% 50%;
-	}
-
-	#introductie-1 p{
-		grid-row: 1/3;
-	}
-
-	#introductie-2 p{
-		grid-row: 2/4;
-	}
-
-	#introductie-2{
-		grid-column: 1/3;
-		grid-row: 3/5;
-		margin-bottom: 25%;
-		grid-template-rows: 15% 50% 50%;
-	}
-
 	#introductie-1, #introductie-2{
+		width: calc(100% - 1rem);
 		display: grid;
 		position: relative;
-		top:120px;
 	}
-
-		#introductie-1 h3, #introductie-2 h3{
-			padding: 0px 60px;
-			line-height: 72px;
-			grid-column: 1/3;
-			text-align: justify;
-		}
 
 	.introductie-1-background, .introductie-2-background{
 		position: absolute;
@@ -2472,14 +2478,14 @@ body{
 
 	.introductie-1-background{
 		display: block;
-		border-radius: 32px 0px 0px 32px;
+		border-radius: 0.75rem 0px 0px 0.75rem;
 		background-color: #F6F6F6 !important;
 		z-index: -1;
 	}
 
 	.introductie-2-background{
 		display: block;
-		border-radius: 0px 32px 32px 0px;
+		border-radius: 0px 0.75rem 0.75rem 0px;
 		background-color: #FFED00 !important;
 		z-index: -2;
 	}
@@ -2537,10 +2543,6 @@ body{
 	header{
 		z-index: 2;
 		border: none;
-	}
-
-	.finance-case-header{
-		background-position: 30% 50% !important;
 	}
 
 	.index-header{
@@ -2882,10 +2884,6 @@ body{
 				margin-left: 24px;
 			}
 
-	.prototypeContainer{
-		grid-template-columns: 50px auto 50px;
-	}
-
 	.eindresultaat-section{
 		display: grid;
 		grid-template-columns: 50px auto auto auto 50px;
@@ -3184,13 +3182,12 @@ body{
 				z-index: 5;
 			}
 
-			.researchContainer{
+			/*.researchContainer{
 				display: grid;
 				grid-template-columns: 50px auto 50px;
 				grid-template-rows: auto auto 50px auto auto;
 				grid-column: 1/4;
-
-			}
+			}*/
 
 			.quote{
 				grid-column: 1/4;
@@ -3289,12 +3286,6 @@ body{
 
 			.eindresultaatTileTekst{
 				margin: 24px 0px;
-			}
-
-			.eindresultaatTileTekst h2{
-				font-size: 64px;
-				margin-top:0px;
-				margin-bottom: 0px;
 			}
 
 			#eindresultaatImageMobile{
@@ -3525,7 +3516,6 @@ body{
 
 @media screen and (min-width: 1001px){
 	
-
 	h1{
 		font-size: 3.125rem;
 	}
@@ -3660,7 +3650,7 @@ body{
 
 
 	#responsive, #responsive-nav, .responsive-image, #eindresultaat-section-responsive, #projectCardContainer, #welkom-introductie-title-responsive,
-		#welkom-projecten-scroll, .finance-header-responsive, .gaming-header-responsive, .eindresultaat-responsive, #volgendeCaseCard, .welkom-bericht-mobile-container, 
+		#welkom-projecten-scroll, .save-now-header-responsive, .gaming-header-responsive, .eindresultaat-responsive, #volgendeCaseCard, .welkom-bericht-mobile-container, 
 		#case-header-description-mobile, .mobileImage, #contactMobile, .mobile-only{
 		display: none;
 	}
@@ -4034,7 +4024,7 @@ body{
 	}
 
 	.eindresultaatTileTekst p{
-		margin-top: 8px;
+		margin: 0;
 	}
 
 	.research-container, .flights-showcase, .stay-showcase{
@@ -4064,6 +4054,12 @@ body{
 		height: 3.375rem;
 		width: 100%;
 		align-items: center;
+	}
+
+	.eindresultaatTileTekst > h2{
+		font-size: 2rem;
+		margin-top:0;
+		margin-bottom: 0.5rem;
 	}
 
 	.opdracht-container{
@@ -4125,13 +4121,28 @@ body{
 
 	.researchContainer{
 		display: grid;
-		grid-column: 2/4;
+		grid-column: 2/12 !important;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 3fr 2fr;
 		height: 100%;
 		width: 100%;
-		grid-gap: 16px;
+		grid-gap: 1rem;
 	}
+
+	.save-now-wireframes{
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		row-gap: 3.75rem;
+		grid-column: 2/12;
+	}	
+
+		.save-now-wireframes > .mobileImage, .save-now-wireframes > .desktopImage{
+			grid-column: 1/-1;
+		}
+
+		.save-now-wireframes > .text-left{
+			grid-column: 1/5;
+		}
 
 	blockquote{
 		font-size: 22px;
@@ -4140,16 +4151,16 @@ body{
 
 	#research1{
 		grid-column: 1/2;
-		grid-template-rows: 1/2;
+		grid-row: 1/2;
 		position: relative;
-		border-radius: 0px 12px 12px 0px;
+		border-radius: 0px 0.75rem 0.75rem 0px;
 	}
 
 	#researchImage{
 		grid-column: 2/3;
-		grid-template-rows: 1/2;
+		grid-row: 1/2;
 		height: 50vh;
-		border-radius: 12px 0px 0px 12px;
+		border-radius: 0.75rem 0px 0px 0.75rem;
 	}
 
 		.researchImageFinance{
@@ -4167,14 +4178,14 @@ body{
 		}
 
 	#research2{
-		grid-column: 1/3;
-		grid-template-rows: 2/3;
+		grid-column: 1/3 !important;
+		grid-row: 2/3 !important;
 		position: relative;
-		border-radius: 12px 0px 0px 12px;
+		border-radius: 0.75rem 0px 0px 0.75rem;
 	}
 
 		#research2 blockquote{
-			padding-right: 40px;
+			padding-right: 2.5rem;
 		}
 
 	#researchSingle{
@@ -4186,7 +4197,7 @@ body{
 		#researchSingle h3{
 			color: #131824;
 			font-style: normal;
-			padding-left: 0px;
+			padding-left: 0;
 		}
 
 		#researchSingle blockquote{
