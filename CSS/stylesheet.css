@@ -1592,7 +1592,7 @@ body{
 				outline: none;
 			}
 
-		.save-now-header{
+		.finance-header, .save-now-header{
 			background-image: url('../Afbeeldingen/Finance/header.jpg');
 			background-position: 30% 50%;
 			background-size: cover;
@@ -1631,7 +1631,7 @@ body{
 			transition: background-size 2s cubic-bezier(.365,.305,0,1);
 		}
 
-		.play-next-case-header{
+		.play-next-header, .play-next-case-header{
 			background-image: url('../Afbeeldingen/Gaming/Eindresultaat/header.jpg');
 		}
 
@@ -3971,47 +3971,51 @@ body{
 		margin-top: 32px;
 	}
 
-	.welkom-introductie{
+	.welkom-introductie .introductie-container {
+	    grid-column: 2 / 12; /* Beslaat alle kolommen van de pagina-section */
+	    display: grid;
+	    grid-template-columns: repeat(12, 1fr);
+	    grid-template-rows: repeat(6, 1fr);
+	    width: 100%;
+	}
+
+/* De container kan eventueel weg als de blokken direct in het grid staan, 
+   of je gebruikt het grid direct op de blokken hieronder: */
+
+	#introductie-1, #introductie-2 {
+	    padding: 2.5rem 4rem; /* 40px omgezet naar rem */
+	    border-radius: 0.75rem; /* 12px */
+	}
+
+	/* Het gele blok (links) */
+	#introductie-1 {
+	    grid-column: 2 / 7 !important; /* !important of specifieke selector overschrijft 'section *' */
+	    grid-row: 1 / 6;
+	    background-color: #FFED00;
+	    z-index: 2;
+	    border-radius: 0.75rem;
+	    align-self: center;
+	}
+
+	.introductie-1-background {
+	    display: none;
+	}
+
+	/* Het grijze blok (rechts, overlappend) */
+	#introductie-2 {
 		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: repeat(6, 1fr);
-		width: 100vw;
-		height: 80vh;
-		position: relative;
+	    grid-column: 4 / 12 !important; /* Overlapt van kolom 6 t/m 11 */
+	    grid-row: 2 / 7;
+	    background-color: #F6F6F6;
+	    z-index: 1;
+	    border-radius: 0.75rem;
+	    align-self: center;
+	    grid-template-columns: 50% 50%;
 	}
-
-	#introductie-1, #introductie-2{
-		width: 100%;
-		padding: 40px;
-		align-self: center;
-		border-radius: 12px;
-	}
-
-	#introductie-1{
-		grid-column: 3/6;
-		grid-row: 1/6;
-		background-color: #FFED00;
-		position: absolute;
-		z-index: 1;
-	}
-
-	.introductie-1-background{
-		display: none;
-	}
-
-	#introductie-2{
-		display: grid;
-		grid-template-columns: 50% 50%;
-		grid-column: 4/10;
-		grid-row: 3/7;
-		background-color: #F6F6F6;
-		position: absolute;
-		z-index: 0;
-	}
-
-	.introductie-2-background{
-		display: none;
-	}
+		
+		#introductie-2 p{
+			grid-column: 2;
+		}
 
 	section{
 		grid-template-columns: repeat(12, 1fr); 
