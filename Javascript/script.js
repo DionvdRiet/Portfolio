@@ -92,7 +92,31 @@ const translations = {
     },
 
     savenow: {
-        projectDescription: "Verbeter je financiële situatie"
+        projectDescription: "Verbeter je financiële situatie",
+        briefText: "Ontwerp een app waarmee millennials beter inzicht in hun uitgaven krijgen en die hen ondersteunt om van hun schulden af te komen.",
+        callout: "Iedereen heeft te maken met geld, jong en oud. Voor de ene persoon is het makkelijk om met geld om te gaan, maar voor de andere kan het lastig zijn om voldoende ervan op de rekening te hebben. Zo blijkt uit onderzoek dat met name millenials, mensen geboren tussen 1986 en 2000, kampen met geldproblemen. Dit project staat in het teken van deze doelgroep.",
+        research1: "Millennials geven gemiddeld <span>$478 per maand</span> uit aan niet-essentiële aankopen, zoals restaurants / take-away en luxe artikelen.",
+        research2: "Millennials kampen vaak met een hoge studieschuld, met een <span>gemiddelde schuld van $17,126</span> bij studenten die geld lenen voor hun studie.<br></br>Millennials moeten <span>39% meer betalen</span> aan een huis dan baby boomers in 1980",
+        schetsen1Title: "Eerste iteratie schetsen",
+        schetsen1Text: "De focus bij deze eerste iteratie schetsen lag op het leggen van de basis van het toevoegen-, bijhouden en analyseren van uitgaven en het helpen afbouwen van schulden.",
+        schetsen1Cite: "Eerste iteratie schetsen: Bijhouden en analyseren uitgaven en afbouwen van schulden",
+        schetsen2Title: "Tweede iteratie schetsen",
+        schetsen2Text: "Bij de tweede iteratie is de workflow van het toevoegen van uitgaven op papier gezet en daarnaast is de analyse functionaliteit verder uitgewerkt.",
+        schetsen2Cite: "Tweede iteratie schetsen: Toevoegen van uitgaven en verder gewerkt aan analyse functie",
+        wireframesText: "Bij de uiteindelijke wireframes is besloten om de uitgaven zo simpel mogelijk weer te geven, omdat de uitgaven gemakkelijk te lezen moeten zijn en de pagina niet te druk moet worden. De gebruiker kan via de 'Analyse-pagina' gemakkelijk meer informatie lezen indien nodig.",
+        wireframesCite: "Wireframes: Expenses-, Analysis-, Articles- en Debtpagina",
+        resultaatTileTitle: "Herken je uitgaven",
+        resultaatTileText: "en houd geld in je zakken!",
+        resultaat1Title: "Nooit meer een aankoop over het hoofd zien",
+        resultaat1Text: "Door elke uitgave zelf in het systeem te zetten, houd je niet alleen zelf alle aankopen bij, maar ben je ook meer bewust van waar je geld naartoe gaat.",
+        resultaat2Title: "Even je nieuwe aankoop doorgeven en daarna verder met je leven",
+        resultaat2Text: "In ons hectisch leven gaan we vaak van de ene afspraak naar de andere, heb je nog wel tijd om je aankopen bij te houden? Zeker wel, want met Save Now heb je binnen een minuut je nieuwe aankoop in het systeem gezet!",
+        resultaat3Title: "Weet waar je geld naartoe gaat",
+        resultaat3Text: "Krijg niet alleen te weten hoeveel je hebt gespendeerd in de afgelopen week, maand of jaar, maar ook waar jouw geld naartoe is gegaan. Heb je een derde spijkerbroek eigenlijk wel nodig?",
+        resultaat4Title: "Leer van anderen",
+        resultaat4Text: "Soms heb je behoefte aan het juiste advies op het gebied van geld besparen, of nieuwe koopgewoontes. Op de ‘articles’ pagina kan je artikelen lezen én zelf plaatsen.",
+        resultaat5Title: "Jij wilt van je schulden af, wij creëren het plan",
+        resultaat5Text: "Samen met jou berekenen wij wat verantwoord is om per maand af te lossen aan je schuld. Zie hoeveel je ondertussen al hebt afbetaald en wanneer je eindelijk verlost zal zijn van deze schuld!"
     },
   },
   en: {
@@ -164,8 +188,32 @@ const translations = {
     },
 
     savenow: {
-        projectDescription: "Improve your financial situation"
-    },
+        projectDescription: "Improve your financial situation",
+        briefText: "Design an app that gives millennials better insight into their spending and helps them clear their debts.",
+        callout: "Everyone deals with money, young and old. For some, managing money comes naturally, but for others, keeping enough in their bank account can be a struggle. Research shows that millennials in particular—people born between 1986 and 2000—face financial difficulties. This project focuses on this specific target audience.",
+        research1: "Millennials spend an average of <span>$478 per month</span> on non-essential purchases, such as dining out / takeout and luxury items.",
+        research2: "Millennials often carry high student debt, with an <span>average debt of $17,126</span> for students who borrow for their education.<br></br>Millennials have to pay <span>39% more</span> for a house than baby boomers did in 1980.",
+        schetsen1Title: "First iteration sketches",
+        schetsen1Text: "The focus of this first sketch iteration was laying the foundation for adding, tracking, and analyzing expenses, as well as helping users pay off debts.",
+        schetsen1Cite: "First iteration sketches: Tracking and analyzing expenses, and paying off debts",
+        schetsen2Title: "Second iteration sketches",
+        schetsen2Text: "In the second iteration, the workflow for adding expenses was sketched out on paper, and the analytics functionality was further refined.",
+        schetsen2Cite: "Second iteration sketches: Adding expenses and further developing the analysis feature",
+        wireframesText: "In the final wireframes, it was decided to display expenses as simply as possible, ensuring they remain easy to read without cluttering the page. Users can easily access more information via the 'Analysis' page if needed.",
+        wireframesCite: "Wireframes: Expenses, Analysis, Articles, and Debt pages",
+        resultaatTileTitle: "Recognize your spending",
+        resultaatTileText: "and keep money in your pocket!",
+        resultaat1Title: "Never overlook a purchase again",
+        resultaat1Text: "By logging every expense yourself, you not only keep track of all your purchases, but also become much more aware of where your money goes.",
+        resultaat2Title: "Log your new purchase and get back to your life",
+        resultaat2Text: "In our hectic lives, we often rush from one appointment to the next. Do you still have time to track your purchases? Absolutely, because with Save Now you can log a new purchase in under a minute!",
+        resultaat3Title: "Know where your money goes",
+        resultaat3Text: "Find out not just how much you spent over the past week, month, or year, but also where it went. Do you really need that third pair of jeans?",
+        resultaat4Title: "Learn from others",
+        resultaat4Text: "Sometimes you need the right advice on saving money or developing better spending habits. On the 'Articles' page, you can read articles and publish your own.",
+        resultaat5Title: "You want to get rid of debt, we build the plan",
+        resultaat5Text: "Together with you, we calculate a responsible monthly repayment amount for your debt. Track how much you've already paid off and see when you'll finally be debt-free!"
+    }
   }
 };
 
