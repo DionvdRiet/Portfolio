@@ -27,7 +27,9 @@ const translations = {
     common: {
       navWelkom: "Welkom",
       briefTitle: "Opdracht",
-      viewCase: "Bekijk case"
+      viewCase: "Bekijk case",
+      thanksForReading: "Bedankt voor het lezen!",
+      readyForCase: "Klaar voor de volgende case study?"
     },
 
     index: {
@@ -68,15 +70,38 @@ const translations = {
       activityTitle: "Inspiratie voor onvergetelijke momenten",
       activityText: "Van boottocht tot museumbezoek: elke stad heeft een eigen overzichtspagina boordevol inspiratie. Hier vind je de hoogst gewaardeerde ervaringen, tipt door medereizigers én de lokale community.",
       groupTitle: "De complete groepsreis op een centrale plek",
-      groupText: "Accommodaties, vluchten, huurauto's en dagplanningen overzichtelijk gebundeld. Op de Group Trip-pagina vloeit alles vlekkeloos samen, zodat je altijd up-to-date bent met je vakantie.",
+      groupText: "Accommodaties, vluchten, huurauto's en dagplanningen overzichtelijk gebundeld. Op de Group Trip-pagina vloeit alles vlekkeloos samen, zodat je altijd up-to-date bent met je vakantie."
+    },
 
-    }
+    bykarlie: {
+        projectDescription: "Redesign kleding webshop",
+        briefText: "Maak een redesign voor een bestaande kledingwebshop.",
+        siteAnalysisTitle: "Analyse van de oude site",
+        siteAnalysisText: "Aan de start van dit project ben ik begonnen met een heuristic evaluation, met als doel om een algemene indruk te krijgen van de interactie op de website en de aanwezige stijl van teksten, kleurgebruik, afbeeldingen, etc.. Met deze nieuwe informatie heb ik een moodboard samengesteld aan de hand van drie kernwoorden: elegant, modern en casual, aangezien dit de stijl is die de cliënt graag terug wilde zien in haar website.",
+        designPhaseTitle: "Ontwerpfase",
+        designPhaseText: "Na het bepalen van de stijl ben ik aan de slag gegaan met het opstellen van het design system. Hierbij heb ik bij de interactie elementen gekozen voor Google Material Design 3, vanwege moderne en herkenbare stijl die het uitstraalt.",
+        stylesheetCiteText: "Stylesheet: Tekststijlen",
+        stylesheetCiteColours: "Stylesheet: Kleuren",
+        stylesheetCiteButtons: "Stylesheet: Buttons",
+        stylesheetCiteForm: "Stylesheet: Formulier elementen",
+        bykarlieResultHome: "Homepagina",
+        bykarlieResultProducts: "Productoverzicht",
+        bykarlieResultProductDetail: "Productpagina",
+        bykarlieResultAboutUs: "'Over ons'-pagina",
+        bykarlieResultContact: "Contactpagina"
+    },
+
+    savenow: {
+        projectDescription: "Verbeter je financiële situatie"
+    },
   },
   en: {
     common: {
       navWelkom: "Welcome",
       briefTitle: "Brief",
-      viewCase: "View case"
+      viewCase: "View case",
+      thanksForReading: "Thanks for reading!",
+      readyForCase: "Ready for the next case study?"
     },
 
     index: {
@@ -117,8 +142,30 @@ const translations = {
       activityTitle: "Inspiration for unforgettable moments",
       activityText: "From boat tours to museum visits: every city features a dedicated overview page packed with inspiration. Discover top-rated experiences recommended by fellow travelers and the local community.",
       groupTitle: "Your entire group trip in one central place",
-      groupText: "Accommodations, flights, rental cars, and daily itineraries neatly bundled together. On the Group Trip page, everything flows together seamlessly so you're always up to date on your vacation.",
-    }
+      groupText: "Accommodations, flights, rental cars, and daily itineraries neatly bundled together. On the Group Trip page, everything flows together seamlessly so you're always up to date on your vacation."
+    },
+
+    bykarlie: {
+        projectDescription: "Clothing website redesign",
+        briefText: "Create a redesign for an existing clothing webshop.",
+        siteAnalysisTitle: "Analysis of the old site",
+        siteAnalysisText: "At the start of this project, I began with a heuristic evaluation aimed at getting a general impression of the interaction on the website and the existing style of texts, color usage, images, etc. Using this new information, I put together a moodboard based on three keywords: elegant, modern, and casual, as this was the style the client wanted to see reflected in her website.",
+        designPhaseTitle: "Design phase",
+        designPhaseText: "After defining the style, I started setting up the design system. For the interactive elements, I chose Google Material Design 3 due to the modern and recognizable style it conveys.",
+        stylesheetCiteText: "Stylesheet: Text styles",
+        stylesheetCiteColours: "Stylesheet: Colors",
+        stylesheetCiteButtons: "Stylesheet: Buttons",
+        stylesheetCiteForm: "Stylesheet: Form elements",
+        resultHome: "Homepage",
+        resultProducts: "Product overview",
+        resultProductDetail: "Product page",
+        resultAboutUs: "'About us' page",
+        resultContact: "Contact page"
+    },
+
+    savenow: {
+        projectDescription: "Improve your financial situation"
+    },
   }
 };
 

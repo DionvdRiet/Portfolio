@@ -333,7 +333,7 @@ body{
 					}
 
 					.bykarlie-brand{
-
+						color: #102442;
 					}
 
 					.save-now-brand{
@@ -1660,6 +1660,7 @@ body{
 
 		.bykarlie-header{
 			background-image: url('../Afbeeldingen/ByKarlie/Header.jpg');
+			background-size: cover;
 		}
 
 		.bykarlie-header-responsive{
