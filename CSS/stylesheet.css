@@ -1491,7 +1491,7 @@ body{
 			}
 
 			.volgendeCaseBykarlie{
-				background-image: url('../Afbeeldingen/ByKarlie/Header.jpg');
+				background-image: url('../Afbeeldingen/Bykarlie/Header.jpg');
 				background-position: 50% 0%;
 			}
 
@@ -1524,7 +1524,7 @@ body{
 			}
 
 			.volgendeCaseCardbykarlie{
-				background-image: url('../Afbeeldingen/ByKarlie/header-responsive.jpg');
+				background-image: url('../Afbeeldingen/Bykarlie/header-responsive.jpg');
 			}
 
 		#footer{
@@ -1659,12 +1659,12 @@ body{
 		}
 
 		.bykarlie-header{
-			background-image: url('../Afbeeldingen/ByKarlie/Header.jpg');
+			background-image: url('../Afbeeldingen/Bykarlie/Header.jpg');
 			background-size: cover;
 		}
 
 		.bykarlie-header-responsive{
-			background-image: url('../Afbeeldingen/ByKarlie/header-responsive.jpg'); 
+			background-image: url('../Afbeeldingen/Bykarlie/header-responsive.jpg'); 
 			background-position: 85% 50% !important;
 		}		
 
