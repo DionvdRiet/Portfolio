@@ -315,52 +315,66 @@ if (enBtn) {
   enBtn.addEventListener('click', () => setLanguage('en'));
 }
 
-// // 1. Haal de opgeslagen taal op, of gebruik 'nl' als standaard
-// let currentLang = localStorage.getItem('selectedLanguage') || 'nl';
+// 1. Haal de opgeslagen taal op, of gebruik 'nl' als standaard
+let currentLang = localStorage.getItem('selectedLanguage');
+if (!currentLang) {
+    currentLang = 'nl';
+    localStorage.setItem('selectedLanguage', 'nl');
+}
 
-// // 2. Functie om de pagina-inhoud te updaten naar de gekozen taal
-// function applyLanguage(lang) {
-//   // Sla de gekozen taal op in het geheugen van de browser
-//   localStorage.setItem('selectedLanguage', lang);
-//   currentLang = lang;
+// 2. Functie om de pagina-inhoud te updaten naar de gekozen taal
+function applyLanguage(lang) {
+  // Sla de gekozen taal op in het geheugen van de browser
+  localStorage.setItem('selectedLanguage', lang);
+  currentLang = lang;
 
-//   // Update de actieve status van je NL/EN knoppen met jouw class 'active-lang'
-//   document.querySelectorAll('.lang-btn').forEach(btn => {
-//     if (btn.dataset.lang === lang) {
-//       btn.classList.add('active-lang');
-//     } else {
-//       btn.classList.remove('active-lang');
-//     }
-//   });
+  // Update de actieve status van je NL/EN knoppen met jouw class 'active-lang'
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.dataset.lang === lang) {
+      btn.classList.add('active-lang');
+    } else {
+      btn.classList.remove('active-lang');
+    }
+  });
 
-//   // Zoek alle elementen met data-i18n en vul de juiste tekst in
-//   document.querySelectorAll('[data-i18n]').forEach(element => {
-//     const keyPath = element.getAttribute('data-i18n').split('.');
+  // Zoek alle elementen met data-i18n en vul de juiste tekst in
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const keyPath = element.getAttribute('data-i18n').split('.');
     
-//     // Blader door het translations object
-//     let translation = translations[lang];
-//     keyPath.forEach(key => {
-//       if (translation) translation = translation[key];
-//     });
+    // Blader door het translations object
+    let translation = translations[lang];
+    keyPath.forEach(key => {
+      if (translation) translation = translation[key];
+    });
 
-//     if (translation) {
-//       element.innerHTML = translation;
-//     }
-//   });
-// }
+    if (translation) {
+      element.innerHTML = translation;
+    }
 
-// // 3. Voeg event listeners toe aan je taalknoppen
-// document.querySelectorAll('.lang-btn').forEach(button => {
-//   button.addEventListener('click', () => {
-//     const selectedLang = button.dataset.lang;
-//     applyLanguage(selectedLang);
-//   });
-// });
+    if (lang === 'en') {
+    nlBtn.classList.remove('active-lang');
+    enBtn.classList.add('active-lang');
+    if (langIndicator) langIndicator.style.transform = 'translateX(3.75rem)';
+  } else {
+    enBtn.classList.remove('active-lang');
+    nlBtn.classList.add('active-lang');
+    if (langIndicator) langIndicator.style.transform = 'translateX(0rem)';
+  }
+  });
+}
 
-// // 4. Voer de functie direct uit zodra de pagina laadt
-// document.addEventListener('DOMContentLoaded', () => {
-//   applyLanguage(currentLang);
-// });
+// 3. Voeg event listeners toe aan je taalknoppen
+document.querySelectorAll('.lang-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const selectedLang = button.dataset.lang;
+    applyLanguage(selectedLang);
+  });
+});
+
+// 4. Voer de functie direct uit zodra de pagina laadt
+document.addEventListener('DOMContentLoaded', () => {
+  applyLanguage(currentLang);
+});
 
 function projectenIndicator(){
     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
