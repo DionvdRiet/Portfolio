@@ -118,6 +118,31 @@ const translations = {
         resultaat5Title: "Jij wilt van je schulden af, wij creëren het plan",
         resultaat5Text: "Samen met jou berekenen wij wat verantwoord is om per maand af te lossen aan je schuld. Zie hoeveel je ondertussen al hebt afbetaald en wanneer je eindelijk verlost zal zijn van deze schuld!"
     },
+
+    playnext: {
+      projectDescription: "Ontdek je volgende favoriete game",
+      briefText: "Ontwerp een app die een duidelijk overzicht biedt aan gamers van de games die binnenkort uitkomen.",
+      callout: "Een enquête onder 18 respondenten vormde de basis van mijn onderzoek. Hiermee heb ik waardevolle informatie verkregen over welke elementen belangrijk zijn in een gaming-gerelateerde app en welke websites of apps de doelgroep al gebruikt. Om een breder beeld te krijgen van het aankoopgedrag van gamers, heb ik vervolgens via deskresearch aanvullende informatie verzameld.",
+      research1: "71% van de 18-24-jarige mannen speelt op console of PC.",
+      research2: "De mannelijke 18-34-jarige gamer:",
+      research2a: "Speelt het liefste action games",
+      research2b: "Speelt samen met vrienden",
+      schetsen1Title: "Eerste iteratie schetsen",
+      schetsen1Text: "De focus bij deze eerste iteratie schetsen lag op het leggen van de basis van het toevoegen-, bijhouden en analyseren van uitgaven en het helpen afbouwen van schulden. <br><br> Daarnaast is besloten om op de 'Home-pagina' informatie weer te geven over games die de gebruiker zelf volgt, maar ook games die over het algemeen populair zijn per week. <br><br> Op de 'Following-pagina' wordt bij elke game een timer weergegeven wanneer het spel uitkomt.",
+      schetsen1Cite: "Eerste iteratie schetsen: Ontdekken nieuwe games",
+      schetsen2Title: "Tweede iteratie schetsen",
+      schetsen2Text: "Bij de tweede iteratie schetsen is de focus meer gelegd op het gebruiken van verschillende cards. Aan de hand hiervan is de lay-out verbeterd op de 'Nieuws-pagina', 'Discovery-pagina' en 'Community-pagina'",
+      schetsen2Cite: "Tweede iteratie schetsen: Verbetering 'Nieuws-pagina', 'Discovery-pagina' en 'Community-pagina'",
+      wireframesText: "Verbeterde homepagina met teller en nieuwsartikelen, gemakkelijk nieuwe games ontdekken per genre en met andere gamers erover praten.",
+      wireframesCite: "Wireframes: Verbeterde homepagina, games ontdekken per genre, praten met anderen op 'Community-pagina'",
+      resultaatTileTitle: "Ontdek nieuwe games",
+      resultaatTileText: "en behaal nieuwe highscores!",
+      resultaat1Text: "Bekijk in een overzicht hoe lang het duurt voordat jouw favoriete games uitkomen, krijg het laatste nieuws mee en kom te weten of er een nieuwe trailer uit is gekomen voor een van de games die je volgt!",
+      resultaat2Text: "Lees het laatste gaming-gerelateerde nieuws in een handig overzicht. Je kan zelf bepalen of je de meest populaire artikelen leest, de meest recente, of juist artikelen die zijn geschreven over de games die jij volgt. Mocht je een artikel later willen lezen, kan je deze opslaan in je Bookmark lijst.",
+      resultaat3Text: "Ontdek nieuwe games door te bekijken wat er binnenkort uit wordt gebracht , sorteer games op genre en krijg aanbevelingen gebaseerd op jouw persoonlijke voorkeuren en activiteit.",
+      resultaat4Text: "Krijg meer te weten over een spel door bestaande threads te bekijken of zelf een thread te beginnen. Krijg meer te weten over een spel door bestaande threads te bekijken of zelf een thread te beginnen.",
+      resultaat5Text: "Krijg een duidelijk overzicht van op welke dagen er deze maand games uitkomen. Zie daarnaast welke games die je volgt binnenkort uitkomen, of bekijk de volledige lijst."
+    },
   },
   en: {
     common: {
@@ -213,7 +238,32 @@ const translations = {
         resultaat4Text: "Sometimes you need the right advice on saving money or developing better spending habits. On the 'Articles' page, you can read articles and publish your own.",
         resultaat5Title: "You want to get rid of debt, we build the plan",
         resultaat5Text: "Together with you, we calculate a responsible monthly repayment amount for your debt. Track how much you've already paid off and see when you'll finally be debt-free!"
-    }
+    },
+
+    playnext: {
+        projectDescription: "Discover your next favorite game",
+        briefText: "Design an app that provides gamers with a clear overview of upcoming game releases.",
+        callout: "A survey among 18 respondents formed the basis of my research. This provided valuable insights into which elements are important in a gaming-related app and which websites or apps the target audience already uses. To gain a broader picture of gamers' purchasing behavior, I subsequently gathered additional information through desk research.",
+        research1: "71% of 18–24-year-old men play on console or PC.",
+        research2: "The male 18–34-year-old gamer:",
+        research2a: "Prefers playing action games",
+        research2b: "Plays together with friends",
+        schetsen1Title: "First iteration sketches",
+        schetsen1Text: "The focus of this first sketch iteration was laying the groundwork for adding, tracking, and analyzing expenses, as well as helping reduce debt. <br><br> Additionally, it was decided to display information on the 'Home' page about games the user follows, as well as games that are generally popular per week. <br><br> On the 'Following' page, a countdown timer is displayed for each game showing when it will be released.",
+        schetsen1Cite: "First iteration sketches: Discovering new games",
+        schetsen2Title: "Second iteration sketches",
+        schetsen2Text: "In the second sketch iteration, the focus shifted toward using various cards. Based on this, the layout was improved for the 'News' page, 'Discovery' page, and 'Community' page.",
+        schetsen2Cite: "Second iteration sketches: Improvements to 'News', 'Discovery', and 'Community' pages",
+        wireframesText: "Improved homepage featuring a countdown timer and news articles, easily discovering new games by genre, and chatting about them with other gamers.",
+        wireframesCite: "Wireframes: Improved homepage, discovering games by genre, chatting with others on 'Community' page",
+        resultaatTileTitle: "Discover new games",
+        resultaatTileText: "and reach new high scores!",
+        resultaat1Text: "View in a single overview how long until your favorite games are released, catch up on the latest news, and find out if a new trailer has been dropped for one of the games you follow!",
+        resultaat2Text: "Read the latest gaming-related news in a convenient overview. You can choose whether to read the most popular articles, the latest releases, or articles written specifically about the games you follow. If you want to read an article later, you can save it to your Bookmark list.",
+        resultaat3Text: "Discover new games by checking out upcoming releases, sort games by genre, and get recommendations based on your personal preferences and activity.",
+        resultaat4Text: "Learn more about a game by browsing existing threads or starting one yourself. Learn more about a game by browsing existing threads or starting one yourself.",
+        resultaat5Text: "Get a clear overview of which days games are coming out this month. Additionally, see which games you follow are releasing soon, or view the complete list."
+    }    
   }
 };
 
@@ -264,6 +314,53 @@ if (nlBtn) {
 if (enBtn) {
   enBtn.addEventListener('click', () => setLanguage('en'));
 }
+
+// // 1. Haal de opgeslagen taal op, of gebruik 'nl' als standaard
+// let currentLang = localStorage.getItem('selectedLanguage') || 'nl';
+
+// // 2. Functie om de pagina-inhoud te updaten naar de gekozen taal
+// function applyLanguage(lang) {
+//   // Sla de gekozen taal op in het geheugen van de browser
+//   localStorage.setItem('selectedLanguage', lang);
+//   currentLang = lang;
+
+//   // Update de actieve status van je NL/EN knoppen met jouw class 'active-lang'
+//   document.querySelectorAll('.lang-btn').forEach(btn => {
+//     if (btn.dataset.lang === lang) {
+//       btn.classList.add('active-lang');
+//     } else {
+//       btn.classList.remove('active-lang');
+//     }
+//   });
+
+//   // Zoek alle elementen met data-i18n en vul de juiste tekst in
+//   document.querySelectorAll('[data-i18n]').forEach(element => {
+//     const keyPath = element.getAttribute('data-i18n').split('.');
+    
+//     // Blader door het translations object
+//     let translation = translations[lang];
+//     keyPath.forEach(key => {
+//       if (translation) translation = translation[key];
+//     });
+
+//     if (translation) {
+//       element.innerHTML = translation;
+//     }
+//   });
+// }
+
+// // 3. Voeg event listeners toe aan je taalknoppen
+// document.querySelectorAll('.lang-btn').forEach(button => {
+//   button.addEventListener('click', () => {
+//     const selectedLang = button.dataset.lang;
+//     applyLanguage(selectedLang);
+//   });
+// });
+
+// // 4. Voer de functie direct uit zodra de pagina laadt
+// document.addEventListener('DOMContentLoaded', () => {
+//   applyLanguage(currentLang);
+// });
 
 function projectenIndicator(){
     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
@@ -664,8 +761,8 @@ function startResponsiveAnimation() {
 function home(){
 	document.getElementById("mobile-nav-title").style.transform = "translateY(+90%)";
 	document.getElementById("mobile-nav-title").style.opacity = "0";
-	document.getElementById("arrow-left-mobile").style.transform = "translateY(+90%)";
-	document.getElementById("arrow-left-mobile").style.opacity = "0";
+	document.getElementById("arrow-left").style.transform = "translateY(+90%)";
+	document.getElementById("arrow-left").style.opacity = "0";
 
 	setTimeout(function(){ 
 	document.getElementById("mobile-nav-title").innerHTML = "Welkom";
