@@ -1928,12 +1928,12 @@ body{
 	}
 
 	#loadWebsiteTitel span{
-		font-size: 3rem;
-		margin-bottom: 8px;
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
 	}
 
 	#loadWebsiteTitel p{
-		font-size: 2rem;
+		font-size: 1rem;
 	}
 
 	h2{
@@ -2735,6 +2735,18 @@ body{
 		background-repeat: no-repeat;
 		z-index: 1;
 	}
+
+	.text-left{
+		margin-bottom: 3rem;
+	}
+
+	.right-half{
+		grid-column: 1 / -1;
+	}
+
+		.right-half img{
+			border-radius: 0px;
+		}
 
 	.header-scroll-yellow{
 		z-index: 0;
