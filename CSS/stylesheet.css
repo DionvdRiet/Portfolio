@@ -2599,17 +2599,22 @@ body{
 		position: fixed;
 		top:1.25rem;
 		left: 0;
-		grid-column: 1/3;
+		/*grid-column: 1/3;*/
 		width: 100%;
 		height: 2.5rem;
 		transition: height .3s cubic-bezier(.365,.305,0,1);
 		z-index: 6;
 	}
+
+		#nav-top-container{
+		}
+
 		#responsive-nav-top{
 			display: flex;
 			grid-column: 2/3;
 			position: relative;
 			justify-content: center;
+			align-items: center;
 			height: 2.5rem;
 			background-color: rgba(239, 239, 239, 0.3);
 			border-radius: 1rem;
@@ -2645,11 +2650,6 @@ body{
 				#responsive-nav-list-item-1, #responsive-nav-list-item-2{
 					opacity: 0;
 					transition: opacity 0.3s cubic-bezier(.365,.305,0,1) 6s;
-				}
-
-				#responsive-nav-list-item-2{
-					text-decoration: line-through;
-					text-decoration-color: white;
 				}
 
 				#nav-bottom{
@@ -2697,6 +2697,76 @@ body{
 				width: 100vw;
 				transition: height .5s ease-in;
 			}
+
+		#responsive-naf{
+			grid-template-columns: none !important;
+			grid-template-rows: auto 1rem ;
+			height: 100vh;
+			/*width: 100vw;*/
+			background-color: red;
+		}
+
+			#naf-top{
+				height: 2.5rem;
+				grid-column: 1/2;
+				grid-row: 1/2;
+				display: grid;
+				grid-template-rows: 2.5rem;
+			}
+
+				#naf-top-container{
+					width: 100%;
+					grid-column: 1/3;
+					height: 2.5rem;
+					grid-row: 1/2;
+					background-color: pink;
+				}
+
+				#naf-list{
+					opacity: 0;
+					grid-row: 2/3;
+					height: 100%;
+					width: 100%;
+					background-color: green;
+				}
+
+				#naf-bottom{
+					display: flex;
+					flex-direction: column;
+					justify-content: end;
+					opacity: 0;
+					grid-row: 3/4;
+					height: 100%;
+					width: 100%;
+					background-color: purple;
+				}
+
+					.naf-bottom-phone{
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						align-items: center;
+						width:100%;
+						background-color: white;
+					}
+
+						.naf-bottom-phone-container{
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							gap:1rem;
+						}
+
+						.bottom-phone-icon{
+							height: 2rem;
+							width: 2rem;
+						}
+
+					.naf-bottom-lang{
+						width:100%;
+						background-color: #FFED00;
+						border-radius: 0 0 1rem 1rem;
+					}
 
 		.arrow-left, .hamburger-menu{
 			border-radius: 0.6rem;

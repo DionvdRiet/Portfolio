@@ -34,7 +34,7 @@
 		</div>
 	</header>
 	
-	<header id="responsive-nav">
+	<!-- <header id="responsive-nav">
 		<div id="responsive-nav-top">
 			<div id="nav-top-container">
 				<button type="button" class="arrow-left" id="arrow-left" onclick="home()">
@@ -56,6 +56,31 @@
 				</div>
 				<div class="nav-bottom-lang">
 					sds
+				</div>
+			</div>
+		</div>
+	</header> -->
+
+	<header id="responsive-naf">
+		<div id="naf-top" onclick="overlay()">
+			<div id="naf-top-container"></div>
+			<div id="naf-list">
+				<a data-i18n="common.navWelkom" id="responsive-nav-list-item-1" onclick="home()">Welkom</a>
+				<a id="responsive-nav-list-item-2" onclick="contact()">Contact</a>
+			</div>
+			<div id="naf-bottom">
+				<div class="naf-bottom-phone">
+					<div class="naf-bottom-phone-container">
+						<div class="contactCardIconTelefoon bottom-phone-icon"></div>
+						<a href="tel:+31621374084">+31 6 21374084</a>
+					</div>
+					<button type="button" class="naf-bottom-button">Neem contact op</button>
+				</div>
+				<div class="lang-switch naf-bottom-lang" role="radiogroup" aria-label="Taalselectie">
+				  <div class="lang-indicator"></div>
+				  
+				  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands">NL</button>
+				  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels">EN</button>
 				</div>
 			</div>
 		</div>
