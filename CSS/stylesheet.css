@@ -2626,7 +2626,8 @@ body{
 				grid-column: 1/3;
 				position: absolute;
 				gap: 2rem;
-				top: 5rem;
+				top: 10rem;
+				left: 3.5rem;
 				width: 100vw;
 				height: 7.5rem;
 				transition: height .3s cubic-bezier(.365,.305,0,1);
@@ -2641,7 +2642,6 @@ body{
 				font-weight: 500;
 				font-size: 1.5rem;
 				color: #131824;
-				padding: 0 2rem;
 				/*margin: 9.375rem;*/
 				opacity: 0;
 				transition: opacity .3s cubic-bezier(.365,.305,0,1);
@@ -2699,19 +2699,19 @@ body{
 			}
 
 		#responsive-naf{
-			grid-template-columns: none !important;
+			grid-template-columns: 2.5rem auto 2.5rem;
 			grid-template-rows: auto 1rem ;
 			height: 100vh;
 			/*width: 100vw;*/
-			background-color: red;
 		}
 
 			#naf-top{
 				height: 2.5rem;
-				grid-column: 1/2;
+				grid-column: 2/3;
 				grid-row: 1/2;
 				display: grid;
 				grid-template-rows: 2.5rem;
+				background-color: #F8F6D4;
 			}
 
 				#naf-top-container{
@@ -2719,7 +2719,6 @@ body{
 					grid-column: 1/3;
 					height: 2.5rem;
 					grid-row: 1/2;
-					background-color: pink;
 				}
 
 				#naf-list{
@@ -2727,7 +2726,7 @@ body{
 					grid-row: 2/3;
 					height: 100%;
 					width: 100%;
-					background-color: green;
+
 				}
 
 				#naf-bottom{
@@ -2738,7 +2737,6 @@ body{
 					grid-row: 3/4;
 					height: 100%;
 					width: 100%;
-					background-color: purple;
 				}
 
 					.naf-bottom-phone{
@@ -2748,7 +2746,14 @@ body{
 						align-items: center;
 						width:100%;
 						background-color: white;
+						padding: 0.5rem 0;
 					}
+
+						.naf-bottom-phone > button{
+							background-color: transparent;
+							color: #131824;
+							font-size: 0.75rem;
+						}
 
 						.naf-bottom-phone-container{
 							display: flex;
