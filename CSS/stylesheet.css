@@ -2606,8 +2606,18 @@ body{
 		z-index: 6;
 	}
 
-		#nav-top-container{
+		#naf-top-container{
+			display: flex;
+			justify-content: space-between;
 		}
+
+			#naf-top-container > .arrow-left{
+				position: relative;
+			}
+
+			#naf-top-container > .hamburger-menu{
+				position: relative;
+			}
 
 		#responsive-nav-top{
 			display: flex;

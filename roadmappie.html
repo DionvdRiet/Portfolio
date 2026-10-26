@@ -63,7 +63,17 @@
 
 	<header id="responsive-naf">
 		<div id="naf-top" onclick="overlay()">
-			<div id="naf-top-container"></div>
+			<div id="naf-top-container">
+					<button type="button" class="arrow-left" id="arrow-left" onclick="home()">
+						<img src="Afbeeldingen/arrow-left.svg">
+					</button>
+					<span id="mobile-nav-title">Roadmappie</span>
+					<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
+						<div id="hamburger-1"></div>
+						<div id="hamburger-2"></div>
+					</div>
+				</div>
+			</div>
 			<div id="responsive-nav-list">
 				<a data-i18n="common.navWelkom" id="responsive-nav-list-item-1" onclick="home()">Welkom</a>
 				<a id="responsive-nav-list-item-2" onclick="contact()">Contact</a>
