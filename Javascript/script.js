@@ -25,7 +25,6 @@ startAnimation(x);
 const translations = {
   nl: {
     common: {
-      navWelkom: "Welkom",
       briefTitle: "Opdracht",
       viewCase: "Bekijk case",
       thanksForReading: "Bedankt voor het lezen!",
@@ -146,7 +145,6 @@ const translations = {
   },
   en: {
     common: {
-      navWelkom: "Welcome",
       briefTitle: "Brief",
       viewCase: "View case",
       thanksForReading: "Thanks for reading!",
@@ -632,7 +630,6 @@ function overlay(){
   //   document.getElementById('responsive-nav').style.height = "100vh";
     document.getElementById('responsive-nav-list').style.display = "flex";
     document.getElementById('responsive-nav-list').style.opacity = "1";
-    document.getElementById('responsive-nav-list').style.height = "100%";
 
   //   document.getElementById('hamburger-1').style.transform = "rotate(-45deg)";
   //   document.getElementById('hamburger-2').style.transform = "rotate(45deg)";
