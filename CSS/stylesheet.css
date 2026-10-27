@@ -636,7 +636,7 @@ body{
 	}
 
 	.mobile-only{
-		display: block;
+		visibility: visible;
 	}
 
 	.desktop-only{
@@ -2799,11 +2799,66 @@ body{
 							background-size: 50%;
 						}
 
-					.naf-bottom-lang{
+/*					.naf-bottom-lang{
 						width:100%;
 						background-color: #FFED00;
 						border-radius: 0 0 1rem 1rem;
+					}*/
+
+					.lang-switch{
+						width:100%;
+						background-color: #FFED00;
+						border-radius: 0 0 1rem 1rem;
+						position: relative;
+						display: flex;
+						/*justify-content: space-around;*/
+						flex-direction: row;
+						/*border-radius: 0.4rem;
+						background-color: #FFED00;
+						grid-column: 4/5;
+						width: 7.50rem;
+						height: 2.25rem;
+						align-self: center;	
+						transform: translateX(0px);*/
 					}
+
+						.lang-switch > button{
+							z-index: 2;
+							position: relative;
+							background: none;
+							border: none;
+							font-family: paralucent, sans-serif;
+							font-style: normal;
+						}
+
+						.lang-btn {
+						  font-weight: 400;
+						  color: #948A00;
+						}
+
+							.lang-btn:hover{
+								color:#131824;
+								font-weight: 500;
+							}
+
+						/* Actieve status */
+						.active-lang {
+						  font-weight: 500;
+						  color:#131824;
+						}
+
+						.lang-indicator-mobile{
+							z-index: 1;
+							position: absolute;
+							height: 1.75rem;
+							left: 0.50rem;
+							bottom: 0.60rem;
+							width: 3.25rem;
+							background-color: white;
+							border-radius: 0.4rem;
+							transform: translateX(0rem);
+							transition: transform 0.4s cubic-bezier(.365,.305,0,1);
+						}
 
 		.arrow-left, .hamburger-menu{
 			border-radius: 0.6rem;
@@ -2855,7 +2910,7 @@ body{
 			opacity: 0;
 			z-index: 2;
 			background-color: rgba(0, 0, 0, 0.3);
-			position: absolute;
+			position: fixed;
 			height: 100vh;
 			width: 100vw;
 		}
@@ -3834,8 +3889,12 @@ body{
 
 	#responsive, #responsive-nav, .responsive-image, #eindresultaat-section-responsive, #projectCardContainer, #welkom-introductie-title-responsive,
 		#welkom-projecten-scroll, .save-now-header-responsive, .gaming-header-responsive, .eindresultaat-responsive, #volgendeCaseCard, .welkom-bericht-mobile-container, 
-		#case-header-description-mobile, .mobileImage, #contactMobile, .mobile-only{
+		#case-header-description-mobile, .mobileImage, #contactMobile{
 		display: none;
+	}
+
+	.mobile-only{
+		visibility: hidden;
 	}
 
 	.play-next-header-responsive, .responsive-header-image{

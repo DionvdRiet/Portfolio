@@ -265,54 +265,6 @@ const translations = {
   }
 };
 
-// 2. Elementen selecteren
-const nlBtn = document.querySelector('[data-lang="nl"]');
-const enBtn = document.querySelector('[data-lang="en"]');
-const langIndicator = document.querySelector('.lang-indicator');
-
-// 3. Universele vertaalfunctie
-function setLanguage(lang) {
-  const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-
-  elementsToTranslate.forEach(element => {
-    // Splits paden zoals "roadmappie.projectDescription"
-    const keyPath = element.getAttribute('data-i18n').split('.');
-    
-    // Door het translations object navigeren
-    let translation = translations[lang];
-    keyPath.forEach(key => {
-      if (translation) {
-        translation = translation[key];
-      }
-    });
-
-    // Tekst updaten als de vertaling bestaat
-    if (translation) {
-      element.textContent = translation;
-    }
-  });
-
-  // Actieve status en indicator-positie bijwerken
-  if (lang === 'en') {
-    nlBtn.classList.remove('active-lang');
-    enBtn.classList.add('active-lang');
-    if (langIndicator) langIndicator.style.transform = 'translateX(3.75rem)';
-  } else {
-    enBtn.classList.remove('active-lang');
-    nlBtn.classList.add('active-lang');
-    if (langIndicator) langIndicator.style.transform = 'translateX(0rem)';
-  }
-}
-
-// 4. Event Listeners (vervangers van onclick)
-if (nlBtn) {
-  nlBtn.addEventListener('click', () => setLanguage('nl'));
-}
-
-if (enBtn) {
-  enBtn.addEventListener('click', () => setLanguage('en'));
-}
-
 // 1. Haal de opgeslagen taal op, of gebruik 'nl' als standaard
 let currentLang = localStorage.getItem('selectedLanguage');
 if (!currentLang) {
@@ -320,58 +272,72 @@ if (!currentLang) {
     localStorage.setItem('selectedLanguage', 'nl');
 }
 
-// 2. Functie om de pagina-inhoud te updaten naar de gekozen taal
+// 2. Selecteer alle taalknoppen en beide indicatoren
+const langButtons = document.querySelectorAll('.lang-btn');
+const desktopIndicator = document.querySelector('.lang-indicator');
+const mobileIndicator = document.querySelector('.lang-indicator-mobile');
+
+// 3. De centrale functie om taal en UI in één keer goed te zetten
 function applyLanguage(lang) {
-  // Sla de gekozen taal op in het geheugen van de browser
-  localStorage.setItem('selectedLanguage', lang);
-  currentLang = lang;
+    // Sla de gekozen taal op in de browser
+    localStorage.setItem('selectedLanguage', lang);
+    currentLang = lang;
 
-  // Update de actieve status van je NL/EN knoppen met jouw class 'active-lang'
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    if (btn.dataset.lang === lang) {
-      btn.classList.add('active-lang');
-    } else {
-      btn.classList.remove('active-lang');
-    }
-  });
-
-  // Zoek alle elementen met data-i18n en vul de juiste tekst in
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const keyPath = element.getAttribute('data-i18n').split('.');
-    
-    // Blader door het translations object
-    let translation = translations[lang];
-    keyPath.forEach(key => {
-      if (translation) translation = translation[key];
+    // Update de actieve status van alle taalknoppen op de pagina
+    langButtons.forEach(btn => {
+        if (btn.dataset.lang === lang) {
+            btn.classList.add('active-lang');
+        } else {
+            btn.classList.remove('active-lang');
+        }
     });
 
-    if (translation) {
-      element.innerHTML = translation;
+    // Verplaats de desktop indicator (indien aanwezig op de pagina)
+    if (desktopIndicator) {
+        if (lang === 'en') {
+            desktopIndicator.style.transform = 'translateX(3.75rem)';
+        } else {
+            desktopIndicator.style.transform = 'translateX(0rem)';
+        }
     }
 
-    if (lang === 'en') {
-    nlBtn.classList.remove('active-lang');
-    enBtn.classList.add('active-lang');
-    if (langIndicator) langIndicator.style.transform = 'translateX(3.75rem)';
-  } else {
-    enBtn.classList.remove('active-lang');
-    nlBtn.classList.add('active-lang');
-    if (langIndicator) langIndicator.style.transform = 'translateX(0rem)';
-  }
-  });
+    // Verplaats de mobiele indicator naar jouw gewenste 4.40rem (indien aanwezig)
+    if (mobileIndicator) {
+        if (lang === 'en') {
+            mobileIndicator.style.transform = 'translateX(4.40rem)';
+        } else {
+            mobileIndicator.style.transform = 'translateX(0rem)';
+        }
+    }
+
+    // Vertaal alle tekst-elementen met data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const keyPath = element.getAttribute('data-i18n').split('.');
+        
+        let translation = translations[lang];
+        keyPath.forEach(key => {
+            if (translation) {
+                translation = translation[key];
+            }
+        });
+
+        if (translation) {
+            element.innerHTML = translation;
+        }
+    });
 }
 
-// 3. Voeg event listeners toe aan je taalknoppen
-document.querySelectorAll('.lang-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const selectedLang = button.dataset.lang;
-    applyLanguage(selectedLang);
-  });
+// 4. Voeg klik-eventlisteners toe aan alle taalknoppen
+langButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedLang = button.dataset.lang;
+        applyLanguage(selectedLang);
+    });
 });
 
-// 4. Voer de functie direct uit zodra de pagina laadt
+// 5. Voer de functie direct uit zodra de pagina laadt
 document.addEventListener('DOMContentLoaded', () => {
-  applyLanguage(currentLang);
+    applyLanguage(currentLang);
 });
 
 function projectenIndicator(){
