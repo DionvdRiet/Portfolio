@@ -2709,19 +2709,24 @@ body{
 			}
 
 		#responsive-naf{
+			position: fixed;
+			top:1rem;
 			grid-template-columns: 2.5rem auto 2.5rem;
 			grid-template-rows: auto 1rem ;
-			height: 100vh;
+			height: calc(100dvh - 2rem);
 			/*width: 100vw;*/
+			z-index: 3;
 		}
 
-			#naf-top{
+			#naf-top{	
 				height: 2.5rem;
 				grid-column: 2/3;
-				grid-row: 1/2;
+				grid-row: 1/4;
 				display: grid;
 				grid-template-rows: 2.5rem;
-				background-color: #F8F6D4;
+				background-color: rgba(239, 239, 239, 0.3);
+				border-radius: 1rem;
+
 			}
 
 				#naf-top-container{
@@ -2827,6 +2832,15 @@ body{
 				transform: rotate(0deg);
 				transition: transform 0.3s cubic-bezier(.365,.305,0,1);
 			}
+
+		#responsive-naf-background{
+			opacity: 0;
+			z-index: 2;
+			background-color: rgba(0, 0, 0, 0.3);
+			position: absolute;
+			height: 100vh;
+			width: 100vw;
+		}
 
 		#responsive-nav-item-1,#responsive-nav-item-2,#responsive-nav-item-3{
 			display: none;
