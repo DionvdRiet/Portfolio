@@ -2711,9 +2711,10 @@ body{
 		#responsive-naf{
 			position: fixed;
 			top:1rem;
-			grid-template-columns: 2.5rem auto 2.5rem;
+			grid-template-columns: 1.5rem auto 1.5rem;
 			grid-template-rows: auto 1rem ;
 			height: calc(100dvh - 2rem);
+			height: 2.5rem;
 			/*width: 100vw;*/
 			z-index: 3;
 		}
@@ -2726,7 +2727,7 @@ body{
 				grid-template-rows: 2.5rem;
 				background-color: rgba(239, 239, 239, 0.3);
 				border-radius: 1rem;
-
+				transition: height .3s cubic-bezier(.365,.305,0,1);
 			}
 
 				#naf-top-container{
@@ -2749,9 +2750,11 @@ body{
 					flex-direction: column;
 					justify-content: end;
 					opacity: 0;
+					visibility: hidden;
 					grid-row: 3/4;
 					height: 100%;
 					width: 100%;
+					transition: opacity .5s cubic-bezier(.365,.305,0,1) 0.3s;
 				}
 
 					.naf-bottom-phone{
@@ -2834,6 +2837,7 @@ body{
 			}
 
 		#responsive-naf-background{
+			display: none;
 			opacity: 0;
 			z-index: 2;
 			background-color: rgba(0, 0, 0, 0.3);

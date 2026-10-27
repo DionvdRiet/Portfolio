@@ -639,11 +639,14 @@ function overlay(){
   //   document.getElementById('hamburger-2').style.marginTop = "-8px";
   //   document.getElementById('hamburger-menu').id = "close-overlay";
 
+  document.getElementById('responsive-naf').style.height = "calc(100dvh - 2rem)";
   document.getElementById('naf-top').style.backgroundColor = "#F8F6D4";
   document.getElementById('naf-top').style.height = "100%";
   document.getElementById('naf-top').style.gridTemplateRows = "2.5rem auto auto";
    // document.getElementById('responsive-nav-list').style.opacity = "1";
+  document.getElementById('naf-bottom').style.visibility = "visible";
   document.getElementById('naf-bottom').style.opacity = "1";
+  document.getElementById('responsive-naf-background').style.display = "block";
   document.getElementById('responsive-naf-background').style.opacity = "1";
 
     document.getElementById("close-overlay").onclick = function(){closeOverlay()};
