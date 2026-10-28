@@ -2717,6 +2717,7 @@ body{
 			height: 2.5rem;
 			/*width: 100vw;*/
 			z-index: 3;
+			transition: height .3s cubic-bezier(.365,.305,0,1);
 		}
 
 			#naf-top{	
@@ -2852,7 +2853,7 @@ body{
 							position: absolute;
 							height: 1.75rem;
 							left: 0.50rem;
-							bottom: 0.60rem;
+							bottom: 0.65rem;
 							width: 3.25rem;
 							background-color: white;
 							border-radius: 0.4rem;

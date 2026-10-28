@@ -305,6 +305,7 @@ function applyLanguage(lang) {
     if (mobileIndicator) {
         if (lang === 'en') {
             mobileIndicator.style.transform = 'translateX(4.40rem)';
+
         } else {
             mobileIndicator.style.transform = 'translateX(0rem)';
         }
@@ -331,7 +332,16 @@ function applyLanguage(lang) {
 langButtons.forEach(button => {
     button.addEventListener('click', () => {
         const selectedLang = button.dataset.lang;
+        
+        // 1. Verander direct de taal en laat de indicator bewegen
         applyLanguage(selectedLang);
+
+        // 2. Wacht even (bijv. 600 milliseconden) zodat de gebruiker de selectie ziet, sluit dan pas
+        setTimeout(() => {
+            if (typeof closeOverlay === 'function') {
+                closeOverlay();
+            }
+        }, 600); // 600ms = genoeg tijd om de indicator te zien verschuiven
     });
 });
 
@@ -585,6 +595,7 @@ function pageScrollIndicatorResponsive(){
 
 
 function overlay(){
+  document.getElementById('responsive-naf').style.transitionDelay = "0s";
   // document.getElementById('responsive-nav').style.height = "100%";
   // document.getElementById('responsive-nav').style.backgroundColor = "#F8F6D4";
   // document.getElementById('responsive-nav-top').style.height = "100%";
@@ -597,10 +608,10 @@ function overlay(){
     document.getElementById('responsive-nav-list').style.display = "flex";
     document.getElementById('responsive-nav-list').style.opacity = "1";
 
-  //   document.getElementById('hamburger-1').style.transform = "rotate(-45deg)";
-  //   document.getElementById('hamburger-2').style.transform = "rotate(45deg)";
+    document.getElementById('hamburger-1').style.transform = "rotate(-45deg)";
+    document.getElementById('hamburger-2').style.transform = "rotate(45deg)";
   //   document.getElementById('hamburger-2').style.marginTop = "-8px";
-  //   document.getElementById('hamburger-menu').id = "close-overlay";
+    document.getElementById('hamburger-menu').id = "close-overlay";
 
   document.getElementById('responsive-naf').style.height = "calc(100dvh - 2rem)";
   document.getElementById('naf-top').style.backgroundColor = "#F8F6D4";
@@ -616,18 +627,23 @@ function overlay(){
 }
 
 function closeOverlay(){
-    document.getElementById('responsive-nav').style.height = "120px";
-    document.getElementById('responsive-nav-list').style.display = "none";
-    document.getElementById('close-overlay').id = "hamburger-menu";
-    document.getElementById('hamburger-1').style.marginBottom = "5px";
-    document.getElementById('hamburger-2').style.marginTop = "5px";
-    document.getElementById('hamburger-2').style.backgroundColor = "#131824";
+  document.getElementById('close-overlay').id = "hamburger-menu";
+  document.getElementById('hamburger-1').style.transform = "rotate(0deg)";
+  document.getElementById('hamburger-2').style.transform = "rotate(0deg)";
+  document.getElementById('naf-bottom').style.opacity = "0";
+  document.getElementById('naf-bottom').style.visibility = "hidden";
+  document.getElementById('responsive-nav-list').style.opacity = "0";
+  document.getElementById('responsive-nav-list').style.display = "none";
+  document.getElementById('naf-top').style.backgroundColor = "rgba(239, 239, 239, 0.3)";
+  document.getElementById('naf-top').style.height = "2.5rem";
+  document.getElementById('naf-top').style.gridTemplateRows = "2.5rem";
 
-    document.getElementById('hamburger-1').style.transform = "rotate(0deg)";
-    document.getElementById('hamburger-2').style.transform = "rotate(0deg)";
-    document.getElementById('hamburger-2').style.transform = "translateY(0px)";
 
-    document.getElementById("hamburger-menu").onclick = function(){overlay()};
+  document.getElementById('responsive-naf').style.height = "2.5rem";
+  document.getElementById('responsive-naf-background').style.opacity = "0";
+   
+
+  document.getElementById("hamburger-menu").onclick = function(){overlay()};
 }
 
 
