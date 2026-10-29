@@ -2773,10 +2773,11 @@ body{
 							color: #71747C;
 							font-weight: 500;
 							text-decoration: none;
+							background-color: transparent;
 						}
 
-						.naf-bottom-phone > button{
-							background-color: transparent;
+						.naf-bottom-phone > a > button{
+							background-color: transparent !important;
 							color: #131824;
 							font-size: 1rem;
 							padding: 0;
