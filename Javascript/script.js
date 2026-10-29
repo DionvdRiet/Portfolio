@@ -333,18 +333,17 @@ langButtons.forEach(button => {
     button.addEventListener('click', () => {
         const selectedLang = button.dataset.lang;
         
-        // 1. Verander direct de taal en laat de indicator bewegen
+        // Verander de taal (en beweeg de indicator)
         applyLanguage(selectedLang);
 
-        // 2. Wacht even (bijv. 600 milliseconden) zodat de gebruiker de selectie ziet, sluit dan pas
+        // Wacht even zodat de gebruiker de taalkeuze ziet, sluit dan het menu
         setTimeout(() => {
             if (typeof closeOverlay === 'function') {
                 closeOverlay();
             }
-        }, 600); // 600ms = genoeg tijd om de indicator te zien verschuiven
+        }, 600); // 600ms pauze voor de visuele bevestiging
     });
 });
-
 // 5. Voer de functie direct uit zodra de pagina laadt
 document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(currentLang);
@@ -594,56 +593,78 @@ function pageScrollIndicatorResponsive(){
 
 
 
-function overlay(){
-  document.getElementById('responsive-naf').style.transitionDelay = "0s";
-  // document.getElementById('responsive-nav').style.height = "100%";
-  // document.getElementById('responsive-nav').style.backgroundColor = "#F8F6D4";
-  // document.getElementById('responsive-nav-top').style.height = "100%";
-  // document.getElementById('nav-bottom').style.display = "flex";
-  // document.getElementById('nav-bottom').style.opacity = "1";
-  // document.getElementById('responsive-nav').style.marginBottom = "1rem";
-	 document.getElementById('responsive-nav-list-item-1').style.opacity = "1";
-    document.getElementById('responsive-nav-list-item-2').style.opacity = "1";
-  //   document.getElementById('responsive-nav').style.height = "100vh";
-    document.getElementById('responsive-nav-list').style.display = "flex";
-    document.getElementById('responsive-nav-list').style.opacity = "1";
+function overlay() {
+    const nav = document.getElementById('responsive-nav');
+    
+    // Zet de .open klasse op het hoofdmenu zodat alle CSS regels direct starten
+    nav.classList.add('open');
+
+    document.getElementById('responsive-nav').style.transitionDelay = "0s";
+    document.getElementById('responsive-nav').style.height = "calc(100dvh - 2rem)";
+    document.getElementById('nav-top').style.backgroundColor = "#F8F6D4";
+    document.getElementById('nav-top').style.height = "100%";
+    document.getElementById('nav-top').style.gridTemplateRows = "2.5rem auto auto";
+    
+    document.getElementById('nav-bottom').style.visibility = "visible";
+    document.getElementById('nav-bottom').style.opacity = "1";
+    
+    document.getElementById('responsive-nav-background').style.display = "block";
+    document.getElementById('responsive-nav-background').style.opacity = "1";
 
     document.getElementById('hamburger-1').style.transform = "rotate(-45deg)";
     document.getElementById('hamburger-2').style.transform = "rotate(45deg)";
-  //   document.getElementById('hamburger-2').style.marginTop = "-8px";
     document.getElementById('hamburger-menu').id = "close-overlay";
 
-  document.getElementById('responsive-naf').style.height = "calc(100dvh - 2rem)";
-  document.getElementById('naf-top').style.backgroundColor = "#F8F6D4";
-  document.getElementById('naf-top').style.height = "100%";
-  document.getElementById('naf-top').style.gridTemplateRows = "2.5rem auto auto";
-   // document.getElementById('responsive-nav-list').style.opacity = "1";
-  document.getElementById('naf-bottom').style.visibility = "visible";
-  document.getElementById('naf-bottom').style.opacity = "1";
-  document.getElementById('responsive-naf-background').style.display = "block";
-  document.getElementById('responsive-naf-background').style.opacity = "1";
-
-    document.getElementById("close-overlay").onclick = function(){closeOverlay()};
+    document.getElementById("close-overlay").onclick = function() { closeOverlay(); };
 }
 
-function closeOverlay(){
-  document.getElementById('close-overlay').id = "hamburger-menu";
-  document.getElementById('hamburger-1').style.transform = "rotate(0deg)";
-  document.getElementById('hamburger-2').style.transform = "rotate(0deg)";
-  document.getElementById('naf-bottom').style.opacity = "0";
-  document.getElementById('naf-bottom').style.visibility = "hidden";
-  document.getElementById('responsive-nav-list').style.opacity = "0";
-  document.getElementById('responsive-nav-list').style.display = "none";
-  document.getElementById('naf-top').style.backgroundColor = "rgba(239, 239, 239, 0.3)";
-  document.getElementById('naf-top').style.height = "2.5rem";
-  document.getElementById('naf-top').style.gridTemplateRows = "2.5rem";
+function closeOverlay() {
+    const nav = document.getElementById('responsive-nav');
+    
+    // Haal de .open klasse weg zodat het menu inklapt (via CSS of hoogte)
+    if (nav) {
+        nav.classList.remove('open');
+        nav.style.height = "2.5rem";
+    }
 
+    // Zet de sluitknop (#close-overlay) in de HTML weer terug naar de hamburger ID
+    const closeBtn = document.getElementById('close-overlay');
+    if (closeBtn) {
+        closeBtn.id = "hamburger-menu";
+    }
 
-  document.getElementById('responsive-naf').style.height = "2.5rem";
-  document.getElementById('responsive-naf-background').style.opacity = "0";
-   
+    // Draai de hamburger-streepjes weer recht
+    const ham1 = document.getElementById('hamburger-1');
+    const ham2 = document.getElementById('hamburger-2');
+    if (ham1) ham1.style.transform = "rotate(0deg)";
+    if (ham2) ham2.style.transform = "rotate(0deg)";
 
-  document.getElementById("hamburger-menu").onclick = function(){overlay()};
+    // Verberg de onderkant van het menu / achtergrond
+    const navBottom = document.getElementById('nav-bottom');
+    if (navBottom) {
+        navBottom.style.opacity = "0";
+        navBottom.style.visibility = "hidden";
+    }
+
+    const navTop = document.getElementById('nav-top');
+    if (navTop) {
+        navTop.style.backgroundColor = "rgba(239, 239, 239, 0.3)";
+        navTop.style.height = "2.5rem";
+        navTop.style.gridTemplateRows = "2.5rem";
+    }
+
+    const navBg = document.getElementById('responsive-nav-background');
+    if (navBg) {
+        navBg.style.opacity = "0";
+    }
+
+    // Zorg dat het hamburger-menu weer klikbaar is om te openen
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    if (hamburgerMenu) {
+        hamburgerMenu.onclick = function() { 
+            overlay(); 
+        };
+    }
 }
 
 
@@ -1055,7 +1076,7 @@ function caseSwitchAnimationDown(){
 function noOpacity(){
 	document.getElementById('caseSwitchAnimation').style.opacity = "0";
 	document.getElementById("caseSwitchAnimation").style.display = "none";
-	document.getElementById('responsive-nav-list').style.display = "none";
+	// document.getElementById('responsive-nav-list').style.display = "none";
 
     document.getElementById("projectTitle").style.letterSpacing = "0.25rem";
     document.getElementById("projectTitle").style.opacity = "1";
