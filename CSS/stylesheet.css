@@ -2075,12 +2075,10 @@ body{
 			display: grid;
 			grid-template-columns: 1.5rem repeat(5, 1fr) 1.5rem;
 			grid-template-rows: repeat(12, 1fr) auto;
-			height: 80vh;
+			height: calc(80dvh - 4rem);
 			grid-column: 1/13;
 			grid-row: 4/5;
 		}
-
-
 
 			.case-header-content > *{
 				background-position: 10% 0% !important;
@@ -2951,6 +2949,22 @@ body{
 
 		#responsive-menu a{
 			color: #131A2B;
+		}
+
+	.opdracht-container{
+		background-color: #FFED00;
+		border-radius: 0.75rem;
+		padding: 1.25rem 1rem 2rem 1.25rem;
+	}
+
+		.opdracht-container > h2{
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.opdracht-container > p{
+			font-size: 1.125rem;
+			color: #131824;
 		}
 
 	.responsive-header-image{

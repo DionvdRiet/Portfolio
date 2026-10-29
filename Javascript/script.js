@@ -1074,19 +1074,26 @@ function caseSwitchAnimationDown(){
 }
 
 function noOpacity(){
-	document.getElementById('caseSwitchAnimation').style.opacity = "0";
-	document.getElementById("caseSwitchAnimation").style.display = "none";
-	// document.getElementById('responsive-nav-list').style.display = "none";
+  document.getElementById('caseSwitchAnimation').style.opacity = "0";
+  document.getElementById("caseSwitchAnimation").style.display = "none";
+  // document.getElementById('responsive-nav-list').style.display = "none";
 
     document.getElementById("projectTitle").style.letterSpacing = "0.25rem";
     document.getElementById("projectTitle").style.opacity = "1";
     document.getElementById("projectType").style.opacity = "1";
     document.getElementById("projectType").style.transform = "translateY(0%)";
     document.getElementById("projectDescription").style.opacity = "1";
-    document.getElementById("projectDescription").style.transform = "translateY(0%)"
+    document.getElementById("projectDescription").style.transform = "translateY(0%)";
 
     document.getElementById("caseHeaderImage").style.backgroundPosition = "52% 20%";
-    document.getElementById("caseHeaderImage").style.height = "80%";
+
+    // Controleer of het scherm kleiner is dan 768px (mobiel) of groter (desktop)
+    // Pas '768' gerust aan naar het breekpunt dat jij voor je mobiele layout gebruikt!
+    if (window.innerWidth <= 768) {
+        document.getElementById("caseHeaderImage").style.height = "100%";
+    } else {
+        document.getElementById("caseHeaderImage").style.height = "80%";
+    }
 }
 
 function linkedIn(){
