@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Save Now</title>
+	<title>Save Now | Portfoliowebsite Dion van der Riet</title>
 	<link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
 	<link rel="stylesheet" href="https://use.typekit.net/gqv3dkc.css">
 	<link rel="shortcut icon" type="image/png" href="Afbeeldingen/favicon.ico"/>
@@ -33,24 +33,41 @@
 
 		</div>
 	</header>
-	<header id="responsive-nav">
-		<div class="progress-container">
-			<div class="progress-bar" id="myBarResponsive"></div>
-		</div>
-		<div class="responsive-nav-top">
-			<div class="arrow-left" id="arrow-left" onclick="home()">
-				<img src="Afbeeldingen/arrow-left.svg" width="50px">
+
+	<header id="responsive-nav" class="mobile-only">
+		<div id="nav-top" onclick="overlay()">
+			<div id="nav-top-container">
+					<button type="button" class="arrow-left" id="arrow-left" onclick="home()">
+						<img src="Afbeeldingen/arrow-left.svg">
+					</button>
+					<span id="mobile-nav-title">Save Now</span>
+					<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
+						<div id="hamburger-1"></div>
+						<div id="hamburger-2"></div>
+					</div>
+				</div>
 			</div>
-			<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
-				<div id="hamburger-1"></div>
-				<div id="hamburger-2"></div>
+			<div id="responsive-nav-list">
+				<a id="responsive-nav-list-item-1" onclick="home()">Home</a>
+				<a id="responsive-nav-list-item-2" onclick="contact()">Contact</a>
 			</div>
-			<span id="mobile-nav-title">Save Now</span>
-		</div>
-		<div id="responsive-nav-list">
-			<a id="responsive-nav-list-item-1" onclick="home()">Welkom</a>
-			<a id="responsive-nav-list-item-2" onclick="contact()">Contact</a>
-		</div>
+			<div id="nav-bottom">
+				<div class="nav-bottom-phone">
+					<div class="nav-bottom-phone-container">
+						<div class="bottom-phone-icon"></div>
+						<a href="tel:+31621374084">+31 6 21374084</a>
+					</div>
+					<a href="tel:+31621374084">
+						<button type="button" class="naf-bottom-button">Bel mij</button>
+					</a>
+				</div>
+				<div class="lang-switch" role="radiogroup" aria-label="Taalselectie">
+				  <div class="lang-indicator-mobile"></div>
+				  
+				  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands">NL</button>
+				  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels">EN</button>
+				</div>
+			</div>
 	</header>
 
 	<div class="caseLanding">

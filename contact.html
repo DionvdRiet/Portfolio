@@ -10,48 +10,61 @@
 <body onload="caseSwitchAnimationDown()" class="contactBody">
 	<div id="caseSwitchAnimation"></div>
 	<header id="desktop">
-			<div class="progress-container">
-				<div class="progress-bar" id="myBar"></div>
+		<div class="progress-container">
+			<div class="progress-bar" id="myBar"></div>
+		</div>
+		<div id="headerContainer" class="headerContainerCase">
+			<div class="headerPages">
+				<span class="header-inactive-page" onclick="home()">Welkom</span>
+				<a class="header-active-page">Contact</a>
 			</div>
-			<div id="headerContainer" class="headerContainerCase">
-				<div class="headerPages">
-					<span class="header-inactive-page" onclick="home()">Welkom</span>
-					<a class="header-active-page">Contact</a>
-				</div>
 
-				<div class="lang-switch" role="radiogroup" aria-label="Taalselectie">
-				  <div class="lang-indicator"></div>
-				  
-				  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands">NL</button>
-				  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels">EN</button>
-				</div>
+			<div class="lang-switch" role="radiogroup" aria-label="Taalselectie">
+			  <div class="lang-indicator"></div>
+			  
+			  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands">NL</button>
+			  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels">EN</button>
+			</div>
 
-			</div>
-			<!-- <div class="headerIndicator">
-				<div id="headerContainer1"></div>
-				<div id="headerContainer2" id="headerContainerActive"></div>
-				<div id="headerContainer3"></div>
-			</div> -->
-		</header>
-	<header id="responsive-nav">
-			<div class="progress-container">
-				<div class="progress-bar" id="myBarResponsive"></div>
-			</div>
-			<div class="responsive-nav-top">
-				<div class="arrow-left" id="arrow-left-mobile" onclick="home()">
-					<img src="Afbeeldingen/arrow-left.svg" width="50px">
-				</div>
+		</div>
+	</header>
+
+	<header id="responsive-nav" class="mobile-only">
+		<div id="nav-top" onclick="overlay()">
+			<div id="nav-top-container">
+				<button type="button" class="arrow-left" id="arrow-left" onclick="home()">
+					<img src="Afbeeldingen/arrow-left.svg">
+				</button>
+				<span id="mobile-nav-title">Home</span>
 				<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
 					<div id="hamburger-1"></div>
 					<div id="hamburger-2"></div>
 				</div>
-				<span id="mobile-nav-title">Contact</span>
 			</div>
-			<div id="responsive-nav-list">
-				<span id="responsive-nav-list-item-1" onclick="home()">Welkom</span>
-				<span id="responsive-nav-list-item-2" onclick="contact()">Contact</span>
+		</div>
+		<div id="responsive-nav-list">
+			<a id="responsive-nav-list-item-1" onclick="home()">Home</a>
+			<a id="responsive-nav-list-item-2" onclick="contact()">Contact</a>
+		</div>
+		<div id="nav-bottom">
+			<div class="nav-bottom-phone">
+				<div class="nav-bottom-phone-container">
+					<div class="bottom-phone-icon"></div>
+					<a href="tel:+31621374084">+31 6 21374084</a>
+				</div>
+				<a href="tel:+31621374084">
+					<button type="button" class="naf-bottom-button">Bel mij</button>
+				</a>
 			</div>
-		</header>
+			<div class="lang-switch" role="radiogroup" aria-label="Taalselectie">
+			  <div class="lang-indicator-mobile"></div>
+			  
+			  <button type="button" class="lang-btn active-lang" data-lang="nl" aria-label="Nederlands">NL</button>
+			  <button type="button" class="lang-btn" data-lang="en" aria-label="Engels">EN</button>
+			</div>
+		</div>
+	</header>
+
 	<section class="contactContent">
 		<div class="contactCardContainer" id="contactDesktop">
 			<div class="contactCard" id="contact1">
