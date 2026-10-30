@@ -618,8 +618,8 @@ function overlay() {
     document.getElementById('responsive-nav-background').style.display = "block";
     document.getElementById('responsive-nav-background').style.opacity = "1";
 
-    document.getElementById('hamburger-1').style.transform = "rotate(-45deg) translateX(-2px) translateY(4px)";
-    document.getElementById('hamburger-2').style.transform = "rotate(45deg) translateX(-3px) translateY(-4px)";
+    document.getElementById('hamburger-1').style.transform = "rotate(-45deg) translateX(-0.125rem) translateY(0.25rem)";
+    document.getElementById('hamburger-2').style.transform = "rotate(45deg) translateX(-0.188rem) translateY(-0.25rem)";
     document.getElementById('hamburger-1').style.width = "50%";
     document.getElementById('hamburger-2').style.width = "50%";
     
