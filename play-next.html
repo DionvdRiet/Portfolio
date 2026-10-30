@@ -38,17 +38,17 @@
 		</header>
 	
 	<header id="responsive-nav" class="mobile-only">
-		<div id="nav-top" onclick="overlay()">
+		<div id="nav-top">
 			<div id="nav-top-container">
-					<button type="button" class="arrow-left" id="arrow-left" onclick="home()">
-						<img src="Afbeeldingen/arrow-left.svg">
-					</button>
-					<span id="mobile-nav-title">Play Next</span>
-					<div class="hamburger-menu" id="hamburger-menu" onclick="overlay()">
-						<div id="hamburger-1"></div>
-						<div id="hamburger-2"></div>
-					</div>
+				<button type="button" class="arrow-left" id="arrow-left" onclick="home()">
+					<img src="Afbeeldingen/arrow-left.svg">
+				</button>
+				<span id="mobile-nav-title">Play Next</span>
+				<div class="hamburger-menu" id="hamburger-menu" onclick="toggleOverlay()">
+					<div id="hamburger-1"></div>
+					<div id="hamburger-2"></div>
 				</div>
+			</div>
 			</div>
 			<div id="responsive-nav-list">
 				<a id="responsive-nav-list-item-1" onclick="home()">Home</a>
@@ -72,6 +72,8 @@
 				</div>
 			</div>
 	</header>
+
+	<div id="responsive-nav-background" class="mobile-only"></div>
 
 	<div class="caseLanding">
 		<div id="case-header-title">

@@ -2929,7 +2929,7 @@ body{
 				transition: transform 0.3s cubic-bezier(.365,.305,0,1);
 			}
 
-		#responsive-naf-background{
+		#responsive-nav-background{
 			display: none;
 			opacity: 0;
 			z-index: 2;
@@ -2949,6 +2949,10 @@ body{
 
 		#responsive-menu a{
 			color: #131A2B;
+		}
+
+		.on-home{
+			visibility: hidden;
 		}
 
 	.opdracht-container{

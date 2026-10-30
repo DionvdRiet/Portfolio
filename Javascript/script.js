@@ -591,12 +591,19 @@ function pageScrollIndicatorResponsive(){
   document.getElementById("myBarResponsive").style.width = scrolled + "%";
 }
 
-
+function toggleOverlay() {
+    const nav = document.getElementById('responsive-nav');
+    
+    if (nav.classList.contains('open')) {
+        closeOverlay();
+    } else {
+        overlay();
+    }
+}
 
 function overlay() {
     const nav = document.getElementById('responsive-nav');
     
-    // Zet de .open klasse op het hoofdmenu zodat alle CSS regels direct starten
     nav.classList.add('open');
 
     document.getElementById('responsive-nav').style.transitionDelay = "0s";
@@ -611,26 +618,26 @@ function overlay() {
     document.getElementById('responsive-nav-background').style.display = "block";
     document.getElementById('responsive-nav-background').style.opacity = "1";
 
-    document.getElementById('hamburger-1').style.transform = "rotate(-45deg)";
-    document.getElementById('hamburger-2').style.transform = "rotate(45deg)";
-    document.getElementById('hamburger-menu').id = "close-overlay";
-
-    document.getElementById("close-overlay").onclick = function() { closeOverlay(); };
+    document.getElementById('hamburger-1').style.transform = "rotate(-45deg) translateX(-2px) translateY(4px)";
+    document.getElementById('hamburger-2').style.transform = "rotate(45deg) translateX(-3px) translateY(-4px)";
+    document.getElementById('hamburger-1').style.width = "50%";
+    document.getElementById('hamburger-2').style.width = "50%";
+    
+    // Verander ID naar sluiten
+    const hamburgerEl = document.getElementById('hamburger-menu');
+    if (hamburgerEl) {
+        hamburgerEl.id = "close-overlay";
+        // Koppel direct de sluit-functie aan het nieuwe ID
+        hamburgerEl.onclick = function() { closeOverlay(); };
+    }
 }
 
 function closeOverlay() {
     const nav = document.getElementById('responsive-nav');
     
-    // Haal de .open klasse weg zodat het menu inklapt (via CSS of hoogte)
     if (nav) {
         nav.classList.remove('open');
         nav.style.height = "2.5rem";
-    }
-
-    // Zet de sluitknop (#close-overlay) in de HTML weer terug naar de hamburger ID
-    const closeBtn = document.getElementById('close-overlay');
-    if (closeBtn) {
-        closeBtn.id = "hamburger-menu";
     }
 
     // Draai de hamburger-streepjes weer recht
@@ -638,8 +645,10 @@ function closeOverlay() {
     const ham2 = document.getElementById('hamburger-2');
     if (ham1) ham1.style.transform = "rotate(0deg)";
     if (ham2) ham2.style.transform = "rotate(0deg)";
+    if (ham1) ham1.style.width = "40%";
+    if (ham2) ham2.style.width = "40%";
 
-    // Verberg de onderkant van het menu / achtergrond
+    // Verberg de onderkant / achtergrond
     const navBottom = document.getElementById('nav-bottom');
     if (navBottom) {
         navBottom.style.opacity = "0";
@@ -656,17 +665,17 @@ function closeOverlay() {
     const navBg = document.getElementById('responsive-nav-background');
     if (navBg) {
         navBg.style.opacity = "0";
+        navBg.style.display = "none";
     }
 
-    // Zorg dat het hamburger-menu weer klikbaar is om te openen
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    if (hamburgerMenu) {
-        hamburgerMenu.onclick = function() { 
-            overlay(); 
-        };
+    // --- HIER PAS: Zet het kruisje (#close-overlay) weer terug naar de hamburger-menu status ---
+    const closeBtn = document.getElementById('close-overlay');
+    if (closeBtn) {
+        closeBtn.id = "hamburger-menu";
+        // Koppel direct de open-functie zodat je hem weer kunt openen
+        closeBtn.onclick = function() { overlay(); };
     }
 }
-
 
 
 function responsiveAnimation(x) {
