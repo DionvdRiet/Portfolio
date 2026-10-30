@@ -2029,16 +2029,13 @@ body{
 	.buttonSmall{
 		grid-column: 1/2;
 		grid-row: 2/3;
-		border-top: 2px solid #FFED00;
 		font-style: normal;
-		font-size: 32px !important;
+		font-size: 1.5rem;
 		text-align: left;
 		letter-spacing: 0px;
-		padding: 32px 40px 32px 40px !important;
+		padding: 1rem;
 		position: absolute;
-		left: 40px;
 		align-self: center;
-		margin-top: 80px !important;
 	}
 
 	#finance-persona, #play-next-persona, #ben-persona{
@@ -2693,7 +2690,6 @@ body{
 			top:1rem;
 			grid-template-columns: 1.5rem auto 1.5rem;
 			grid-template-rows: auto 1rem ;
-			height: calc(100dvh - 2rem);
 			height: 2.5rem;
 			/*width: 100vw;*/
 			z-index: 3;
@@ -3641,55 +3637,57 @@ body{
 					}
 
 			.contactContent{
-				width: 100vw;
-				height: 100vh;
+				display: grid;
+				grid-template-columns: 1.5rem auto 1.5rem;
+				grid-template-rows: 8rem auto 8rem;
+				height: 100dvh;
+				padding-bottom: 0;
 			}
 
 				.contactCard{
-					grid-template-rows: 120px auto;
-					height: auto;
+					display: grid;
+					grid-template-rows: 1fr 2fr;
+					/*grid-template-rows: 7.5rem auto;
+					height: auto;*/
+					width: 100%;
+					height: 100%;
+					background-color: white;
+					border: 1px solid rgba(0, 0, 0, 0.3);
+					border-radius: 0.75rem;
 				}
 
+					.contactCard > div{
+						height: 100%;
+					}
+
 					.contactCardTitle{
-						grid-template-columns: 120px 1fr;
+						grid-template-columns: 7.5rem 1fr;
 						grid-column: 1/3;
 						grid-row: 1/2;
-						height: 120px;
 					}
 
 						.contactCardIcon{
 							grid-column: 1/2;
-							width: 120px;
-							height: 120px;
 						}
 
-						.contactCardIconEmail{
-							background-size: 40%;
-						}
-
-						.contactCardIconTelefoon{
-							background-size: 40%;
-						}
-
-						.contactCardIconLinkedin{
-							background-size: 40%;
+						.contactCardIconEmail, .contactCardIconTelefoon, .contactCardIconLinkedin{
+							background-size: 2rem;
 						}
 
 						.contactCardTitle h3{
 							grid-column: 2/3;
-							margin: 0px 0px 0px 32px;
-							padding: 0px !important;
+							margin: 0 0 0 2rem;
+							padding: 0 !important;
 							align-self: center;
 						}
 
 					.contactCardDescription{
-						display: grid;
-						grid-template-columns: auto;
-						grid-template-rows: 120px 160px;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
 						grid-column: 1/3;
 						grid-row: 2/3;
 /*						margin-left: 24px;*/
-						height: auto;
 					}
 
 						.contactCardDescriptionP{
@@ -3697,14 +3695,12 @@ body{
 							display: flex;
 							justify-content: center;
 							grid-row: 1/2;
-							background-color: orange;
 						}
 
 							.contactCardDescriptionP .p-small{
-								margin-left: 40px !important;
+								margin-left: 2.5rem !important;
 								margin-top: 0px !important;
 								margin-bottom: 0px !important;
-								background-color: green;
 							}
 
 						.contactCardDescriptionButton{
@@ -3712,7 +3708,6 @@ body{
 							display: flex;
 							justify-content: center;
 							grid-row: 2/3;
-							background-color: purple;
 						}
 
 							.contactCardDescriptionButton button{
@@ -3723,15 +3718,15 @@ body{
 						grid-column: 1/2;
 						grid-row: 1/2;
 						letter-spacing: 1px;
-						margin-left: 20px;
+						margin-left: 1.25rem;
 					}
 
 					.contactCard p{
-						margin-top: 80px;
+						margin-top: 5rem;
 					}
 
 					.contactCard #contact-email-text-res, .contactCard #contact-phone-text-res{
-						margin-top: 40px;
+						margin-top: 2.5rem;
 					}
 
 						.contactCard #contact-email-text-res::selection, .contactCard #contact-phone-text-res::selection{
@@ -3739,7 +3734,7 @@ body{
 						}
 
 					.contactCard .buttonSmall{
-						margin-left: 0px;
+						margin-left: 0;
 					}
 
 					.contactCardLine{
@@ -3749,16 +3744,28 @@ body{
 					}
 
 				.contactCardContainer{
-					grid-column: 1/17;
-					grid-template-columns: 50px auto auto 50px;
-					grid-template-rows: auto auto 0px auto 0px auto auto;
-					grid-column-gap: 1vw;
-					height: 100vh;
-					width: 100vw;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					grid-column: 2/3;
+					grid-row: 2/3;
+					gap: 1rem;
+					height: calc(100dvh - 16rem);
+					width: 100%;
 				}
 
+					/*.contact1, .contact2, .contact3{
+						width: 100%;
+						height: 100%;
+						background-color: white;
+						border: 1px solid rgba(0, 0, 0, 0.3);
+						border-radius: 0.75rem;
+					}*/
+
+
+
 				.contactCardDescription .p-small{
-					font-size: 2rem;
+					font-size: 1rem;
 				}
 
 				#contact1, #contact2, #contact3{
