@@ -3742,6 +3742,7 @@ body{
 
 					.contactCard .buttonSmall{
 						/*margin-left: 0;*/
+						margin-top: 0.5rem;
 					}
 
 					.contactCardLine{
