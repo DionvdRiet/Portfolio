@@ -3954,7 +3954,8 @@ body{
 	}
 
 	.mobile-only{
-		visibility: hidden;
+		/*visibility: hidden;*/
+		display: none;
 	}
 
 	.play-next-header-responsive, .responsive-header-image{
