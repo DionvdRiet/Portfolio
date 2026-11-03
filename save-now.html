@@ -373,12 +373,9 @@
 		<div class="projectCard caseCard">
 			<div class="projectCardImage play-next-header"></div>
 			<div class="projectCardInfo">
-				<div class="projectCardLabel">
-					<h4>Mobile Design Project</h4>
-				</div>
 				<h2>Play Next</h2>
-				<p data-i18n="playnext.projectDescription">Ontdek je volgende favoriete game</p>
-				<input type="button" name="button" value="BEKIJK CASE" onclick="playNextWelkom()">
+				<p class="next-case-subtitle" data-i18n="playnext.projectDescription">Ontdek jouw volgende favoriete game</p>
+				<button type="button" name="button" data-i18n="common.viewCase" class="caseButton" id="volgendeCaseButton" onclick="playNextNieuw()" onmouseover="buttonOn()" onmouseout="buttonOff()">Bekijk case</button>
 			</div>
 		</div>
 	</section>
